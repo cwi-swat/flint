@@ -36,8 +36,11 @@ Edges exprToEdges(e:(Expr)`<Expr l> en <Expr r>`)
      + exprToEdges(l) + exprToEdges(r);
 
 Edges exprToEdges(e:(Expr)`<Expr l> of <Expr r>`)
-  = [edge(exprId(e), exprId(l)), edge(exprId(e), exprId(r))] 
+  = [edge(exprId(l), exprId(e)), edge(exprId(r), exprId(e))] 
      + exprToEdges(l) + exprToEdges(r);
+
+Edges exprToEdges(e:(Expr)`(<Expr x>)`)
+  = exprToEdges(x);
 
 default Edges exprToEdges(Expr _) = [];
 
@@ -49,16 +52,20 @@ list[Figure] exprToNodes(e:(Expr)`onbekend <Expr a>`)
   = [ellipse(text(" ? "), id(exprId(e))), onClickExpr(e)] + exprToNodes(a);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> en <Expr r>`)
-  = [ellipse(text(" & "), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∧ "), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> of <Expr r>`)
-  = [ellipse(text("|"), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∨ "), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
+
+list[Figure] exprToNodes(e:(Expr)`(<Expr x>)`)
+  = exprToNodes(x);
 
 default list[Figure] exprToNodes(Expr _) = [];
 
 str exprId((Expr)`<Id f>(<{Id ","}* fs>)`) = "<f>";
+str exprId((Expr)`(<Expr e>)`) = exprId(e);
 default str exprId(Expr e) = "expr<e@\loc>";
 
 Figure visualize(start[Main] flint) {
@@ -66,7 +73,7 @@ Figure visualize(start[Main] flint) {
   Edges es = [];
   
   visit (flint) {
-    case d:(Decl)`feit <Id x>(<{Formal ","}* fs>)`: {
+    case d:(Decl)`feit <Id x>(<{Formal ","}* fs>) <Text _>`: {
       ns += [ellipse(text("iFeit:\n<x>", FONT, FONT_SIZE), id("<x>"), onClick(d), gap(3.0))];
     }
       
@@ -96,13 +103,4 @@ Figure visualize(start[Main] flint) {
 
   return graph(ns, es, gap(40.0,40.0), hint("layered"), orientation(topDown()));
 }
-
-//Edges getEdges(DecisionGraph g) {
-//  es = [];
-//  es += [ edge(idOf(a), idOf(b), TO_ARROW) | <a, none(), b> <- g ];
-//  es += [ edge(idOf(a), idOf(b), label(text(prettyPrint(e), FONT, FONT_SIZE)), TO_ARROW)
-//          | <a, cond(e), b> <- g, bprintln("label = <prettyPrint(e)>") ];
-//  es += [ edge(idOf(a), idOf(b), label(text("otherwise", FONT, FONT_SIZE)), TO_ARROW)
-//          | <a, \else(), b> <- g ];
-//  return es;
 

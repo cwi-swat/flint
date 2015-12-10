@@ -4,6 +4,8 @@ import Flint;
 import ParseTree;
 import util::IDE;
 import Resolve;
+import vis::Render;
+import Visualize;
 
 anno rel[loc,loc, str] Tree@hyperlinks;
 
@@ -14,20 +16,23 @@ void main() {
   });
   
   contribs = {
-    // outliner(node(Tree pt) {
-    //  if (Form f := pt.args[1]) {
-    //    return outline(f);
-    //  }
-    //  throw "Error: not a form";
-    //}),
-    
-//    annotator(start[Form](start[Form] pt) {
     annotator(Tree(Tree pt) {
       if (start[Main] f := pt) {
-        return pt[@hyperlinks=resolve(f)];
+        <msgs, hlinks> = resolve(f);
+        return pt[@hyperlinks=hlinks][@messages=msgs];
       }
       return pt[@messages={error("BUG: not a form", pt@\loc)}];
-    })
+    }),
+    
+    popup(
+      menu("Flint",[
+        action("Visualize...", (Tree tree, loc source) {
+          if (start[Main] flint := tree) {
+            render(visualize(flint));
+          }
+        })
+      ])
+    )
     
   };
   

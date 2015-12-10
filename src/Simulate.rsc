@@ -36,6 +36,14 @@ Relation instantiate(Relation r, Env e) {
   }
 }
 
+Call instantiateCall(Call c, Env e) {
+  return visit(c) {
+     case Id x => parse(#Id, "#<e[x]>")
+       when x in e
+  }
+}
+
+
 set[Env] allBindings({Formal ","}* fs, World world) {
   classes = { "<x>" | (Formal)`<Id _>: <Id x>` <- fs };
   objs = { k | k <- world.objects };
@@ -50,49 +58,85 @@ set[Env] allBindings({Formal ","}* fs, World world) {
   return result;
 }
 
-bool eval({Expr ","}+ conds, Env env, World world) 
-  = all(c <- conds, eval(c, env, world));
+alias Trace = list[str];
 
-bool eval((Expr)`<Id f>(<{Id ","}* args>)`, Env env, World world) {
+tuple[bool, Trace] eval({Expr ","}+ conds, Env env, World world) {
+  trace = [];
+  for (c <- conds) {
+    <b, t> = eval(c, env, world);
+    if (!b) {
+      return <false, []>;
+    }
+    trace += t;
+  }
+  return <true, trace>; 
+} 
+
+tuple[bool, Trace] eval((Expr)`<Id f>(<{Id ","}* args>)`, Env env, World world) {
   objs = [ env[a] | a <- args ];
-  return <true, "<f>", objs> in world.facts;
+  b = <true, "<f>", objs> in world.facts;
+  if (b) {
+    call = instantiateCall((Call)`<Id f>(<{Id ","}* args>)`, env);
+    return <true, ["<call>"]>;
+  }
+  return <false, []>;
 }
 
-bool eval((Expr)`niet <Id f>(<{Id ","}* args>)`, Env env, World world) {
+tuple[bool, Trace] eval((Expr)`niet <Id f>(<{Id ","}* args>)`, Env env, World world) {
   objs = [ env[a] | a <- args ];
-  val = <false, "<f>", objs> in world.facts;
-  println("VAL = <val>");
-  return val;
+  b = <false, "<f>", objs> in world.facts;
+  if (!b) {
+    call = instantiateCall((Call)`<Id f>(<{Id ","}* args>)`, env);
+    return <true, ["¬ <call>"]>;
+  }
+  return <false, []>;
 } 
 
-bool eval((Expr)`onbekend <Id f>(<{Id ","}* args>)`, Env env, World world) {
-  objs = [ env[a] | a <- args ];
-  return !any(<_, "<f>", objs> <- world.facts);
-} 
+//bool eval((Expr)`onbekend <Id f>(<{Id ","}* args>)`, Env env, World world) {
+//  objs = [ env[a] | a <- args ];
+//  return !any(<_, "<f>", objs> <- world.facts);
+//} 
 
-bool eval((Expr)`<Expr l> en <Expr r>`, Env env, World world)
-  = eval(l, env, world) && eval(r, env, world);
+//bool eval((Expr)`<Expr l> en <Expr r>`, Env env, World world)
+//  = eval(l, env, world) && eval(r, env, world);
 
-bool eval((Expr)`<Expr l> of <Expr r>`, Env env, World world)
-  = eval(l, env, world) || eval(r, env, world);
+tuple[bool, Trace] eval((Expr)`<Expr l> en <Expr r>`, Env env, World world) {
+  <lb, lt> = eval(l, env, world);
+  if (!lb) {
+    return <false, []>;
+  }
+  <rb, rt> = eval(r, env, world);
+  if (!rb) {
+    return <false, []>;
+  }
+  return <true, lt + rt>;
+}
 
 
-set[Relation] relations(start[Main] flint, World world) {
+tuple[bool, Trace] eval((Expr)`<Expr l> of <Expr r>`, Env env, World world) {
+  <lb, lt> = eval(l, env, world);
+  if (lb) {
+    return <true, lt>;
+  }
+  <rb, rt> = eval(r, env, world);
+  if (rb) {
+    return <true, rt>;
+  }
+  return <false, []>;
+}
+
+
+rel[Relation, Trace] relations(start[Main] flint, World world) {
   result = {};
   
   visit (flint) {
     case (Decl)`relatie <Id r>(<{Formal ","}* fs>) <Relation rr>`:
-      result += { instantiate(rr, env) | env <- allBindings(fs, world) }; 
-    case (Decl)`relatie <Id r>(<{Formal ","}* fs>) <Relation rr> <Preconditions cc>`:
-      result += { instantiate(rr, env) | env <- allBindings(fs, world), eval(cc.conditions, env, world) }; 
+      result += { <instantiate(rr, env), []> | env <- allBindings(fs, world) }; 
+    case (Decl)`relatie <Id r>(<{Formal ","}* fs>) <Relation rr> <Preconditions cc>`: 
+      result += { <instantiate(rr, env), t> | env <- allBindings(fs, world),
+        <bool b, Trace t> := eval(cc.conditions, env, world), b }; 
   }
 
   return result;
-  /*
-   for all relations, and all possible bindings of the parameters
-     if the preconditions are true in the current world, enable
-     the action for the "owner" 
-  
-  */
 }
 

@@ -20,13 +20,21 @@ syntax Formal
   ; 
   
 syntax Decl
-  = "feit" Id "(" {Formal ","}* ")" 
+  = @Foldable "feit" Id "(" {Formal ","}* ")" Text
   | "actie" Id "(" {Formal ","}* ")" Statement+ 
   | "regel" Id "(" {Formal ","}* ")" "=" Expr
   | "regel" "unknown" Id "(" {Formal ","}* ")" "=" Expr
   | @Foldable "relatie" Id "(" {Formal ","}* ")" Relation Preconditions?
   | "rol" Id 
   | "document" Id 
+  ;
+  
+syntax Text
+  = "{" Content "}"
+  ;
+  
+lexical Content
+  = @category="Comment" ![{}]* >> "}"
   ;
   
 syntax Preconditions
@@ -48,6 +56,7 @@ syntax Expr
   | "onbekend" Expr
   > left Expr "en" Expr
   > left Expr "of" Expr
+  | bracket "(" Expr ")"
   ;  
   
 syntax Relation

@@ -2,20 +2,26 @@ module Resolve
 
 import Flint;
 import ParseTree;
+import Message;
 
-rel[loc, loc, str] resolve(start[Main] def) {
+tuple[set[Message], rel[loc, loc, str]] resolve(start[Main] def) {
   defs = ();
   rel[loc, loc, str] refs = {};
   
+  msgs = {};
+  
   visit (def) {
-    case (Decl)`feit <Id x>(<{Formal ","}* _>)`:
+    case (Decl)`feit <Id x>(<{Formal ","}* _>) <Text _>`:
       defs["<x>"] = x@\loc;
 
     case (Decl)`actie <Id x>(<{Formal ","}* _>) <Statement+ _>`:
       defs["<x>"] = x@\loc;
     
-    case (Decl)`relatie <Id x>(<{Formal ","}* _>) <Relation _>`:
-      defs["<x>"] = x@\loc;
+    //case (Decl)`relatie <Id x>(<{Formal ","}* _>) <Relation _>`:
+    //  defs["<x>"] = x@\loc;
+    //
+    //case (Decl)`relatie <Id x>(<{Formal ","}* _>) <Relation _> <Preconditions _>`:
+    //  defs["<x>"] = x@\loc;
     
     case (Decl)`rol <Id x>`:
       defs["<x>"] = x@\loc;
@@ -25,15 +31,24 @@ rel[loc, loc, str] resolve(start[Main] def) {
   }
   
   visit (def) {
-    case (Call)`<Id f>(<{Id ","}* _>)`: 
-      refs += {<f@\loc, defs["<f>"], "<f>"> | "<f>" in defs };
+    case c:(Call)`<Id f>(<{Id ","}* _>)`:
+      if ("<f>" in defs) { 
+        refs += {<f@\loc, defs["<f>"], "<f>"> };
+      }
+      else {
+        msgs += {error("Ongedefinieerd feit of actie", c@\loc)}; 
+      }
       
-    case (Formal)`<Id x>: <Id t>`:
-       refs += {<t@\loc, defs["<t>"], "<t>"> | "<t>" in defs };
-    //case (Relation)`<Id x> is <Type _> jegens <Id other> omtrent <Call _>`:
-    //  refs += {<x@\loc, defs["<x>"], "<x>">,
-    //           <other@\loc, defs["<other>"], "<other>">};
+    case f:(Formal)`<Id x>: <Id t>`:
+       if ("<t>" in defs) {
+         refs += {<t@\loc, defs["<t>"], "<t>"> };
+       }
+       else {
+         msgs += {error("Ongedefinieerde object type of rol", f@\loc)};
+       }
   }
   
-  return refs;
+  msgs += { warning("Ongebruikt element", d) | d <- defs<1>, d notin refs<1> };
+  
+  return <msgs, refs>;
 }

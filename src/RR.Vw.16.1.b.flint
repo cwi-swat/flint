@@ -1,0 +1,59 @@
+context Vw.16.1.a.
+
+// Aanvraag VVR BEP
+document Aanvraag
+
+rol Minister
+rol Vreemdeling
+
+feit Vw.16.1.aanvraag(v: Vreemdeling, a: Aanvraag) {
+}
+
+// x heeft *geen* document voor grensoverschrijding
+feit Vw.16.1.b(x: Vreemdeling) {
+} 
+
+feit Vb.3.73(x: Vreemdeling) {
+ 1. De aanvraag tot het verlenen van de verblijfsvergunning voor bepaalde tijd, 
+ bedoeld in artikel 14 van de Wet, wordt afgewezen, indien de vreemdeling
+ niet beschikt over een geldige machtiging tot voorlopig verblijf.
+}
+
+feit Vc.B1.4.1.zin4.1(x: Vreemdeling) {
+  Aanvraag van onderdanen van Somalië, zolang er geen internationaal erkend
+  centraal gezag is in Somalië en Nederland de Somalische autoriteiten en 
+  door hen uitgegeven documenten niet erkent.
+}
+
+feit Vc.B1.4.1.zin4.2(x: Vreemdeling) {
+  Aanvraag van hier te lande geboren kRR.Vw.16.1.beren die een verblijfsvergunning
+  regulier bepaalde tijd voor verblijf bij ouder (familie- en gezinslid) 
+  aanvragen, mits zij voldoen aan alle volgende voorwaarden:
+  • beide ouders zijn in het bezit van een geldige verblijfsvergunning; en
+  • beide ouders zijn vrijgesteld van het vereiste over een geldig
+    document voor grensoverschrijding te beschikken.
+}
+
+
+feit Vw.16.1.b.afwijzing(a: Aanvraag) {
+  De aanvraag tot het verlenen van een VVR BEP is afgewezen omdat de 
+  vreemdeling niet beschikt over een geldig document voor grensoverschrijding.
+}
+
+//Artikel 16, eerste lid, aanhef en onder b, Vw
+relatie RR.Vw.16.1.b(m: Minister, v: Vreemdeling, a: Aanvraag)
+  m is bevoegd jegens v omtrent afwijzen(a)
+wanneer
+  Vw.16.1.aanvraag(a, v)
+  en Vw.16.1.b(v)
+  en niet (
+    (Vc.B1.4.1.zin4.1(v) 
+    of Vc.B1.4.1.zin4.2(v))
+    of Vb.3.73(v))
+    
+actie afwijzen(a: Aanvraag) 
+ + Vw.16.1.b.afwijzing(a)
+ 
+ 
+ 
+ 
