@@ -8,9 +8,9 @@ import vis::KeySym;
 import Flint;
 import IO;
 
-private FProperty FONT = font("Menlo");
-private FProperty FONT_SIZE = fontSize(16);
-private FProperty TO_ARROW = toArrow(triangle(7));
+public FProperty FONT = font("Menlo");
+public FProperty FONT_SIZE = fontSize(16);
+public FProperty TO_ARROW = toArrow(triangle(7));
 
 FProperty onClick(Decl d) =
     onMouseDown(bool (int butnr, map[KeyModifier,bool] modifiers) {
