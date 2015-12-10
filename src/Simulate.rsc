@@ -7,27 +7,40 @@ import ParseTree;
 import IO;
 
 alias World = tuple[Objects objects, Facts facts];
-alias Objects = map[int id, str class];
+alias Objects = map[str id, str class];
 
 data Action = action();
 
-alias Facts = rel[bool enabled, str name, list[int] args];
+alias Facts = rel[bool enabled, str name, list[str] args];
 
-alias Env = map[Id name, int obj];
+alias Env = map[Id name, str obj];
 
 public World initialWorld = <
-(1: "Minister", 
- 2: "Aanvrager",
- 3: "Aanvrager",
- 4: "Aanvraag",
- 5: "Aanvraag"),
+("1": "Minister", 
+ "2": "Aanvrager",
+ "3": "Aanvrager",
+ "4": "Aanvraag",
+ "5": "Aanvraag"),
 {
-<true, "Vw.14.1.a.aanvraag", [2, 4]>,
-<true, "Vw.14.1.a.aanvraag", [3, 5]>,
-<false, "Vw.16.1.a", [3]>,
-<true, "Vw.16.1.a", [2]>
+<true, "Vw.14.1.a.aanvraag", ["2", "4"]>,
+<true, "Vw.14.1.a.aanvraag", ["3", "5"]>,
+<false, "Vw.16.1.a", ["3"]>,
+<true, "Vw.16.1.a", ["2"]>
 }
 >;
+
+World extractWorld(start[Main] flint, loc sel) {
+  objs = ();
+  facts = {};
+  if (treeFound(Decl d) := treeAt(#Decl, sel, flint)) {
+    visit (d) {
+      case Object obj: objs["<obj.id>"] = "<obj.class>";
+      case Fact f: facts += {<true, "<f.call.name>", [  "<a>" | a <- f.call.args ] >};
+    }
+    return <objs, facts>;
+  }
+  return <(), {}>;
+}
 
 Relation instantiate(Relation r, Env e) {
   return visit(r) {
@@ -47,7 +60,7 @@ Call instantiateCall(Call c, Env e) {
 set[Env] allBindings({Formal ","}* fs, World world) {
   classes = { "<x>" | (Formal)`<Id _>: <Id x>` <- fs };
   objs = { k | k <- world.objects };
-  set[str] typesOf(set[int] objs) = { world.objects[k] | k <- objs }; 
+  set[str] typesOf(set[str] objs) = { world.objects[k] | k <- objs }; 
 
   result = {};
   for (subset <- power(objs), typesOf(subset) == classes) {
@@ -84,7 +97,7 @@ tuple[bool, Trace] eval((Expr)`<Id f>(<{Id ","}* args>)`, Env env, World world) 
 
 tuple[bool, Trace] eval((Expr)`niet <Id f>(<{Id ","}* args>)`, Env env, World world) {
   objs = [ env[a] | a <- args ];
-  b = <false, "<f>", objs> in world.facts;
+  b = <true, "<f>", objs> in world.facts;
   if (!b) {
     call = instantiateCall((Call)`<Id f>(<{Id ","}* args>)`, env);
     return <true, ["¬ <call>"]>;

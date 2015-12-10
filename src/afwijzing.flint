@@ -20,8 +20,18 @@ relatie RR.Vw.14.1.a.afwijzen(m: Minister, a: Aanvrager, x: Aanvraag)
   m is bevoegd jegens a omtrent afwijzen(x)
 wanneer
   Vw.14.1.a.aanvraag(a, x)
-  en niet Vw.16.1.a(a) // NB: staat niet op slide 4
-
+  en niet Vw.16.1.a(a) 
 
 actie afwijzen(x: Aanvraag) 
   + Vw.14.1.a.afwijzen(x)
+
+situatie tweeAanvragers {
+ deMin: Minister
+ met: Aanvrager
+ zonder: Aanvrager
+ a1: Aanvraag
+ a2: Aanvraag
+ Vw.14.1.a.aanvraag(met, a1)
+ Vw.14.1.a.aanvraag(zonder, a2)
+ Vw.16.1.a(met)
+}

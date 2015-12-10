@@ -23,7 +23,6 @@ Figure visRels(rel[Relation, Trace] rels) =
   vcat( 
      [box(text("Enabled relations", LFONT, LFONT_SIZE), vresizable(false), valign(0))] 
     + [hcat([box(text("<r>", LFONT, LFONT_SIZE), vresizable(false), valign(0), lineWidth(0)),
-       box(text(""), width(2), hresizable(false)),
        vcat([ box(text(t, LFONT, LFONT_SIZE), valign(0),lineWidth(0)) | t <- trace], resizable(false))], hgap(10))
    | <r, trace> <- rels ], gap(10));
 

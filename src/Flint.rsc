@@ -27,7 +27,14 @@ syntax Decl
   | @Foldable "relatie" Id "(" {Formal ","}* ")" Relation Preconditions?
   | "rol" Id 
   | "document" Id 
+  | @Foldable "situatie" Id name "{" Object* Fact* "}"
   ;
+  
+syntax Object
+  = Id id ":" Id class;
+  
+syntax Fact
+  = Call call;
   
 syntax Text
   = "{" Content "}"
@@ -64,7 +71,7 @@ syntax Relation
   ; 
   
 syntax Call
-  = Ref name "(" {Id ","}* ")"
+  = Ref name "(" {Id ","}* args ")"
   ;
 
 syntax Type
@@ -75,4 +82,5 @@ syntax Type
 lexical Id
   = [a-zA-Z][a-zA-Z0-9.]* !>> [a-zA-Z0-9.]
   | "#" [0-9]+ !>> [0-9]
+  | "#" [a-zA-Z][a-zA-Z0-9.]* !>> [a-zA-Z0-9.]
   ;
