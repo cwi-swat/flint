@@ -35,7 +35,7 @@ syntax Preconditions
 
 syntax Statement
   = "+" Call
-  | "-" Call
+  | [\-] Call
   ; 
   
 syntax Ref
