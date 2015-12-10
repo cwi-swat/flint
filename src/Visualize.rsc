@@ -8,11 +8,17 @@ import vis::KeySym;
 import Flint;
 import IO;
 
-private FProperty FONT = font("Monospaced");
+private FProperty FONT = font("Menlo");
 private FProperty FONT_SIZE = fontSize(16);
 private FProperty TO_ARROW = toArrow(triangle(5));
 
 FProperty onClick(Decl d) =
+    onMouseDown(bool (int butnr, map[KeyModifier,bool] modifiers) {
+          edit(d@\loc, [highlight(d@\loc.begin.line, "<d>")]);
+          return true;
+        });
+
+FProperty onClickExpr(Expr d) =
     onMouseDown(bool (int butnr, map[KeyModifier,bool] modifiers) {
           edit(d@\loc, [highlight(d@\loc.begin.line, "<d>")]);
           return true;
@@ -37,17 +43,17 @@ default Edges exprToEdges(Expr _) = [];
 
 
 list[Figure] exprToNodes(e:(Expr)`niet <Expr a>`)
-  = [ellipse(text(" ¬ "), id(exprId(e)))] + exprToNodes(a);
+  = [ellipse(text(" ¬ "), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
 
 list[Figure] exprToNodes(e:(Expr)`onbekend <Expr a>`)
-  = [ellipse(text(" ? "), id(exprId(e)))] + exprToNodes(a);
+  = [ellipse(text(" ? "), id(exprId(e))), onClickExpr(e)] + exprToNodes(a);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> en <Expr r>`)
-  = [ellipse(text(" & "), width(4), height(4), resizable(false), id(exprId(e)))]
+  = [ellipse(text(" & "), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> of <Expr r>`)
-  = [ellipse(text("|"), id(exprId(e)))]
+  = [ellipse(text("|"), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 default list[Figure] exprToNodes(Expr _) = [];
