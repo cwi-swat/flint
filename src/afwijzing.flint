@@ -1,0 +1,46 @@
+context Afwijzing van aanvraag verblijfsvergunning
+
+document Aanvraag
+
+rol Minister 
+rol Aanvrager 
+
+// slide 4
+
+//De aanvraag tot het verlenen van VVR BEP bestaat
+feit Vw.14.1.a.aanvraag(x: Aanvrager, y: Aanvraag) 
+
+// de vreemdeling heeft geldige ....
+feit Vw.16.1.a(x: Aanvrager)
+
+// de aanvraag is afgewezen
+feit Vw.14.1.a.afwijzen(x: Aanvraag)
+
+//feit somalier(x: Aanvrager)
+
+//regel notSomalier(x) = niet Somalier(x)
+//regel unknown Somalier(x) = niet Somalier(x)
+
+relatie RR.Vw.14.1.a.afwijzen(m: Minister, a: Aanvrager, x: Aanvraag)
+  m is bevoegd jegens a omtrent afwijzen(x)
+wanneer
+  Vw.14.1.a.aanvraag(a, x)
+  en niet Vw.16.1.a(a) // NB: staat niet op slide 4
+
+
+actie afwijzen(x: Aanvraag) 
+  + Vw.14.1.a.afwijzen(x)
+
+
+
+
+
+
+
+// slide 5
+
+
+// vragen:
+
+//- horen post-conditie bij relaties of bij handeling.
+//- zijn handeling gedeeld tussen relaties is er impliciete namespacing
