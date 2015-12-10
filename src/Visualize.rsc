@@ -10,7 +10,7 @@ import IO;
 
 private FProperty FONT = font("Menlo");
 private FProperty FONT_SIZE = fontSize(16);
-private FProperty TO_ARROW = toArrow(triangle(5));
+private FProperty TO_ARROW = toArrow(triangle(7));
 
 FProperty onClick(Decl d) =
     onMouseDown(bool (int butnr, map[KeyModifier,bool] modifiers) {
