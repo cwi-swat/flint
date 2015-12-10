@@ -51,11 +51,11 @@ syntax Expr
   ;  
   
 syntax Relation
-  = Id from "is" Type "jegens" Id other "omtrent" Call 
+  = Id from "is" Type "jegens" Id other "omtrent" Call action
   ; 
   
 syntax Call
-  = Ref "(" {Id ","}* ")"
+  = Ref name "(" {Id ","}* ")"
   ;
 
 syntax Type
