@@ -5,16 +5,17 @@ document Aanvraag
 rol Minister 
 rol Aanvrager 
 
-// slide 4
+feit Vw.14.1.a.aanvraag(x: Aanvrager, y: Aanvraag) {
+  De aanvraag tot het verlenen van VVR BEP bestaat.
+} 
 
-//De aanvraag tot het verlenen van VVR BEP bestaat
-feit Vw.14.1.a.aanvraag(x: Aanvrager, y: Aanvraag) {} 
+feit Vw.16.1.a(x: Aanvrager) {
+  Heeft geldige machtiging voorlopig verblijf (MVV).  
+}
 
-// de vreemdeling heeft geldige ....
-feit Vw.16.1.a(x: Aanvrager) {}
-
-// de aanvraag is afgewezen
-feit Vw.14.1.a.afwijzen(x: Aanvraag) {}
+feit Vw.14.1.a.afwijzen(x: Aanvraag) {
+ De aanvraag is afgewezen.
+}
 
 relatie RR.Vw.14.1.a.afwijzen(m: Minister, a: Aanvrager, x: Aanvraag)
   m is bevoegd jegens a omtrent afwijzen(x)

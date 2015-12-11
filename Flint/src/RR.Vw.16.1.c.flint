@@ -1,0 +1,31 @@
+context Vw.16.1.c
+
+// Aanvraag VVR BEP
+document Aanvraag
+
+rol Minister
+rol Vreemdeling
+
+feit Vw.16.1.aanvraag(x: Aanvraag) {
+}
+
+
+feit Vw.16.1.c(v: Vreemdeling) {
+c. de vreemdeling niet zelfstandig en duurzaam beschikt over voldoende middelen
+van bestaan dan wel, indien de persoon bij wie de vreemdeling wil verblijven, 
+niet zelfstandig en duurzaam beschikt over voldoende middelen van bestaan;
+}
+
+feit Vw.16.1.c.afwijzing(a: Aanvraag) {
+}
+
+
+
+//Artikel 16, eerste lid, aanhef en onder b, Vw
+relatie RR.Vw.16.1.c(m: Minister, v: Vreemdeling, a: Aanvraag)
+  m is bevoegd jegens v omtrent afwijzen(a)
+wanneer
+  Vw.16.1.aanvraag(a) en Vw.16.1.c(v)
+    
+actie afwijzen(a: Aanvraag) 
+ + Vw.16.1.c.afwijzing(a)

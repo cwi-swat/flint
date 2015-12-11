@@ -9,7 +9,7 @@ import Flint;
 import IO;
 
 public FProperty FONT = font("Menlo");
-public FProperty FONT_SIZE = fontSize(16);
+public FProperty FONT_SIZE = fontSize(24);
 public FProperty TO_ARROW = toArrow(triangle(7));
 
 FProperty onClick(Decl d) =
