@@ -18,6 +18,9 @@
 \newcommand{\deriv}[1]{{#1}^{\textrm{\textbf{deriv}}}}
 \newcommand{\decl}[1]{{#1}^{\textrm{\textbf{decl}}}}
 
+\newcommand{\stateform}{\mathcal{F}_{\textrm{\textbf{st}}}}
+\newcommand{\worldform}{\mathcal{F}_{\textrm{\textbf{w}}}}
+\newcommand{\always}{\square}
 
 \title{\flint: An Abstract Syntax and Semantics}
 
@@ -81,15 +84,23 @@ The syntax of a schema structure is as follows:
   
 \subsection{Formulas} 
 
-We postulate a set $\mathcal{V}$ of variables, which we will use in formulas. Given a schema structure $S = (OT, FT, R, \rho)$ we define the set of formulas over $S$ as the smallest set $\mathcal{F}$  such that:
+We postulate a set $\mathcal{V}$ of variables, which we will use in formulas. Given a schema structure $S = (OT, FT, R, \rho)$ we define two sets of formulas over $S$, the set $\stateform$ for \emph{state formulas} and $\worldform$ for \emph{world formulas}, as the smallest sets such that:
 \begin{itemize}
-  \item $ot(x) \in \mathcal{F}$ and $\overline{ot}(x) \in \mathcal{F}$ if $ot \in OT$ and $x \in \mathcal{V}$
-  \item $ft(r_1:x_1, \ldots, r_n:x_n) \in \mathcal{F}$ and $\overline{ft}(r_1:x_1, \ldots, r_n:x_n) \in \mathcal{F}$ if $ft \in FT$, $x_1, \ldots, x_n \in \mathcal{V}$ and $\{ r_1, \ldots, r_n \} = \{ r \mid (ft, r, ot) \in \rho \}$ with $n$ distinct elements in $\{ r_1, \ldots, r_n \}$  
-  \item $(x = y) \in \mathcal{F}$ if $x, y \in \mathcal{V}$ 
-  \item $(\varphi_1 \wedge \varphi_2) \in \mathcal{F}$ if $\varphi_1, \varphi_2 \in \mathcal{F}$
-  \item $\neg\varphi \in \mathcal{F}$ if $\varphi \in \mathcal{F}$
-  \item $(\exists\  x : \varphi) \in \mathcal{F}$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \mathcal{F}$
+  \item $ot(x) \in \worldform$ if $ot \in OT$ and $x \in \mathcal{V}$
+  \item $ft(r_1:x_1, \ldots, r_n:x_n) \in \worldform$ if $ft \in FT$, $x_1, \ldots, x_n \in \mathcal{V}$ and $\{ r_1, \ldots, r_n \} = \{ r \mid (ft, r, ot) \in \rho \}$ with $n$ distinct elements in $\{ r_1, \ldots, r_n \}$  
+  \item $(x = y) \in \worldform$ if $x, y \in \mathcal{V}$ 
+  \item $(\varphi_1 \wedge \varphi_2) \in \worldform$ if $\varphi_1, \varphi_2 \in \worldform$
+  \item $\neg\varphi \in \worldform$ if $\varphi \in \worldform$
+  \item $(\exists\  x : \varphi) \in \worldform$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \worldform$
 \end{itemize}
+and such that:
+\begin{itemize}
+  \item $\always\varphi \in \stateform$ if $\varphi \in \worldform$
+  \item $(\varphi_1 \wedge \varphi_2) \in \stateform$ if $\varphi_1, \varphi_2 \in \stateform$
+  \item $\neg\varphi \in \stateform$ if $\varphi \in \stateform$
+  \item $(\exists\  x : \varphi) \in \stateform$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \stateform$
+\end{itemize}
+
 Note that formulas such as $(\varphi_1 \vee \varphi_2)$, $(\varphi_1 \Rightarrow \varphi_2)$ and $(\forall\  x : \varphi)$ can be expressed in the formulas defined above and can be regarded as syntactic sugar.
 
 We will call a formula a \emph{positive} formula if it contains no formulas of the forms $\neg\varphi$ or $(\varphi_1 \Rightarrow \varphi_2)$.
@@ -97,18 +108,18 @@ We will call a formula a \emph{positive} formula if it contains no formulas of t
 As usual we have a notion of \emph{free variables} in a formula. A formula is said to be a \emph{closed} formula if it has no free variables.
 
 
-\subsection{Ontology rules} An \emph{ontology rule} for a schema structure $S = (OT, FT, R, \rho)$ is a formula over $S$ of the form  $\psi \Rightarrow \psi'$ where $\psi, \psi'$ are of the form (a) $ot(x)$, (b) $\overline{ot}(x)$, (c) $ft(r_1 : x_1, \ldots, r_n : x_n)$ or (d) $\overline{ft}(r_1 : x_1, \ldots, r_n : x_n)$, with $ft \in FT$, $ot \in {OT}$.
+\subsection{Ontology rules} An \emph{ontology rule} for a schema structure $S = (OT, FT, R, \rho)$ is a world formula over $S$ of the form  $\psi \Rightarrow \psi'$ where $\psi, \psi'$ are of the form (a) $ot(x)$, (b) $\neg ot(x)$, (c) $ft(r_1 : x_1, \ldots, r_n : x_n)$ or (d) $\neg {ft}(r_1 : x_1, \ldots, r_n : x_n)$, with $ft \in FT$, $ot \in {OT}$.
 
-The semantics of these rules are that in every possible world described by the state it holds that if $\psi$ is true under a certain variable assignment $\alpha$ then $\alpha(\psi')$ is also true, i.e., $\psi'$ where every variable is replaced with its value in $\alpha$, to that state.
+The semantics of these rules will be that in every possible world it holds, assuming that the free variables are universally quantified.
 
 The \emph{schema rules} for $S$ is a set of ontology rules for $S$ that contains exactly all the formulas $ft(r_1 : x_1, \ldots, r_n : x_n) \Rightarrow ot(x_i)$ under $S$ where $(ft, r_i, ot) \in \rho$.
 
-\subsection{Transition rules} A \emph{transition rule} for a schema structure $S = (OT, FT, R, \rho)$ has the form $\varphi \leadsto +(\psi_1, \ldots, \psi_n), -(\psi'_1, \ldots, \psi'_m)$ where (1) $\varphi$ is a formula for $S$, (2) $\psi_i$ and $\psi'_i$ are formulas for $S$ of the form (a) $ot(x)$, (b) $\overline{ot}(x)$, (c) $ft(r_1:x_1, \ldots, r_n:x_n)$ or (d) $\overline{ft}(r_1:x_1, \ldots, r_n:x_n)$, with $ot \in {OT}$ and $ft \in {FT}$.
+\subsection{Transition rules} A \emph{transition rule} for a schema structure $S = (OT, FT, R, \rho)$ has the form $\varphi \leadsto +(\psi_1, \ldots, \psi_n), -(\psi'_1, \ldots, \psi'_m)$ where (1) $\varphi$ is a state formula for $S$, (2) all $\psi_i$ and $\psi'_i$ are world formulas for $S$ of the form (a) $ot(x)$, (b) $\neg{ot}(x)$, (c) $ft(r_1:x_1, \ldots, r_n:x_n)$ or (d) $\neg{ft}(r_1:x_1, \ldots, r_n:x_n)$, with $ot \in {OT}$ and $ft \in {FT}$.
 
 The semantics of a transition rule is that if $\varphi$ is true in a certain state for a certain variable assignment $\alpha$, then we can move to another state where the propositions $\alpha(\psi_1), \ldots, \alpha(\psi_n)$ are asserted as certainly true and the propositions $\alpha(\psi'_1), \ldots, \alpha(\psi'_m)$ are asserted as certainly false.
 
 
-\subsection{Dynamic rules}   A \emph{dynamic rule} for a schema structure $S = (OT, FT, R, \rho)$ is a formula $\varphi$ over the schema $S' = (OT', FT', \rho')$ where
+\subsection{Dynamic rules}   A \emph{dynamic rule} for a schema structure $S = (OT, FT, R, \rho)$ is a state formula $\varphi$ over the schema $S' = (OT', FT', \rho')$ where
 \begin{itemize}
   \item $OT' = \{ \old{ot} \mid ot \in OT \} \cup \{ \new{ot} \mid ot \in OT  \}$, 
   \item $FT' = \{ \old{ft} \mid ft \in FT \} \cup \{ \new{ot} \mid ft \in FT  \}$ and 
@@ -125,29 +136,31 @@ Note that we effectively create two disjoint copies of the original schema, one 
   \item $O$ is a finite set of objects
   \item $P$ is a finite set of propositions concerning $O$ where such propositions are of one the following forms:
     \begin{itemize}
-      \item $ot(o)$ or $\overline{ot}(o)$ with $o \in O$ and $ot \in OT$,
-      \item $ft(\tau)$ or $\overline{ft}(\tau)$ where $ft \in FT$ and $\tau : R \to O$ a finite partial function, which we sometimes also denote as $r_1 : o_1, \ldots, r_n : o_n$, and which has domain $\{ r \mid (ft, r, ot) \in \rho \}$. 
+      \item $ot(o)$ or $\neg{ot}(o)$ with $o \in O$ and $ot \in OT$,
+      \item $ft(\tau)$ or $\neg{ft}(\tau)$ where $ft \in FT$ and $\tau : R \to O$ a finite partial function, which we sometimes also denote as $r_1 : o_1, \ldots, r_n : o_n$, and which has domain $\{ r \mid (ft, r, ot) \in \rho \}$. 
     \end{itemize} 
-  \item if $ot(o) \in P$ then $\overline{ot}(o) \not\in P$, and  if $\overline{ot}(o) \in P$ then ${ot}(o) \not\in P$.
-  \item if $ft(\tau) \in P$ then $\overline{ft}(\tau) \not\in P$, and if $\overline{ft}(\tau) \in P$ then ${ft}(\tau) \not\in P$.  
+  \item if $ot(o) \in P$ then $\neg{ot}(o) \not\in P$, and  if $\neg{ot}(o) \in P$ then ${ot}(o) \not\in P$.
+  \item if $ft(\tau) \in P$ then $\neg{ft}(\tau) \not\in P$, and if $\neg{ft}(\tau) \in P$ then ${ft}(\tau) \not\in P$.  
 \end{itemize}
 
 NOTE: we do not require that all objects live in at least one object type.
 
+\subsection{Possible worlds} Given an instance $I = (O, P)$ of a schema structure $S$ the associated \emph{set of possible worlds} is defined as all instances $W = (O, P')$ of $S$ such that (1) $P'$ contains only positive propositions (no negations), (2) all positive facts in $P$ also occur in $P'$ and (3) for all negative facts in $P$ it holds that the $P'$ does not contains the corresponding positive facts.
 
-\subsection{Semantics of formulas} Given a schema  structure $S = (OT, FT, R, \rho)$, an instance $I = (O, P)$ of $S$ and a variable assignment $\alpha : \mathcal{V} \to O$ we define the proposition that $\varphi$ holds in $I$ under $\alpha$ (denoted as $I, \alpha \models \varphi$) by induction as follows:
+\subsection{Semantics of formulas} Given a schema  structure $S = (OT, FT, R, \rho)$, an instance $I = (O, P)$ of $S$, a possible world $W = (O, P')$ of $I$ and a variable assignment $\alpha : \mathcal{V} \to O$ we define the proposition that world formula $\varphi$ holds in world $W$ under $\alpha$ (denoted as $W, \alpha \models \varphi$) and the proposition that state formula $\varphi$ holds in instance $I$ under $\alpha$ (denoted as $I, \alpha \models \varphi$) by induction as follows for world formulae:
 \begin{itemize}
-  \item $I, \alpha \models ot(x)$ if $ot(\alpha(x)) \in P$
-  \item $I, \alpha \models \overline{ot}(x)$ if $\overline{ot}(\alpha(x)) \in P$
-%  \item $(x.a = c) \in \mathcal{F}$ if $x$ a variable, $a$ an attribute name and $c$ a basic value constant
-%  \item $(x.a_1 = y.a_2) \in \mathcal{F}$ if $x, y$ are variables, $a_1, a_2$ are attribute names   
-  \item $I, \alpha \models ft(r_1:x_1, \ldots, r_n:x_n)$ if $ft(r_1 : \alpha(x_1), \ldots, r_n : \alpha(x_n)) \in P$
-  \item $I, \alpha \models \overline{ft}(r_1:x_1, \ldots, r_n:x_n)$ if $\overline{ft}(r_1 : \alpha(x_1), \ldots, r_n : \alpha(x_n)) \in P$  
-  \item $I, \alpha \models (x = y)$ if $\alpha(x) = \alpha(y)$   
+  \item $W, \alpha \models ot(x)$ if $ot(\alpha(x)) \in I'$
+  \item $W, \alpha \models ft(r_1:x_1, \ldots, r_n:x_n)$ if $ft(r_1 : \alpha(x_1), \ldots, r_n : \alpha(x_n)) \in I'$
+  \item $W, \alpha \models (x = y)$ if $\alpha(x) = \alpha(y)$   
+  \item $W, \alpha \models (\varphi_1 \wedge \varphi_2)$ if $I, \alpha \models \varphi_1$ and $I, \alpha \models \varphi_2$
+  \item $W, \alpha \models \neg\varphi$ if it does not hold that  $W, \alpha \models \varphi$
+  \item $W, \alpha \models (\exists\  x : \varphi)$ if there is an object $o \in O$ such that $W, \alpha_{[x \mapsto o]} \models \varphi$ where $\alpha_{[x \mapsto o]}$ denotes the function that is equal to $\alpha$ except that it maps $x$ to $o$.
+\end{itemize}
+and for state formulae:
+\begin{itemize}
+  \item $I, \alpha \models \always{\varphi}$ if in all worlds $W$ of $I$ it holds that $W, \alpha \models \varphi$
   \item $I, \alpha \models (\varphi_1 \wedge \varphi_2)$ if $I, \alpha \models \varphi_1$ and $I, \alpha \models \varphi_2$
-%  \item $I, \alpha \models (\varphi_1 \vee \varphi_2) \in \mathcal{F}$ if  $I, \alpha \models \varphi_1$ or $I, \alpha \models \varphi_2$
   \item $I, \alpha \models \neg\varphi$ if it does not hold that  $I, \alpha \models \varphi$
-%  \item $I, \alpha \models (\forall\  x : \varphi) \in \mathcal{F}$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \mathcal{F}$
   \item $I, \alpha \models (\exists\  x : \varphi)$ if there is an object $o \in O$ such that $I, \alpha_{[x \mapsto o]} \models \varphi$ where $\alpha_{[x \mapsto o]}$ denotes the function that is equal to $\alpha$ except that it maps $x$ to $o$.
 \end{itemize}
 
@@ -157,11 +170,23 @@ For closed formulas the semantics does not depend upon $\alpha$, and so we will 
 %
 %Observe that the declared projection of an instance of $S$ is clearly a pre-instance of $S$, but not necessarily an instance. We will ``repair'' this when we determine the ontological closure.
 
-\subsection{Ontological closure} Given a schema structure $S$, an instance $I = (O, P)$ of $S$ and an ontology rule $\psi \Rightarrow \psi'$ we say that $I$ is closed under this rule if it holds that for every variable assignment $\alpha$ it holds that $\psi \Rightarrow \psi'$ holds in $I$ under $\alpha$ and (2) $\overline{\psi'} \Rightarrow \overline{\psi}$ holds in $I$ under $\alpha$. Here $\overline{\psi}$ is defined such that (1) $\overline{{ft}(r_1:x_1, \ldots, r_n:x_n)} = \overline{ft}(r_1:x_1, \ldots, r_n:x_n)$, (2) $\overline{\overline{ft}(r_1:x_1, \ldots, r_n:x_n)} = {ft}(r_1:x_1, \ldots, r_n:x_n)$, (3) $\overline{{ot}(x)} = \overline{ot}(x)$ and (4)  $\overline{\overline{ot}(x)} = {ot}(x)$.  
+\subsection{Ontological closure} Given a schema structure $S$, an instance $I = (O, P)$ of $S$ and a world formula $\varphi$ we say that $I$ is closed under $\varphi$ if it holds for every variable assignment $\alpha$ that $\varphi$ holds in all worlds of $I$ under $\alpha$.
 
-NOTE: the closure under a rule corresponds to checking if all facts that can be derived in all possible worlds, are indeed derived.
+Given a schema $S$, an instance $I$ and a set $C$ of ontological rules over $S$, we define the \emph{ontological closure} of $I$, denoted as $I^*$, as the smallest super-instance of $I$ that (1) is closed under all the rules in $C$ and (2) closed under all the schema rules of $S$. Observe that such an instance always uniquely exists except if a contradiction is derived.
 
-Given a schema $S$, an instance $I$ and a set $C$ of ontological rules over $S$, we define the \emph{ontological closure} of $I$, denoted as $I^*$, as the smallest super-instance that (1) is closed under all the rules in $C$ and (2) closed under all the schema rules of $S$. Observe that such an instance always uniquely exists except if a contradiction is derived.
+The closure of $I = (O, P)$ for a set of ontology rules $C$ can be computed from $I$ as follows:
+\begin{itemize}
+  \item let $P'$ be $P$
+  \item repeat the following rule exhaustively: for each rule $\psi \Rightarrow \psi'$:
+        \begin{itemize}
+          \item for each assignment $\alpha$ s.t.\ $\alpha(\psi) \in P'$ add $\alpha(\psi')$ to $P'$
+          \item for each assignment $\alpha$ s.t.\ $\alpha(\overline{\psi'}) \in P'$ add $\alpha(\overline{\psi})$ to $P'$, where
+           \begin{itemize}
+             \item $\overline{ft(\tau)} = \neg{ft(\tau)}$, $\overline{\neg{ft(\tau)}} = ft(\tau)$, $\overline{ot(x)} = \neg{ot(x)}$, $\overline{\neg{ot(x)}} = ot(x)$
+           \end{itemize}
+        \end{itemize}
+  \item return $I' = (O, P')$ if it does not contain a contradiction
+\end{itemize}
 
 \subsection{Semantics of dynamic rules} Given a schema $S$ and a dynamic rule $\varphi$ for $S$ holds in a pair $(I_1, I_2)$ where $I_1 = (O_1, P_1)$ and $I_2 = (O_2, P_2)$ are instances of $S$ if $\varphi$ holds in $(O_1 \cup O_2, \old{P}_1 \cup \new{P}_2)$ where
 \begin{itemize}
@@ -193,11 +218,7 @@ Some technical considerations:
 
 \begin{itemize}
 
-\item It is probably more transparent for users and acceptable for fellow logicians if explicitly use modal operators in our formulas.
-
 \item The ontological rules are really weak now, more or less just subclass and simple inclusion and disjointness constraints. This is by design to keep the inferencing process scalable.
-
-\item The ontological rules are really interpreted as statements that must hold (in all possible worlds) and from which we can derive other statements if this indeed follows in all possible worlds. This means that $\psi \to \psi'$ can and should be used in both directions: if we know that $\psi$ holds then also $\psi'$ holds, but also if we know that $\psi'$ does not hold then we can infer that $\psi$ does not hold.
 
 \item Rules might be ambiguous in the sense that the same fact is both added and removed. The semantics resolves this now by giving precedence to the removal, but this is something we might want to detect and report as a ``code smell''.
 
