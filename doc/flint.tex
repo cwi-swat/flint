@@ -1,0 +1,215 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\newcommand{\flint}{{\sc Flint}}
+\newcommand{\nt}[1]{\langle {#1} \rangle}
+\newcommand{\tm}[1]{\textrm{``\textbf{#1}''}}
+\newcommand{\sem}[1]{[\![{#1}]\!]}
+\newcommand{\old}[1]{{#1}^{\textrm{\textbf{old}}}}
+\newcommand{\new}[1]{{#1}^{\textrm{\textbf{new}}}}
+\newcommand{\deriv}[1]{{#1}^{\textrm{\textbf{deriv}}}}
+\newcommand{\decl}[1]{{#1}^{\textrm{\textbf{decl}}}}
+
+
+\title{\flint: An Abstract Syntax and Semantics}
+
+\author[Jan Hidders et al.]{Jan Hidders \and
+  Tijs van der Storm \and 
+  Robert van Doesburg \and 
+  Arend Rensink \and
+  Luis Antonio Moreira Cardoso \and
+  Merijn Verstraaten \and
+  Mariette Lokin \and
+  Tom van Engers
+}
+\date{}                                           % Activate to display a given date or no date
+
+% TODO:
+% - in instance alleen gedeclareerde feiten
+% - voor evaluatie passen we ook de ontologiefeiten toe
+% - rol-domein constraint is geen inferentie regel!!
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document gives an initial description of the syntax and semantics of \flint, a language for formally describing the interpretation of laws concerning the admission of aliens into The Netherlands.
+\end{abstract}
+
+\tableofcontents
+
+\section{The Syntax of \flint}
+
+A \flint{} specification consists of four parts:
+\begin{itemize}
+  \item A \emph{schema structure}, which specifies the object-types, the fact-types and their connections.
+  \item A set of \emph{ontology rules}, which specifiy the inference rules for the schema. These rules indicate which facts are inferred automatically without requiring a transition.
+  \item A set of \emph{transition rules}, which specify the possible transitions. They indicate which facts can be added or removed by a certain transition.
+  \item A set of \emph{dynamic rules}, which specify constraints that should hold for all transitions.
+\end{itemize}
+
+\subsection{Schema structure}
+
+Formally we define a \emph{schema structure} as a tuple $S = (OT, FT, R, \rho)$ where
+\begin{itemize}
+  \item $OT$ is the set object types % which is partitioned into declared object types $\decl{OT}$ and derived object types $\deriv{OT}$
+  \item $FT$ is the set of fact types % which is partitioned into declared fact types $\decl{FT}$ and derived object types $\deriv{FT}$
+  \item $R$ is the set of role names
+  \item $\rho \subseteq FT \times R \times OT$ is a finite set that describes the \emph{roles} of fact types and their associated fact types such that for each $ft \in FT$ and $r \in R$ there is at most one $ot \in OT$ such that $(ft, r, ot)$.
+\end{itemize} 
+  
+The syntax of a schema structure is as follows:
+{\small
+\begin{align*}
+\nt{Schema} &::= ( \nt{ObjTypDecl} \mid \nt{FactTypeDecl} )^* . \\
+\nt{ObjTypeDecl} &::= \tm{Object Type:} \nt{OTName} \tm{;}. \\
+\nt{FactTypeDecl} &::= \tm{Fact Type:} \nt{FTName} \tm{(} \nt{RoleList}^? \tm{)} \tm{;}. \\
+\nt{RoleList} &::= \nt{RoleName} \tm{:} \nt{OTName} (\tm{,} \nt{RoleName} \tm{:} \nt{OTName} )^* .
+\end{align*}  
+}
+
+
+  
+\subsection{Formulas} 
+
+We postulate a set $\mathcal{V}$ of variables, which we will use in formulas. Given a schema structure $S = (OT, FT, R, \rho)$ we define the set of formulas over $S$ as the smallest set $\mathcal{F}$  such that:
+\begin{itemize}
+  \item $ot(x) \in \mathcal{F}$ and $\overline{ot}(x) \in \mathcal{F}$ if $ot \in OT$ and $x \in \mathcal{V}$
+  \item $ft(r_1:x_1, \ldots, r_n:x_n) \in \mathcal{F}$ and $\overline{ft}(r_1:x_1, \ldots, r_n:x_n) \in \mathcal{F}$ if $ft \in FT$, $x_1, \ldots, x_n \in \mathcal{V}$ and $\{ r_1, \ldots, r_n \} = \{ r \mid (ft, r, ot) \in \rho \}$ with $n$ distinct elements in $\{ r_1, \ldots, r_n \}$  
+  \item $(x = y) \in \mathcal{F}$ if $x, y \in \mathcal{V}$ 
+  \item $(\varphi_1 \wedge \varphi_2) \in \mathcal{F}$ if $\varphi_1, \varphi_2 \in \mathcal{F}$
+  \item $\neg\varphi \in \mathcal{F}$ if $\varphi \in \mathcal{F}$
+  \item $(\exists\  x : \varphi) \in \mathcal{F}$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \mathcal{F}$
+\end{itemize}
+Note that formulas such as $(\varphi_1 \vee \varphi_2)$, $(\varphi_1 \Rightarrow \varphi_2)$ and $(\forall\  x : \varphi)$ can be expressed in the formulas defined above and can be regarded as syntactic sugar.
+
+We will call a formula a \emph{positive} formula if it contains no formulas of the forms $\neg\varphi$ or $(\varphi_1 \Rightarrow \varphi_2)$.
+
+As usual we have a notion of \emph{free variables} in a formula. A formula is said to be a \emph{closed} formula if it has no free variables.
+
+
+\subsection{Ontology rules} An \emph{ontology rule} for a schema structure $S = (OT, FT, R, \rho)$ is a formula over $S$ of the form  $\psi \Rightarrow \psi'$ where $\psi, \psi'$ are of the form (a) $ot(x)$, (b) $\overline{ot}(x)$, (c) $ft(r_1 : x_1, \ldots, r_n : x_n)$ or (d) $\overline{ft}(r_1 : x_1, \ldots, r_n : x_n)$, with $ft \in FT$, $ot \in {OT}$.
+
+The semantics of these rules are that in every possible world described by the state it holds that if $\psi$ is true under a certain variable assignment $\alpha$ then $\alpha(\psi')$ is also true, i.e., $\psi'$ where every variable is replaced with its value in $\alpha$, to that state.
+
+The \emph{schema rules} for $S$ is a set of ontology rules for $S$ that contains exactly all the formulas $ft(r_1 : x_1, \ldots, r_n : x_n) \Rightarrow ot(x_i)$ under $S$ where $(ft, r_i, ot) \in \rho$.
+
+\subsection{Transition rules} A \emph{transition rule} for a schema structure $S = (OT, FT, R, \rho)$ has the form $\varphi \leadsto +(\psi_1, \ldots, \psi_n), -(\psi'_1, \ldots, \psi'_m)$ where (1) $\varphi$ is a formula for $S$, (2) $\psi_i$ and $\psi'_i$ are formulas for $S$ of the form (a) $ot(x)$, (b) $\overline{ot}(x)$, (c) $ft(r_1:x_1, \ldots, r_n:x_n)$ or (d) $\overline{ft}(r_1:x_1, \ldots, r_n:x_n)$, with $ot \in {OT}$ and $ft \in {FT}$.
+
+The semantics of a transition rule is that if $\varphi$ is true in a certain state for a certain variable assignment $\alpha$, then we can move to another state where the propositions $\alpha(\psi_1), \ldots, \alpha(\psi_n)$ are asserted as certainly true and the propositions $\alpha(\psi'_1), \ldots, \alpha(\psi'_m)$ are asserted as certainly false.
+
+
+\subsection{Dynamic rules}   A \emph{dynamic rule} for a schema structure $S = (OT, FT, R, \rho)$ is a formula $\varphi$ over the schema $S' = (OT', FT', \rho')$ where
+\begin{itemize}
+  \item $OT' = \{ \old{ot} \mid ot \in OT \} \cup \{ \new{ot} \mid ot \in OT  \}$, 
+  \item $FT' = \{ \old{ft} \mid ft \in FT \} \cup \{ \new{ot} \mid ft \in FT  \}$ and 
+  \item $\rho' = \{ (\old{ft}, r, \old{ot}) \mid (ft, r, ot) \in \rho \} \cup \{ (\new{ft}, r, \new{ot}) \mid (ft, r, ot) \in \rho \}$ 
+\end{itemize}
+Note that we effectively create two disjoint copies of the original schema, one representing the state before a transition and one representing the state after the transition. The meaning of such a formula is that for each transition the combination of the instances of the old and new state much satisfy this formula, otherwise the transition is not allowed.
+
+
+\section{The Semantics of \flint}
+
+
+\subsection{Instance of schema structure} We define an \emph{instance} of a schema structure $S = (OT, FT, R, \rho)$ as any tuple $I = (O, P)$ such that :
+\begin{itemize}
+  \item $O$ is a finite set of objects
+  \item $P$ is a finite set of propositions concerning $O$ where such propositions are of one the following forms:
+    \begin{itemize}
+      \item $ot(o)$ or $\overline{ot}(o)$ with $o \in O$ and $ot \in OT$,
+      \item $ft(\tau)$ or $\overline{ft}(\tau)$ where $ft \in FT$ and $\tau : R \to O$ a finite partial function, which we sometimes also denote as $r_1 : o_1, \ldots, r_n : o_n$, and which has domain $\{ r \mid (ft, r, ot) \in \rho \}$. 
+    \end{itemize} 
+  \item if $ot(o) \in P$ then $\overline{ot}(o) \not\in P$, and  if $\overline{ot}(o) \in P$ then ${ot}(o) \not\in P$.
+  \item if $ft(\tau) \in P$ then $\overline{ft}(\tau) \not\in P$, and if $\overline{ft}(\tau) \in P$ then ${ft}(\tau) \not\in P$.  
+\end{itemize}
+
+NOTE: we do not require that all objects live in at least one object type.
+
+
+\subsection{Semantics of formulas} Given a schema  structure $S = (OT, FT, R, \rho)$, an instance $I = (O, P)$ of $S$ and a variable assignment $\alpha : \mathcal{V} \to O$ we define the proposition that $\varphi$ holds in $I$ under $\alpha$ (denoted as $I, \alpha \models \varphi$) by induction as follows:
+\begin{itemize}
+  \item $I, \alpha \models ot(x)$ if $ot(\alpha(x)) \in P$
+  \item $I, \alpha \models \overline{ot}(x)$ if $\overline{ot}(\alpha(x)) \in P$
+%  \item $(x.a = c) \in \mathcal{F}$ if $x$ a variable, $a$ an attribute name and $c$ a basic value constant
+%  \item $(x.a_1 = y.a_2) \in \mathcal{F}$ if $x, y$ are variables, $a_1, a_2$ are attribute names   
+  \item $I, \alpha \models ft(r_1:x_1, \ldots, r_n:x_n)$ if $ft(r_1 : \alpha(x_1), \ldots, r_n : \alpha(x_n)) \in P$
+  \item $I, \alpha \models \overline{ft}(r_1:x_1, \ldots, r_n:x_n)$ if $\overline{ft}(r_1 : \alpha(x_1), \ldots, r_n : \alpha(x_n)) \in P$  
+  \item $I, \alpha \models (x = y)$ if $\alpha(x) = \alpha(y)$   
+  \item $I, \alpha \models (\varphi_1 \wedge \varphi_2)$ if $I, \alpha \models \varphi_1$ and $I, \alpha \models \varphi_2$
+%  \item $I, \alpha \models (\varphi_1 \vee \varphi_2) \in \mathcal{F}$ if  $I, \alpha \models \varphi_1$ or $I, \alpha \models \varphi_2$
+  \item $I, \alpha \models \neg\varphi$ if it does not hold that  $I, \alpha \models \varphi$
+%  \item $I, \alpha \models (\forall\  x : \varphi) \in \mathcal{F}$ if $x \in \mathcal{V}$, $ot \in OT$ and $\varphi \in \mathcal{F}$
+  \item $I, \alpha \models (\exists\  x : \varphi)$ if there is an object $o \in O$ such that $I, \alpha_{[x \mapsto o]} \models \varphi$ where $\alpha_{[x \mapsto o]}$ denotes the function that is equal to $\alpha$ except that it maps $x$ to $o$.
+\end{itemize}
+
+For closed formulas the semantics does not depend upon $\alpha$, and so we will simply write $I \models \varphi$ and say that $I$ \emph{satisfies} $\varphi$ or $\varphi$ \emph{holds in} $I$.
+
+%\subsection{Declared projection}  Given a schema structure $S = (OT, FT, R, \rho)$, an instance $I = (O, P)$ of $S$ we define the \emph{declared projection} of $I$ as the pair $\pi_{\decl{}}(I) = (O, P')$ where $P' = \{ ot(o) \mid ot(o) \in P, ot \in \decl{OT} \} \cup \{\overline{ot}(o) \mid \overline{ot}(o) \in P, ot \in \decl{OT} \} \cup \{  ft(r_1:x_1, \ldots, r_n:x_n)\mid  ft(r_1:x_1, \ldots, r_n:x_n) \in P, ft \in \decl{FT} \} \cup \{ \overline{ft}(r_1:x_1, \ldots, r_n:x_n)\mid  \overline{ft}(r_1:x_1, \ldots, r_n:x_n) \in P, ft \in \decl{FT}  \}$.
+%
+%Observe that the declared projection of an instance of $S$ is clearly a pre-instance of $S$, but not necessarily an instance. We will ``repair'' this when we determine the ontological closure.
+
+\subsection{Ontological closure} Given a schema structure $S$, an instance $I = (O, P)$ of $S$ and an ontology rule $\psi \Rightarrow \psi'$ we say that $I$ is closed under this rule if it holds that for every variable assignment $\alpha$ it holds that $\psi \Rightarrow \psi'$ holds in $I$ under $\alpha$ and (2) $\overline{\psi'} \Rightarrow \overline{\psi}$ holds in $I$ under $\alpha$. Here $\overline{\psi}$ is defined such that (1) $\overline{{ft}(r_1:x_1, \ldots, r_n:x_n)} = \overline{ft}(r_1:x_1, \ldots, r_n:x_n)$, (2) $\overline{\overline{ft}(r_1:x_1, \ldots, r_n:x_n)} = {ft}(r_1:x_1, \ldots, r_n:x_n)$, (3) $\overline{{ot}(x)} = \overline{ot}(x)$ and (4)  $\overline{\overline{ot}(x)} = {ot}(x)$.  
+
+NOTE: the closure under a rule corresponds to checking if all facts that can be derived in all possible worlds, are indeed derived.
+
+Given a schema $S$, an instance $I$ and a set $C$ of ontological rules over $S$, we define the \emph{ontological closure} of $I$, denoted as $I^*$, as the smallest super-instance that (1) is closed under all the rules in $C$ and (2) closed under all the schema rules of $S$. Observe that such an instance always uniquely exists except if a contradiction is derived.
+
+\subsection{Semantics of dynamic rules} Given a schema $S$ and a dynamic rule $\varphi$ for $S$ holds in a pair $(I_1, I_2)$ where $I_1 = (O_1, P_1)$ and $I_2 = (O_2, P_2)$ are instances of $S$ if $\varphi$ holds in $(O_1 \cup O_2, \old{P}_1 \cup \new{P}_2)$ where
+\begin{itemize}
+  \item $\old{P}_1 = \{ \old{ot}(o) \mid ot(o) \in P_1 \} \cup \{ \old{ft}(\tau) \mid ft(\tau) \in P_1 \}$
+  \item $\new{P}_2 = \{ \new{ot}(o) \mid ot(o) \in P_2 \} \cup \{ \new{ft}(\tau) \mid ft(\tau) \in P_2 \}$
+\end{itemize}
+
+\subsection{The associated state transition system}
+
+Given a \flint{} specification $(S, C, T, D)$ with $S$ a schema structure, $C$ a finite set of ontology rules over $S$, $T$ a finite set of transition rules over $S$ and $D$ a finite set of dynamic rules over $S$, we define \emph{the associated state transition system} as follows:
+\begin{itemize}
+
+  \item The \emph{states} of the system are all instances $I$ of $S$.
+  
+  \item The \emph{transitions} are all pairs  $(I_1, I_2)$ of instances of $S$, with $I_1= (O_1, P_1) $ and $I_2 = (O_2, P_2)$, where (1) $O_1 = O_2$, (2) there is a  rule $\varphi \leadsto +(\psi_1, \ldots, \psi_n), -(\psi'_1, \ldots, \psi'_m)$ in $T$ such that $P_2 = (((P_1 \cup P^+) \setminus \overline{P}^+) \cup P^- ) \setminus \overline{P}^-$ where
+       \begin{itemize}
+     \item  $P^+ = \{ \alpha(\psi_i) \mid {1 \leq i \leq n} \wedge {I^*, \alpha \models \varphi} \}$
+     \item $\overline{P}^+ =  \{ \alpha(\overline{\psi_i}) \mid {1 \leq i \leq n} \wedge {I^*, \alpha \models \varphi} \}$
+     \item  $P^- = \{ \alpha(\overline{\psi'_i}) \mid {1 \leq i \leq m} \wedge {I^*, \alpha \models \varphi} \}$
+     \item $\overline{P}^- =  \{ \alpha({\psi'_i}) \mid {1 \leq i \leq m} \wedge {I^*, \alpha \models \varphi} \}$
+       \end{itemize}
+   and (3) the pair $(I_1, I_2)$ satisfies all the dynamic rules in $D$.
+ \end{itemize}
+
+
+\section{Remarks and Research Questions}
+
+Some technical considerations:
+
+\begin{itemize}
+
+\item It is probably more transparent for users and acceptable for fellow logicians if explicitly use modal operators in our formulas.
+
+\item The ontological rules are really weak now, more or less just subclass and simple inclusion and disjointness constraints. This is by design to keep the inferencing process scalable.
+
+\item The ontological rules are really interpreted as statements that must hold (in all possible worlds) and from which we can derive other statements if this indeed follows in all possible worlds. This means that $\psi \to \psi'$ can and should be used in both directions: if we know that $\psi$ holds then also $\psi'$ holds, but also if we know that $\psi'$ does not hold then we can infer that $\psi$ does not hold.
+
+\item Rules might be ambiguous in the sense that the same fact is both added and removed. The semantics resolves this now by giving precedence to the removal, but this is something we might want to detect and report as a ``code smell''.
+
+\item Which properties of the state transition system are decidable?
+
+\item Starting from a particular instance the state space is actually finite.
+
+\item What if we only allow positive formulas for the transition rules? How should we limit the dynamic rules? 
+
+\end{itemize}
+
+
+
+
+\end{document}  
