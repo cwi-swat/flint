@@ -57,6 +57,25 @@ Call instantiateCall(Call c, Env e) {
 }
 
 
+set[value] recProd(list[set[value]] l) {
+  if (size(l) == 2) {
+    return l[0] * l[1];  
+  }
+  return l[0] * recProd(l[1..]);
+}
+
+set[list[&T]] bigprod(list[set[&T]] l) {
+  set[list[&T]] result = {};
+  for (v <- recProd(l)) {
+    t = [];
+    visit (v) {
+      case &T x: t += [x];
+    }
+    result += {t};
+  }
+  return result;
+}
+
 set[Env] allBindings({Formal ","}* fs, World world) {
   classes = { "<x>" | (Formal)`<Id _>: <Id x>` <- fs };
   objs = { k | k <- world.objects };

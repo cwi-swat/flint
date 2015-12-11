@@ -23,7 +23,7 @@ void main() {
         <msgs, hlinks> = resolve(f);
         return pt[@hyperlinks=hlinks][@messages=msgs];
       }
-      return pt[@messages={error("BUG: not a form", pt@\loc)}];
+      return pt[@messages={error("BUG: not a spec", pt@\loc)}];
     }),
     
     popup(
