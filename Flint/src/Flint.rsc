@@ -30,6 +30,17 @@ syntax Decl
   | @Foldable "situatie" Id name "{" Object* Fact* "}"
   ;
   
+syntax Decl // english
+  = @Foldable "iFact" Id "(" {Formal ","}* ")" Text
+  | "action" Id "(" {Formal ","}* ")" Statement+ 
+  | "rule" Id "(" {Formal ","}* ")" "=" Expr
+  | "rule" "unknown" Id "(" {Formal ","}* ")" "=" Expr
+  | @Foldable "relation" Id "(" {Formal ","}* ")" Relation Preconditions?
+  | "role" Id 
+  | "document" Id 
+  | @Foldable "situation" Id name "{" Object* Fact* "}"
+  ;  
+  
 syntax Object
   = Id id ":" Id class;
   
@@ -46,6 +57,7 @@ lexical Content
   
 syntax Preconditions
   = "wanneer" {Expr ","}+ conditions
+  | "when"  {Expr ","}+ conditions
   ; 
 
 syntax Statement
@@ -60,20 +72,36 @@ syntax Ref
 syntax Expr
   = Call 
   | "niet" Expr
+  | "not" Expr
   | "onbekend" Expr
-  > left Expr "en" Expr
-  > left Expr "of" Expr
+  | "unknown" Expr
+  > left (
+    left Expr "en" Expr
+    | left Expr "and" Expr
+  )  
+  > left (
+    left Expr "of" Expr
+    | left Expr "or" Expr
+  )
   | bracket "(" Expr ")"
   ;  
   
 syntax Relation
   = Id from "is" Type "jegens" Id other "omtrent" Call action
+  | Id from Type "to" Call action "of" Id other
   ; 
   
 syntax Call
   = Ref name "(" {Id ","}* args ")"
   ;
 
+syntax Type // english
+  = "has" "the" "power"
+  | "is" "immune" 
+  | "is" "liable"
+  | "has" "the" "freedom"
+  ;
+   
 syntax Type
   = "bevoegd" | "immuun"
   | "onbevoegd" | "gehouden" 

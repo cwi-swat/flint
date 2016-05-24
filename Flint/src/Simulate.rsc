@@ -77,6 +77,7 @@ set[list[&T]] bigprod(list[set[&T]] l) {
 }
 
 set[Env] allBindings({Formal ","}* fs, World world) {
+  println("all Bindings: <fs>, world = <world>");
   classes = { "<x>" | (Formal)`<Id _>: <Id x>` <- fs };
   objs = { k | k <- world.objects };
   set[str] typesOf(set[str] objs) = { world.objects[k] | k <- objs }; 
@@ -105,6 +106,7 @@ tuple[bool, Trace] eval({Expr ","}+ conds, Env env, World world) {
 } 
 
 tuple[bool, Trace] eval((Expr)`<Id f>(<{Id ","}* args>)`, Env env, World world) {
+  println("call <f>(<args>)");
   objs = [ env[a] | a <- args ];
   b = <true, "<f>", objs> in world.facts;
   if (b) {
@@ -115,6 +117,7 @@ tuple[bool, Trace] eval((Expr)`<Id f>(<{Id ","}* args>)`, Env env, World world) 
 }
 
 tuple[bool, Trace] eval((Expr)`niet <Id f>(<{Id ","}* args>)`, Env env, World world) {
+  println("niet <f>(<args>)");
   objs = [ env[a] | a <- args ];
   b = <true, "<f>", objs> in world.facts;
   if (!b) {
@@ -132,7 +135,21 @@ tuple[bool, Trace] eval((Expr)`niet <Id f>(<{Id ","}* args>)`, Env env, World wo
 //bool eval((Expr)`<Expr l> en <Expr r>`, Env env, World world)
 //  = eval(l, env, world) && eval(r, env, world);
 
+default tuple[bool, Trace] eval((Expr)`niet <Expr x>`, Env env, World world) {
+  println("niet <x>");
+  <lb, lt> = eval(x, env, world);
+  if (!lb) {
+    return <true, lt>;
+  }
+  return <false, []>;
+}
+
+tuple[bool, Trace] eval((Expr)`(<Expr x>)`, Env env, World world) 
+  = eval(x, env, world);
+
+
 tuple[bool, Trace] eval((Expr)`<Expr l> en <Expr r>`, Env env, World world) {
+  println("<l> en <r>");
   <lb, lt> = eval(l, env, world);
   if (!lb) {
     return <false, []>;
@@ -146,6 +163,7 @@ tuple[bool, Trace] eval((Expr)`<Expr l> en <Expr r>`, Env env, World world) {
 
 
 tuple[bool, Trace] eval((Expr)`<Expr l> of <Expr r>`, Env env, World world) {
+  println("<l> of <r>");
   <lb, lt> = eval(l, env, world);
   if (lb) {
     return <true, lt>;

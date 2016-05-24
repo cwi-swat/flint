@@ -31,7 +31,24 @@ b. de gemeenschapsonderdaan, voorzover niet reeds vrijgesteld op grond van een
 aanwijzing als bedoeld onder a;
 }
 
-feit Vw.17.1.c(v: Vreemdeling) {
+//
+
+//
+
+
+feit nietAndersBepaald() {
+  id = iFeitAWB.4:1.tenzij
+  juri = ...
+  bron
+  
+  tenzij bij wettelijk voorschrift anders is bepaald
+
+}
+
+feit gezondheidOnverantwoord(v: Vreemdeling) {
+  ref = Vw.17.1.c
+  juri = sdlkfjsdklfjl
+  source =
 c. de vreemdeling voor wie het gelet op diens gezondheidstoestand niet verantwoord 
 is om te reizen;
 }

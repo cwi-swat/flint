@@ -1,0 +1,61 @@
+context Vw.16.1.b.
+
+document Application
+
+rol Alien
+rol Minister
+
+feit AA.14.1.a.application(a: Alien, x: Application) {
+  the application to grant a temporary residence permit
+} 
+
+feit AA.16.1.b(a: Alien) {
+  the alien does not possess a valid border crossing document.
+}
+
+feit AD.3.72.vreemdeling(a: Alien) {
+  the alien proves that he can not (any longer) be put in possession
+  of a valid border-crossing document due to the government of his
+  country.
+}
+
+feit AAIG.B1.4.sent.4.1(a: Alien) {
+  the alien is citizen of Somalia
+}
+
+feit AAIG.B1.4.sent.4.3(a: Alien) {
+  children born in this country who apply for stay with their parents,
+  provided they meet the conditions.
+}
+
+feit AA.16.1.b.reject(a: Application) {
+  the application is rejected.
+}
+
+actie reject(a: Application) 
+ + AA.16.1.b.reject(a)
+
+relatie NR.AA.16.1.b(m: Minister, v: Alien, a: Application)
+  m is bevoegd jegens v omtrent reject(a)
+wanneer
+  AA.14.1.a.application(v, a)
+  en AA.16.1.b(v)
+  en niet (
+    AD.3.72.vreemdeling(v)
+    of AAIG.B1.4.sent.4.1(v)
+    of AAIG.B1.4.sent.4.3(v)
+  )
+  
+situatie twoApplicants {
+ ourMin: Minister
+ somalian: Alien
+ other: Alien
+ a1: Application
+ a2: Application
+
+ AA.14.1.a.application(other, a2)
+ AA.16.1.b(other)
+ 
+ AA.14.1.a.application(somalian, a1)
+ AAIG.B1.4.sent.4.1(somalian)
+}
