@@ -158,6 +158,7 @@ iFact iFACT.AA.17.1.h
   or his spouse or child
 }
 
+
 iFact iFACT.GAL.3:40.come.into.force
   source: Article 3:40 GAL
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
@@ -209,6 +210,8 @@ iFact iFACT.AA.16.1.c.reject
   long-term means of support
 }
 
+
+
 iFact iFACT.GAL.4:2.2
   source: Article 4:2, paragraph 2, GAL
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=2
@@ -218,6 +221,7 @@ iFact iFACT.GAL.4:2.2
   needed for making the decision, and over which the applicant
   can dispose of in fairness
 }
+
 
 iFact iFACT.GAL.4:5.1.c
   source: Article 4:5, paragraph 1, point c, GAL
@@ -459,6 +463,7 @@ iFact iFACT.AA.16.1.d
   security
 }
 
+
 iFact iFACT.AA.17.1.d
   source: Article 17, paragraph 1, point d, AA
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=d
@@ -608,14 +613,12 @@ when
 action:
   + iFACT.AA.16.1.f.reject
 
-
 relation NR.AA.16.1.a: 
   [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
 when 
   iFACT.AA.14.1.a.application AND iFACT.AA.16.1.a AND NOT (iFACT.AA.17.1.a OR iFACT.AA.17.1.b OR iFACT.AA.17.1.c OR iFACT.AA.17.1.d OR iFACT.AA.17.1.e OR iFACT.AA.17.1.f OR iFACT.AA.17.1.g OR iFACT.AA.17.1.h OR iFACT.AD.3.71.3)
 action:
   + iFACT.AA.16.1.a.reject
-
 
 relation NR.GAL.3:41.1: 
   [the administrative authority] has the power towards [the applicant] to [announce] [decision]
@@ -652,14 +655,12 @@ action:
   - NR.GAL.4:13.1.timelimit
   - iFACT.AA.14.1.a.application
 
-
 relation NR.AA.16.1.j: 
   [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
 when 
   iFACT.AA.14.1.a.application AND iFACT.AA.16.1.j
 action:
   + iFACT.AA.16.1.j.reject
-
 
 relation NR.AA.16.1.k: 
   [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
