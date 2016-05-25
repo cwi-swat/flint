@@ -19,8 +19,8 @@ syntax Formal
 syntax Decl
   = @Foldable "iFeit" Id MetaData* Text
   | @Foldable "iFact" Id MetaData* Text
-  | @Foldable "relatie" Id ":" Relation Preconditions? Action
-  | @Foldable "relation" Id ":" Relation Preconditions? Action
+  | @Foldable "relatie" Id ":" Relation MetaData* Preconditions? Action Text
+  | @Foldable "relation" Id ":" Relation MetaData* Preconditions? Action Text
   | @Foldable "relatie" Id ":" Relation MetaData* Text
   | @Foldable "relation" Id ":" Relation MetaData* Text
   ;  

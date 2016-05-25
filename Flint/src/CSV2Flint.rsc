@@ -144,13 +144,17 @@ str genRel2flintEnglish(FactEnv env, GenNorm r) {
   //pre = ( r.pre | replaceAll(it, k, makeId(env[k])) | k <- env, bprintln("k = <k>") ); 
   
   return 
-   "relation <r.code>: 
-   '  <r.actor> has the power towards <r.recipient> to <r.iAct> <r.object>
+   "relation <r.code>: <r.actor> has the power towards <r.recipient> to <r.iAct> <r.object>
+   '  source: <r.source>
+   '  link: <r.juriconnect>
    'when 
    '  <replaceAll(r.pre, "\r", "")>
    'action:<for (pc <- posts(r.postCreate), trim(pc) != "") {>
    '  + <pc><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
    '  - <pd><}>
+   '{
+   '  <wrap(r.text, WRAP)>
+   '}
    '";
 }
 
@@ -165,13 +169,17 @@ str genRel2flintDutch(FactEnv env, GenNorm r) {
   
   
   return 
-   "relatie <r.code> :
-   '  <r.actor> heeft de bevoegdheid jegens <r.recipient> tot het <r.iAct> van <r.object>
+   "relatie <r.code>: <r.actor> heeft de bevoegdheid jegens <r.recipient> tot het <r.iAct> van <r.object>
+   '  bron: <r.source>
+   '  link: <r.juriconnect>
    'wanneer
    '  <replaceAll(r.pre, "\r", "")>
    'actie:<for (pc <- posts(r.postCreate), trim(pc) != "") {>
    '  + <pc><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
    '  - <pd><}>
+   '{
+   '  <wrap(r.text, WRAP)>
+   '}
    '";
 }
 
