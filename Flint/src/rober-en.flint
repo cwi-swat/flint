@@ -1,20 +1,3 @@
-iFact iFACT.AA.16.1.d.reject
-  source: Article 16, paragraph 1, introduction and point d, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
-{
-  the application to grant a temporary residence permit is
-  rejected because the alien constitutes a threat to public
-  order or national security
-}
-
-iFact iFACT.AA.26.1.fulfills
-  source: Article 26, paragraph 1, AA
-  link: jci1.31:c:BWBR0011823&g=2001-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=5&Artikel=16&Lid=1
-{
-  the alien has demonstrated that he fulfills all conditions
-  for granting a residence permit
-}
-
 iFact iFACT.AA.26.1.date
   source: Article 26, paragraph 1, AA
   link: jci1.31:c:BWBR0011823&g=2001-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=5&Artikel=16&Lid=1
@@ -23,6 +6,23 @@ iFact iFACT.AA.26.1.date
   which the alien demonstrates that he meets all the
   conditions, but no earlier than from the day the application
   is received
+}
+
+iFact iFACT.AA.16.1.b.IND.PD.date.issue.before.application
+  source: NONE
+  link: GEEN
+  alias: issued before submission application
+{
+  date of issue document is before the submission date of
+  application
+}
+
+iFact iFACT.travel.doc.part.III
+  source: 
+  link: 
+  alias: recognized by all member states in part 3
+{
+  travel document recognized by all member states in part 3
 }
 
 iFact iFACT.AA.16.1.i.reject
@@ -37,13 +37,12 @@ iFact iFACT.AA.16.1.i.reject
   of a visa or a residence permit
 }
 
-iFact iFACT.AA.16.1.k.reject
-  source: Article 16, paragraph 1, introduction and point k, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=k
+iFact iFACT.GAL.1:3.3.application
+  source: Article 1:3, paragraph 3 GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
+  alias: an application
 {
-  the application to grant a temporary residence permit is
-  rejected because the sponsor did not submit a statement on
-  the residence of the alien pursuant to iFACT.AA.2a.1
+  an application
 }
 
 iFact iFACT.AA.17.1.a
@@ -51,14 +50,6 @@ iFact iFACT.AA.17.1.a
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=a
 {
   the alien possesses a designated nationality
-}
-
-iFact iFACT.AA.14.1.a.disregard
-  source: Article 14, paragraph 1, point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
-{
-  the application to grant a temporary residence permit is
-  disregarded
 }
 
 iFact iFACT.AA.16.1.e
@@ -69,14 +60,6 @@ iFact iFACT.AA.16.1.e
   for a disease designated by or under the Infectious Diseases
   Act, for the protection of public health, or to undergo
   medical treatment against such a disease
-}
-
-iFact iFACT.AA.14.1.a.grant
-  source: Article 14, paragraph 1, point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
-{
-  the application to grant a temporary residence permit is
-  granted
 }
 
 iFact iFACT.GAL.4:5.1.a
@@ -97,16 +80,6 @@ iFact iFACT.AA.16.1.a.reject
   temporary residence permit is applied for
 }
 
-iFact iFACT.AA.16.1.i
-  source: Article 16, paragraph 1, point i, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=i
-{
-  the alien has given incorrect information, or has withheld
-  information in circumstances where such information should
-  or could have resulted in the rejecting of an earlier
-  application for the grant, renewal, or change of a visa or a
-  residence permit
-}
 
 iFact iFACT.GAL.4:5.4
   source: Article 4:5, paragraph 4, GAL
@@ -118,20 +91,31 @@ iFact iFACT.GAL.4:5.4
   application has expired unused
 }
 
-iFact iFEIT.GAL.3:40
-  source: Article 3:40 GAL
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
-  alias: a decision cannot come into force before announcement
-{
-  a decision shall not come into force before it is announced
-}
-
 iFact iFACT.AA.16.1.h.knowledge
   source: Article 16, paragraph 1, point h, AA
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
 {
   the alien does not have basic knowledge of the Dutch
   language and Dutch society
+}
+
+iFact iFACT.AA.16.1.i
+  source: Article 16, paragraph 1, point i, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=i
+{
+  the alien has given incorrect information, or has withheld
+  information in circumstances where such information should
+  or could have resulted in the rejecting of an earlier
+  application for the grant, renewal, or change of a visa or a
+  residence permit
+}
+
+iFact iFACT.AAIG.B1.4.2.sentence4.1
+  source: B1/4.2 sentence 4 AAIG
+  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
+  alias: the alien is citizen of Somalia
+{
+  the alien is citizen of Somalia
 }
 
 iFact iFACT.AA.17.1.e
@@ -158,12 +142,62 @@ iFact iFACT.AA.17.1.h
   or his spouse or child
 }
 
-iFact iFACT.GAL.3:40.come.into.force
+iFact iFACT.AA.16.1.b.IND.PD.no.features.invalidity
+  source: NONE
+  link: GEEN
+  alias: no signs of invalidity
+{
+  document does not contain any features that were missing on
+  a valid document
+}
+
+iFact iFACT.AA.16.1.d.reject
+  source: Article 16, paragraph 1, introduction and point d, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
+{
+  the application to grant a temporary residence permit is
+  rejected because the alien constitutes a threat to public
+  order or national security
+}
+
+iFact iFACT.GAL.3:40
   source: Article 3:40 GAL
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
-  alias: decision has come into force
+  alias: a decision cannot come into force before announcement
 {
-  a decision has come into force because it has been announced
+  a decision shall not come into force before it is announced
+}
+
+iFact iFACT.AA.26.1.fulfills
+  source: Article 26, paragraph 1, AA
+  link: jci1.31:c:BWBR0011823&g=2001-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=5&Artikel=16&Lid=1
+{
+  the alien has demonstrated that he fulfills all conditions
+  for granting a residence permit
+}
+
+iFact 1105/2011/EU.1.visa
+  source: 
+  link: 
+  alias: visa
+{
+  a visa can be submitted to travel document
+}
+
+iFact iFACT.travel.doc.part.I.NL
+  source: 
+  link: 
+  alias: recognized by NL in part 1
+{
+  travel document recognized by the Netherlands in part 1
+}
+
+iFact iFACT.travel.doc.part.III.NL
+  source: 
+  link: 
+  alias: recognized by NL in part 3
+{
+  travel document recognized by the Netherlands in part 3
 }
 
 iFact iFACT.AA.24.2.sentence4
@@ -171,23 +205,15 @@ iFact iFACT.AA.24.2.sentence4
   link: jci1.31:c:BWBR0011823&g=2014-03-01&Hoofdstuk=3&Afdeling=3&Paragraaf=3&Artikel=24&Lid=2
   alias: Article 4:5, paragraph 4, GAL does not apply.
 {
-  Article 4:5, paragraph 4, GAL does not apply.
+  article 4:5, paragraph 4, GAL does not apply
 }
 
-iFact iFACT.AAIG.B1.4.2.sent.4.2
-  source: B1/4.2 sentence 4 AAIG
-  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
+iFact iFACT.GAL.3:40.come.into.force
+  source: Article 3:40 GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
+  alias: decision has come into force
 {
-  children born in this country born who apply for stay with
-  their parents, provided they meet the conditions
-}
-
-iFact iFACT.AAIG.B1.4.2.sent.4.1
-  source: B1/4.2 sentence 4 AAIG
-  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
-  alias: the alien is citizen of Somalia
-{
-  the alien is citizen of Somalia
+  a decision has come into force because it has been announced
 }
 
 iFact iFACT.AA.16.1.c
@@ -228,6 +254,14 @@ iFact iFACT.GAL.4:5.1.c
   the order
 }
 
+iFact iFACT.travel.doc.part.II.NL
+  source: 
+  link: 
+  alias: recognized by NL in part 2
+{
+  travel document recognized by the Netherlands in part 2
+}
+
 iFact iFACT.AA.16.1.f
   source: Article 16, paragraph 1, point f, AA
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
@@ -236,12 +270,13 @@ iFact iFACT.AA.16.1.f
   the conditions of the  Aliens Employment Act
 }
 
-iFact iFACT.GAL.3:46
-  source: Article 3:46 GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Artikel=3:46
-  alias: a valid motivation
+iFact iFACT.GAL.4:5.1.provided
+  source: Article 4:5, paragraph 1, GAL
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
 {
-  a valid motivation
+  provided that the applicant has had the opportunity to
+  supplement the application within a period specified by the
+  administrative authority
 }
 
 iFact iFACT.AA.16.1.e.reject
@@ -254,6 +289,32 @@ iFact iFACT.AA.16.1.e.reject
   Infectious Diseases Act, for the protection of public
   health, or to undergo medical treatment against such a
   disease
+}
+
+iFact BLABLA 
+  source: NONE
+  link: GEEN
+  alias: proofed possession document
+{
+  the alien has not proofed to possess a valid border-crossing
+  document
+}
+
+iFact iFACT.GAL.3:46
+  source: Article 3:46 GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Artikel=3:46
+  alias: a valid motivation
+{
+  a valid motivation
+}
+
+iFact iFACT.GAL.4:5.1.disregard
+  source: Article 4:5, paragraph 1, introduction, GAL
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: the application is diregarded
+{
+  the administrative authority decides to disregard the
+  application
 }
 
 iFact iFACT.GAL.1:3.3.stakeholder 
@@ -272,6 +333,15 @@ iFact iFACT.AA.16.1.g
   purpose for which he wishes to reside
 }
 
+iFact iFACT.AA.16.1.b.IND.PD.date.expiry.after.decision
+  source: NONE
+  link: GEEN
+  alias: expires after decision
+{
+  date of expiry document is after the date of the decision on
+  the application
+}
+
 iFact iFACT.AA.16.1.f.reject
   source: Article 16, paragraph 1, introduction and point f, AA
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
@@ -287,6 +357,24 @@ iFact iFACT.GAL.4:1.unless
   alias: unless otherwise provided by law
 {
   unless otherwise provided by law
+}
+
+iFact iFACT.AA.16.1.b.IND.PD.date.expiry.after.application
+  source: NONE
+  link: GEEN
+  alias: expires after submission application
+{
+  date of expiry document is after the submission date of
+  application
+}
+
+iFact iFACT.AA.16.1.k.reject
+  source: Article 16, paragraph 1, introduction and point k, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=k
+{
+  the application to grant a temporary residence permit is
+  rejected because the sponsor did not submit a statement on
+  the residence of the alien pursuant to iFACT.AA.2a.1
 }
 
 iFact iFACT.AA.17.1.g
@@ -311,21 +399,22 @@ iFact iFACT.AA.16.1.j
   accordance with iFACT.AA.8
 }
 
-iFact iFACT.GAL.4:5.1.providing
-  source: Article 4:5, paragraph 1, GAL
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+iFact BLA 
+  source: NONE
+  link: GEEN
+  alias: opportunity to proof possession document
 {
-  provided that the applicant has had the opportunity to
-  supplement the application within a period specified by the
-  administrative authority
+  the alien has been given the opportunity to proof he does
+  possess a valid border-crossing document
 }
 
-iFact iFACT.GAL.1:3.3.application
-  source: Article 1:3, paragraph 3 GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
-  alias: an application
+iFact 1105/2011/EU.1.borders
+  source: 
+  link: 
+  alias: borders
 {
-  an application
+  the travel document gives the holder the right to cross the
+  borders of the EU
 }
 
 iFact iFACT.GAL.4:1.authorized
@@ -369,16 +458,6 @@ iFact iFACT.AA.16.1.h.reject
   basis of Articles 3 and 5 of the Integration Act
 }
 
-iFact iFACT.GAL.4:2.1
-  source: Article 4:2, paragraph 1, GAL
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=1
-  alias: the application contains a subject, date, signature, name and address
-{
-  the application shall be signed and contains at least:a.
-  the name and address of the applicant;b. the date;c. an
-  indication of the decision is requested
-}
-
 iFact iFACT.AA.16.1.g.reject
   source: Article 16, paragraph 1, introduction and point g, AA
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=g
@@ -419,6 +498,14 @@ iFact iFACT.GAL.3:2.facts
   the relevant facts necessary to make the decision
 }
 
+iFact iFACT.travel.doc.part.II
+  source: 
+  link: 
+  alias: recognized by all member states in part 2
+{
+  travel document recognized by all member states in part 2
+}
+
 iFact iFACT.GAL.3:2.interests
   source: Article 3:2 GAL
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
@@ -435,6 +522,35 @@ iFact iFACT.AA.16.1.j.reject
   the application to grant a temporary residence permit is
   rejected because the alien resided in the Netherlands other
   than in accordance with iFACT.AA.8
+}
+
+iFact iFACT.AA.16.1.b.IND.PD.date.issue.before.decision
+  source: NONE
+  link: GEEN
+  alias: issued before decision
+{
+  date of issue document is before de datum the date of the
+  decision on the application
+}
+
+iFact iFACT.GAL.3:41.1
+  source: Article 3:41, paragraph 1, GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=1
+  alias: announcement by sending or issuing
+{
+  the announcement of the decision, which is addressed to one
+  or more stakeholders, is done by sending or issuing to
+  stakeholders, including the applicant
+}
+
+iFact iFACT.GAL.3:4.2
+  source: Article 3:4, paragraph 2 GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:4&Lid=2
+  alias: adverse consequences not disproportionate
+{
+  the adverse consequences of a decision for one or more
+  stakeholders, may not be disproportionate in relation to the
+  decision to serve goals
 }
 
 iFact iFACT.GAL.4:5.2
@@ -459,22 +575,20 @@ iFact iFACT.AA.16.1.d
   security
 }
 
+iFact iFACT.seamensbook
+  source: 
+  link: 
+  alias: no visa in seamen's book
+{
+  no visa can be submitted in a seamen's book
+}
+
 iFact iFACT.AA.17.1.d
   source: Article 17, paragraph 1, point d, AA
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=d
 {
   the alien is a victim or a witness reporting human
   trafficking
-}
-
-iFact iFEIT.GAL.3:41.1
-  source: Article 3:41, paragraph 1, GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=1
-  alias: announcement by sending or issuing
-{
-  the announcement of the decision, which is addressed to one
-  or more stakeholders, is done by sending or issuing to
-  stakeholders, including the applicant
 }
 
 iFact iFACT.AA.14.1.a.application
@@ -489,6 +603,40 @@ iFact iFACT.AA.16.1.b
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
 {
   the alien does not possess a valid border-crossing document
+}
+
+iFact iFACT.AA.14.1.a.disregard
+  source: Article 14, paragraph 1, point a, AA
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
+{
+  the application to grant a temporary residence permit is
+  disregarded
+}
+
+iFact iFACT.GAL.4:2.1
+  source: Article 4:2, paragraph 1, GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=1
+  alias: the application contains a subject, date, signature, name and address
+{
+  the application shall be signed and contains at least:a.
+  the name and address of the applicantb. the datec. an
+  indication of the decision is requested
+}
+
+iFact iFACT.AA.14.1.a.grant
+  source: Article 14, paragraph 1, point a, AA
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
+{
+  the application to grant a temporary residence permit is
+  granted
+}
+
+iFact iFACT.AA.16.1.b.IND.PD.traveldocument.name=paspoort
+  source: NONE
+  link: GEEN
+  alias: name travel document contains term "passport"
+{
+  name travel document contains the term "passport"
 }
 
 iFact iFACT.GAL.4:1.written
@@ -515,14 +663,12 @@ iFact iFACT.AA.16.1.b.reject
   border-crossing document
 }
 
-iFact iFEIT.GAL.3:41.2
-  source: Article 3:41, paragraph 2, GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=2
-  alias: announcement in another suitable way
+iFact iFACT.AA.16.1.b.IND.PD.all.authentication.features
+  source: NONE
+  link: GEEN
+  alias: document includes all the authentication features
 {
-  the announcement of the decision can not be done by sending
-  or issuing to stakeholders, including the applicant, and
-  must be done by some other suitable manner
+  document includes all the authentication features
 }
 
 iFact iFACT.AD.3.71.3
@@ -565,6 +711,24 @@ iFact iFACT.AA.17.1.f
   permit
 }
 
+iFact iFACT.GAL.3:41.2
+  source: Article 3:41, paragraph 2, GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=2
+  alias: announcement in another suitable way
+{
+  the announcement of the decision can not be done by sending
+  or issuing to stakeholders, including the applicant, and
+  must be done by some other suitable manner
+}
+
+iFact iFACT.AAIG.B1.4.2.sentence4.2
+  source: B1/4.2 sentence 4 AAIG
+  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
+{
+  children born in this country born who apply for stay with
+  their parents, provided they meet the conditions
+}
+
 iFact iFACT.GAL.1:3.3.request
   source: Article 1:3, paragraph 3 GAL
   link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
@@ -585,36 +749,32 @@ iFact iFACT.AA.16.1.h
   Articles 3 and 5 of the Integration Act
 }
 
-relation NR.AA.16.1.h: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point h, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=h
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.h.integration AND iFACT.AA.16.1.h.knowledge AND iFACT.AA.16.1.h.categories
-action:
-  + iFACT.AA.16.1.h.reject
+iFact iFACT.travel.doc.part.I
+  source: 
+  link: 
+  alias: recognized by all member states in part 1
 {
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if:the alien does
-  not have basic knowledge of the Dutch language and Dutch
-  society, while he does not belong to one of the categories
-  referred to in Article 17, first paragraph, and who, after
-  obtaining lawful residence in the Netherlands would be
-  required to integrate on the basis of Articles 3 and 5 of
-  the Integration Act.
+  travel document recognized by all member states in part 1
 }
 
-
-relation NR.AA.16.1.b: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point b, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
+relation NR.GAL.1:3.3: [stakeholder] has the power towards [the administrative authority] to [make] [a request to make a decision]
+  source: Article 1:3, Paragraph 3, GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
 when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.b AND NOT (iFACT.AD.3.72.alien OR iFACT.AAIG.B1.4.2.sentence4.1 OR iFACT.AAIG.B1.4.2.sentence4.2)
+  iFACT.GAL.1:3.3.request AND iFACT.GAL.1:3.3.stakeholder AND NOT iFACT.GAL.4:1.unless
 action:
-  + iFACT.AA.16.1.b.reject
+  + NR.GAL.3:2.DUTY
+  + NR.GAL.3:46.DUTY
+  + NR.GAL.4:1.written
+  + NR.GAL.4:1.authorized
+  + NR.GAL.4:2.1
+  + NR.GAL.4:2.2
+  + NR.GAL.4:13.1.timelimit
+  + iFACT.GAL.1:3.3.application
 {
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if: the alien
-  does not possess a valid border-crossing document.
+  The application to issue a decision is submitted in writing
+  to the administrative authority competent to decide on the
+  application, unless otherwise provided by law.
 }
 
 
@@ -655,12 +815,165 @@ when
   (iFACT.AA.14.1.grant OR iFACT.AA.14.1.reject OR iFACT.GAL.4:5.disregard) AND iFACT.GAL.3:41.1
 action:
   + iFACT.GAL.3:40.come.into.force
-  - NR.GAL.4:13.1.termijn
-  - iFACT.AA.14.1.a.aanvraag
+  - NR.GAL.4:1.written
+  - NR.GAL.4:1.authorized
+  - NR.GAL.4:2.1
+  - NR.GAL.4:2.2
+  - NR.GAL.4:13.1.timelimit
+  - iFACT.AA.14.1.a.application
 {
   The announcement of decisions addressed to one or more
   stakeholders, is done by sending or issuing them to the
   stakeholders, including the applicant.
+}
+
+
+relation NR.AA.14.1.a.grant: [Our Minister] has the power towards [the alien] to [grant] [the application to grant a temporary residence permit]
+  source: Article 14, paragraph 1, introduction and under point a, AA
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.26.1.fulfills AND iFACT.AA.26.1.date
+action:
+  + iFACT.AA.14.1.grant
+{
+  Our Minister is authorized to accept, to reject or to
+  disregard the application for granting a temporary residence
+  permit.
+}
+
+
+relation NR.AA.16.1.g: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point g, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.g
+action:
+  + iFACT.AA.16.1.g.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if: the alien
+  does not comply with the conditions related to the purpose
+  for which he wishes to reside.
+}
+
+
+relation NR.GAL.3:46: [the administrative authority] has the power towards [the applicant] to [motivate] [a decision]
+  source: Article 3:46, GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
+when 
+  iFACT.GAL.3:2.facts AND iFACT.GAL.3:2.interests
+action:
+  + iFACT.GAL.3:46
+  - NR.GAL.3:46.DUTY
+{
+  A decision must be based on a valid motivation.
+}
+
+
+relation NR.GAL.3:2: [the administrative authority] has the power towards [the applicant] to [acquire] [the necessary information concerning the relevant facts and the interests to be weighed]
+  source: Article 3:2, GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
+when 
+  iFACT.GAL.4:1.written AND iFACT.GAL.4:1.authorized
+action:
+  + iFACT.GAL.3:2.facts
+  + iFACT.GAL.3:2.interests
+  - NR.GAL.3:2.DUTY
+{
+  During the preparation of a decision the administrative
+  authority acquires the necessary information concerning the
+  relevant facts and the interests to be weighed.
+}
+
+
+relation NR.AA.16.1.h: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point h, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=h
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.h
+action:
+  + iFACT.AA.16.1.h.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if:the alien does
+  not have basic knowledge of the Dutch language and Dutch
+  society, while he does not belong to one of the categories
+  referred to in Article 17, first paragraph, and who, after
+  obtaining lawful residence in the Netherlands would be
+  required to integrate on the basis of Articles 3 and 5 of
+  the Integration Act.
+}
+
+
+relation NR.AA.16.1.b: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point b, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.b AND NOT (iFACT.AD.3.72.alien OR iFACT.AAIG.B1.4.2.sentence4.1 OR iFACT.AAIG.B1.4.2.sentence4.2)
+action:
+  + iFACT.AA.16.1.b.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if: the alien
+  does not possess a valid border-crossing document.
+}
+
+
+relation NR.AA.14.1.a.reject: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 14, paragraph 1, introduction and under point a, AA
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
+when 
+  iFACT.AA.14.1.a.application AND iFACT.GAL.3:46 AND iFACT.GAL.3:4.2
+action:
+  + iFACT.AA.14.1.a.reject
+{
+  Our Minister is authorized to accept, to reject or to
+  disregard the application for granting a temporary residence
+  permit.
+}
+
+
+relation NR.AA.16.1.j: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point j, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=j
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.j
+action:
+  + iFACT.AA.16.1.j.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if:the alien
+  resided in the Netherlands other than in accordance with
+  Article 8.
+}
+
+
+relation NR.AA.16.1.d: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point d, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.d
+action:
+  + iFACT.AA.16.1.d.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if: the alien
+  constitutes a threat to public order or national security.
+}
+
+
+relation NR.AA.16.1.k: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+  source: Article 16, paragraph 1, introduction and under point k, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=k
+when 
+  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.k
+action:
+  + iFACT.AA.16.1.k.reject
+{
+  An application to grant a temporary residence permit as
+  referred to in Article 14 may be rejected if:the sponsor
+  did not submit a statement on the residence of the alien
+  pursuant to Article 2a, first paragraph.
 }
 
 
@@ -681,30 +994,13 @@ action:
 }
 
 
-relation NR.AA.16.1.g: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point g, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.g
-action:
-  + iFACT.AA.16.1.g.reject
-{
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if: the alien
-  does not comply with the conditions related to the purpose
-  for which he wishes to reside.
-}
-
-
 relation NR.GAL.4:5: [the administrative authority] has the power towards [the applicant] to [disregard] [the application]
   source: Article 4:5, GAL
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Article=4:5
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
 when 
-  iFACT.AA.14.1.a.application AND iFACT.GAL.4:5.1.provided AND iFACT.GAL.4.5.4 AND ( iFACT.GAL.4:5.1.a OR  iFACT.GAL.4:5.1.b OF  iFACT.GAL.4:5.1.c OR  iFACT.GAL.4:5.2 OR iFACT.GAL.4:5.3)
+  iFACT.AA.14.1.a.application AND iFACT.GAL.4:5.1.provided AND iFACT.GAL.4:5.4 AND ( iFACT.GAL.4:5.1.a OR  iFACT.GAL.4:5.1.b OF  iFACT.GAL.4:5.1.c OR  iFACT.GAL.4:5.2 OR iFACT.GAL.4:5.3)
 action:
   + iFACT.GAL.4:5.disregard
-  - NR.GAL.4:13.1.timelimit
-  - iFACT.AA.14.1.a.application
 {
   1. The administrative authority may decide to disregard the
   application if:a. the applicant has not complied with any
@@ -734,95 +1030,6 @@ action:
   communicated to the applicant within four weeks after the
   application is completed, or after the specified period to
   supplement the application has expired unused.
-}
-
-
-relation NR.AA.16.1.j: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point j, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=j
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.j
-action:
-  + iFACT.AA.16.1.j.reject
-{
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if:the alien
-  resided in the Netherlands other than in accordance with
-  Article 8.
-}
-
-
-relation NR.AA.16.1.k: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point k, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=k
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.k
-action:
-  + iFACT.AA.16.1.k.reject
-{
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if:the sponsor
-  did not submit a statement on the residence of the alien
-  pursuant to Article 2a, first paragraph.
-}
-
-
-relation NR.AA.16.1.d: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 16, paragraph 1, introduction and under point d, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.16.1.d
-action:
-  + iFACT.AA.16.1.d.reject
-{
-  An application to grant a temporary residence permit as
-  referred to in Article 14 may be rejected if: the alien
-  constitutes a threat to public order or national security.
-}
-
-
-relation NR.AA.14.1.a.grant: [Our Minister] has the power towards [the alien] to [grant] [the application to grant a temporary residence permit]
-  source: Article 14, paragraph 1, introduction and under point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
-when 
-  iFACT.AA.14.1.a.application AND iFACT.AA.26.1.fulfills AND iFACT.AA.26.1.date
-action:
-  + iFACT.AA.14.1.grant
-  - NR.GAL.4:13.1.timelimit
-  - iFACT.AA.14.1.a.application
-{
-  Our Minister is authorized to accept, to reject or to
-  disregard the application for granting a temporary residence
-  permit.
-}
-
-
-relation NR.AA.14.1.a.disregarding: [Our Minister] has the power towards [the alien] to [disregard] [the application to grant a temporary residence permit]
-  source: Article 14, paragraph 1, introduction and under point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
-when 
-  iFACT.AA.14.1.a.application AND iFACT.GAL.4:5.1.providing AND iFACT.AA.24.2.disregarding
-action:
-  + iFACT.AA.14.1.a.disregarded
-  - NR.GAL.4:13.1.timelimit
-  - iFACT.AA.14.1.a.application
-{
-  Our Minister is authorized to accept, to reject or to
-  disregard the application for granting a temporary residence
-  permit.
-}
-
-
-relation NR.GAL.3:46: [the administrative authority] has the power towards [the applicant] to [motivate] [a decision]
-  source: Article 3:46, GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
-when 
-  iFACT.3:2.facts AND iFACT.3:2.interests
-action:
-  + iFACT.GAL.3:46
-  - NR.GAL.3:46.DUTY
-{
-  A decision must be based on a valid motivation.
 }
 
 
@@ -860,23 +1067,6 @@ action:
 }
 
 
-relation NR.AA.14.1.a.reject: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
-  source: Article 14, paragraph 1, introduction and under point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
-when 
-  iFACT.AA.14.1.a.application AND iFACT.GAL.3:46 AND iFACT.GAL.3:4.2
-action:
-  + iFACT.AA.14.1.a.reject
-  - NR.GAL.3:46
-  - NR.GAL.4:13.1.timelimit
-  - iFACT.AA.14.1.a.application
-{
-  Our Minister is authorized to accept, to reject or to
-  disregard the application for granting a temporary residence
-  permit.
-}
-
-
 relation NR.GAL.3:41.2: [the administrative authority] has the power towards [the applicant] to [announce] [decision]
   source: Artikel 3:41, Paragraph 2, GAL
   link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=2
@@ -884,8 +1074,12 @@ when
   (iFACT.AA.14.1.grant OR iFACT.AA.14.1.reject OR iFACT.GAL.4:5.disregard) AND iFACT.GAL.3:41.2
 action:
   + iFACT.GAL.3:40.come.into.force
-  - NR.GAL.4:13.1.termijn
-  - iFACT.AA.14.1.a.aanvraag
+  - NR.GAL.4:1.written
+  - NR.GAL.4:1.authorized
+  - NR.GAL.4:2.1
+  - NR.GAL.4:2.2
+  - NR.GAL.4:13.1.timelimit
+  - iFACT.AA.14.1.a.application
 {
   If the announcement of the decision can not be made in the
   manner as provided in the first paragraph, it shall be done
@@ -893,62 +1087,27 @@ action:
 }
 
 
-relation NR.GAL.1:3.3: [stakeholder] has the power towards [the administrative authority] to [make] [a request to make a decision]
-  source: Article 1:3, Paragraph 3, GAL
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
+relation NR.AA.14.1.a.disregard: [Our Minister] has the power towards [the alien] to [disregard] [the application to grant a temporary residence permit]
+  source: Article 14, paragraph 1, introduction and under point a, AA
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
 when 
-  iFACT.GAL.1:3.3.request AND iFACT.GAL.1:3.3.stakeholder AND NOT iFACT.GAL.4:1.unless
+  iFACT.AA.14.1.a.application AND iFACT.GAL.4:5.1.provided AND iFACT.AA.24.2.sentence3
 action:
-  + NR.GAL.4:1.authorized
-  + NR.GAL.3:46.DUTY
-  + NR.GAL.4:1.written
-  + NR.GAL.4:1.authorized
-  + NR.GAL.4:2.1
-  + NR.GAL.4:2.2
-  + NR.GAL.4:13.1.timelimit
-  + iFACT.Awb.1:3.3.application
+  + iFACT.AA.14.1.a.disregard
 {
-  The application to issue a decision is submitted in writing
-  to the administrative authority competent to decide on the
-  application, unless otherwise provided by law.
+  Our Minister is authorized to accept, to reject or to
+  disregard the application for granting a temporary residence
+  permit.
 }
 
 
-relation NR.GAL.3:2: [the administrative authority] has the power towards [the applicant] to [acquire] [the necessary information concerning the relevant facts and the interests to be weighed]
-  source: Article 3:2, GAL
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Article=3:2
-when 
-  iFACT.GAL.4:1.written AND iFACT.GAL.4:1.competent
-action:
-  + iFACT.3:2.facts
-  + iFACT.3:2.interests
-  - NR.GAL.3:2.DUTY
+relation NR.GAL.4:2.2: [the applicant] is liable towards [the administrative authority] to [the application]
+  source: Article 4:2, paragraph 2 GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=2
 {
-  During the preparation of a decision the administrative
-  authority acquires the necessary information concerning the
-  relevant facts and the interests to be weighed.
-}
-
-
-relation NR.AA.8.f: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point f, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.g: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point g, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.b: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point b, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
+  The applicant provides the data and documents that are
+  needed for making the decision, and over which the applicant
+  can dispose of in fairness.
 }
 
 relation NR.GAL.4:1.written: [the applicant] is liable towards [the administrative authority] to [the application to issue a decision]
@@ -967,14 +1126,14 @@ relation NR.GAL.3:46.DUTY: [the administrative authority] is liable towards [the
   A decision must be based on a valid motivation.
 }
 
-relation NR.AA.8.e: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point e, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+relation NR.GAL.4:2.1: [the applicant] is liable towards [the administrative authority] to [the application]
+  source: Article 4:2, paragraph 1 GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=1
 {
-  
+  The application shall be signed and contains at least:a.
+  the name and address of the applicant;b. the date;c. an
+  indication of the decision is requested.
 }
-
-
 
 relation NR.GAL.3:2.DUTY: [the administrative authority] is liable towards [the applicant] to [the necessary information concerning the relevant facts and the interests to be weighed]
   source: Article 3:2, GAL
@@ -983,45 +1142,6 @@ relation NR.GAL.3:2.DUTY: [the administrative authority] is liable towards [the 
   During the preparation of a decision the administrative
   authority acquires the necessary information concerning the
   relevant facts and the interests to be weighed.
-}
-
-relation NR.AA.8.m: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point m, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.GAL.4:13.1.timelimit: [the administrative authority] is liable towards [the applicant] to [a decision]
-  source: Article 4:13, paragraph 1, GAL
-  link: jci1.31:c:BWBR0005537&g=2009-10-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.3&Paragraaf=4.1.3.1&Artikel=4:13&Lid=1
-{
-  A decision must be given within the period laid down by law
-  or, in the absence of such a time limit, within a reasonable
-  time after receipt of the application.
-}
-
-relation NR.AA.8.h: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point h, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.i: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point i, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-
-
-relation NR.AA.8.l: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point l, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
 }
 
 relation NR.GAL.4:1.authorized: [the applicant] is liable towards [the administrative authority] to [the application to issue a decision]
@@ -1033,37 +1153,11 @@ relation NR.GAL.4:1.authorized: [the applicant] is liable towards [the administr
   application, unless otherwise provided by law.
 }
 
-relation NR.AA.8.k: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point k, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+relation NR.GAL.4:13.1.timelimit: [the administrative authority] is liable towards [the applicant] to [a decision]
+  source: Article 4:13, paragraph 1, GAL
+  link: jci1.31:c:BWBR0005537&g=2009-10-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.3&Paragraaf=4.1.3.1&Artikel=4:13&Lid=1
 {
-  
-}
-
-relation NR.AA.8.a: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point a, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.d: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point d, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.j: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point j, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
-}
-
-relation NR.AA.8.c: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
-  source: Article 8, introduction and under point c, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
-{
-  
+  A decision must be given within the period laid down by law
+  or, in the absence of such a time limit, within a reasonable
+  time after receipt of the application.
 }

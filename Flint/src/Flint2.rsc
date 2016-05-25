@@ -27,7 +27,7 @@ syntax Decl
   
   
 syntax Text
-  = "{" Content "}"
+  = @Foldable "{" Content "}"
   ;
   
 lexical Content
@@ -96,5 +96,5 @@ syntax Type
   ;
  
 lexical Id
-  = [a-zA-Z][a-zA-Z0-9.:�]* !>> [a-zA-Z0-9.]
+  = [a-zA-Z0-9][a-zA-Z0-9.:�/=]* !>> [a-zA-Z0-9.]
   ;

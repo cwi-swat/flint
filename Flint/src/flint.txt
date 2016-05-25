@@ -15,9 +15,14 @@ The idea is that the iFacts and the situational relations describe possible stat
 A declaration of generative relation contains a boolean expression, describing its preconditions. Boolean expressions consist of the standard boolean connectives (and, or, not, etc.) and may refer to iFacts and situational relations.
 Whenever the precondition is true, the relation is /enabled/.  When such a relation is enabled, it can be /enacted/ which triggers the execution of the postcondition. A postcondition is a list of iFacts or situational relations that must become true or false in the new world.
 
-Flint is accompanied with an integrated develoment environment (IDE), which provides editor services such as syntax highlighting, jump-to-definition (e.g., clicking on an iFact in a precondition or postcondition moves the cursor to its definition), and error marking. Currently, the IDE displays errors when a references iFact or relation is not defined. In the future, we will extend this with automated cross-referencing with legal texts, content completion, and more advanced consistency checks (e.g., decidability, reachability etc.), and refactoring operations.
 
-Importing an initial set of legal relations and iFacts from Excel sheets immediately uncovered a number of mistakes, due to typos or missing iFact declarations. Automated tooling for engineering such legal specifications is thus extremely useful, even if the analysis itself is very simple. 
+Subsection: Formal Analysis & Simulation
+
+Subsection: Specification Support
+
+Flint is accompanied with an integrated develoment environment (IDE), which provides editor services such as automatic syntax checking, syntax highlighting, jump-to-definition (e.g., clicking on an iFact in a precondition or postcondition moves the cursor to its definition), error marking, content completion, and hover documentation. Currently, the IDE displays errors when a references iFact or relation is not defined. In the future, we will extend this with automated cross-referencing with legal texts, more advanced consistency checks (e.g., decidability, reachability etc.), and refactoring operations (e.g., consistently renaming an iFact).
+
+We have automatically imported an initial set of legal relations and iFacts from Excel sheets, which immediately uncovered a number of mistakes due to typos or missing iFact declarations. Automated tooling for engineering such legal specifications is thus extremely useful, even if the analysis itself is very simple. 
 
 Simulation
 

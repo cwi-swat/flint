@@ -5,29 +5,33 @@ import ParseTree;
 import String;
 import List;
 
-tuple[rel[loc,loc, str], set[Message]] resolve(start[Main] m) {
+tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   env = ();
 
+  str makeDoc(Text t) = "Definition: <trim("<t>"[1..-1])>";
+
   visit (m) {
-    case (Decl)`iFeit <Id x> <MetaData* _> <Text _>`:
-      env["<x>"] = x@\loc; 
-    case (Decl)`iFact <Id x> <MetaData* _> <Text _>`:
-      env["<x>"] = x@\loc; 
-    case (Decl)`relatie <Id x>: <Relation _> <MetaData* _> <Text _>`:
-      env["<x>"] = x@\loc; 
-    case (Decl)`relation <Id x>: <Relation _> <MetaData* _> <Text _>`:
-      env["<x>"] = x@\loc; 
+    case (Decl)`iFeit <Id x> <MetaData* _> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc(t)>; 
+    case (Decl)`iFact <Id x> <MetaData* _> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc(t)>; 
+    case (Decl)`relatie <Id x>: <Relation _> <MetaData* _> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc(t)>; 
+    case (Decl)`relation <Id x>: <Relation _> <MetaData* _> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc(t)>; 
   }
   
   rel[loc, loc, str] r = {};
   set[Message] errs = {};
+  map[loc, str] docs = ();
   
   visit (m) {
     // Ref is used in expression and statements
     case (Ref)`<Id x>`: { 
       n = "<x>";
       if (n in env) {
-        r += {<x@\loc, env[n], n>};
+        r += {<x@\loc, env[n][0], n>};
+        docs[x@\loc] = env[n][1];
       }
       else {
         //alts = suggestions(env, n);
@@ -42,9 +46,9 @@ tuple[rel[loc,loc, str], set[Message]] resolve(start[Main] m) {
     }
   }
   
-  errs += { warning("Unused iFact/relation <k>", env[k]) | k <- env, env[k] notin r<1> }; 
+  errs += { warning("Unused iFact/relation <k>", env[k][0]) | k <- env, env[k] notin r<1> }; 
 
-  return <r, errs>;
+  return <r, errs, docs>;
 }
 
 

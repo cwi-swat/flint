@@ -28,7 +28,47 @@ list[CompletionProposal] flintProposer(start[Main] input, str prefix, int reques
     case (Decl)`relation <Id x>: <Relation _> <MetaData* _> <Text _>`:
       names += {"<x>"}; 
   }
-  return sort([ sourceProposal(x) | x <- names, startsWith(x, prefix) ]);
+  ps = sort([ sourceProposal(x) | x <- names, startsWith(x, prefix) ]);
+  if (prefix == "rel") {
+    ps = [ sourceProposal("relation x: [role] has the power towards [role] to [action] [object] 
+            '  source:
+            '  link:
+            'when
+            '  c
+            'action:
+            '  + iFact
+            '{
+            '  Text
+            '}", "New generative relation (English)"),
+            sourceProposal("relatie x: [role] heeft de bevoegdheid jegens [role] tot het [action] van [object] 
+            '  bron:
+            '  link:
+            'wanneer
+            '  c
+            'actie:
+            '  + iFact
+            '{
+            '  Tekst
+            '}", "New generative relation (Dutch)")] + ps;
+  }
+  if (prefix == "iFa") {
+    ps = [ sourceProposal("iFact x 
+            '  source:
+            '  link:
+            '{
+            '  Text
+            '}", "New iFact (English)") ] + ps;
+   }
+   
+   if (prefix == "iFe") {
+      ps = [ sourceProposal("iFeit x 
+            '  bron:
+            '  link:
+            '{
+            '  Tekst
+            '}", "New iFact (Dutch)")] + ps;
+  }
+  return sort(ps);
 }
 
 
@@ -40,14 +80,15 @@ void main() {
   contribs = {
     annotator(Tree(Tree pt) {
       if (start[Main] f := pt) {
-        <hlinks, msgs> = resolve(f);
-        //for (Message m <- msgs, m is error) {
-        //  println("Error: <m.msg>");
-        //}
+        <hlinks, msgs, docs> = resolve(f);
+        errs = { m.msg | m <- msgs, m is error };
+        for (e <- errs) {
+          println("Error: <e>");
+        }
         //for (Message m <- msgs, m is warning) {
         //  println("Warning: <m.msg>");
         //}
-        return pt[@hyperlinks=hlinks][@messages=msgs];
+        return pt[@hyperlinks=hlinks][@messages=msgs][@docs=docs];
       }
       return pt[@messages={error("BUG: not a spec", pt@\loc)}];
     }),
