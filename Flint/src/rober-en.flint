@@ -766,3 +766,142 @@ action:
   + iFACT.3:2.facts
   + iFACT.3:2.interests
   - NR.GAL.3:2.DUTY
+
+
+relation NR.AA.8.f: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point f, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.g: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point g, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.b: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point b, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.GAL.4:1.written: [the applicant] is liable towards [the administrative authority] to [the application to issue a decision]
+  source: Article 4:1, GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Paragraaf=4.1.1&Artikel=4:1
+{
+  The application to issue a decision is submitted in writing
+  to the administrative authority authorized to decide on the
+  application, unless otherwise provided by law.
+}
+
+relation NR.GAL.3:46.DUTY: [the administrative authority] is liable towards [the applicant] to [a decision]
+  source: Article 3:46, GAL
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.7&Artikel=3:46
+{
+  A decision must be based on a valid motivation.
+}
+
+relation NR.AA.8.e: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point e, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+
+
+relation NR.GAL.3:2.DUTY: [the administrative authority] is liable towards [the applicant] to [the necessary information concerning the relevant facts and the interests to be weighed]
+  source: Article 3:2, GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.2&Artikel=3:2
+{
+  During the preparation of a decision the administrative
+  authority acquires the necessary information concerning the
+  relevant facts and the interests to be weighed.
+}
+
+relation NR.AA.8.m: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point m, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.GAL.4:13.1.timelimit: [the administrative authority] is liable towards [the applicant] to [a decision]
+  source: Article 4:13, paragraph 1, GAL
+  link: jci1.31:c:BWBR0005537&g=2009-10-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.3&Paragraaf=4.1.3.1&Artikel=4:13&Lid=1
+{
+  A decision must be given within the period laid down by law
+  or, in the absence of such a time limit, within a reasonable
+  time after receipt of the application.
+}
+
+relation NR.AA.8.h: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point h, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.i: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point i, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+
+
+relation NR.AA.8.l: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point l, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.GAL.4:1.authorized: [the applicant] is liable towards [the administrative authority] to [the application to issue a decision]
+  source: Article 4:1, GAL
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Paragraaf=4.1.1&Artikel=4:1
+{
+  The application to issue a decision is submitted in writing
+  to the administrative authority authorized to decide on the
+  application, unless otherwise provided by law.
+}
+
+relation NR.AA.8.k: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point k, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.a: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point a, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.d: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point d, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.j: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point j, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}
+
+relation NR.AA.8.c: [the alien] is immune towards [everyone] to [lawful residence in the Netherlands]
+  source: Article 8, introduction and under point c, AA
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  
+}

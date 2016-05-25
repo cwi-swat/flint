@@ -65,8 +65,8 @@ str dutyClaimRight,// 10
 str libertyNoRight, // 11
 str refs, // 12
 str comments, // 13
-str typeEn,
 str codeEn,
+str typeEn,
 str sourceEn,
 str textEn,
 str dutyOwnerEn,
