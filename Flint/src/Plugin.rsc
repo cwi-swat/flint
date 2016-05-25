@@ -17,8 +17,6 @@ data CompletionProposal
   | errorProposal(str errorText) /*3*/
   ;
 list[CompletionProposal] flintProposer(start[Main] input, str prefix, int requestOffset) {
-  println(prefix);
-  println(requestOffset);
   names = {};
   visit (input) {
     case (Decl)`iFeit <Id x> <MetaData* _> <Text _>`:
@@ -43,12 +41,12 @@ void main() {
     annotator(Tree(Tree pt) {
       if (start[Main] f := pt) {
         <hlinks, msgs> = resolve(f);
-        for (Message m <- msgs, m is error) {
-          println("Error: <m.msg>");
-        }
-        for (Message m <- msgs, m is warning) {
-          println("Warning: <m.msg>");
-        }
+        //for (Message m <- msgs, m is error) {
+        //  println("Error: <m.msg>");
+        //}
+        //for (Message m <- msgs, m is warning) {
+        //  println("Warning: <m.msg>");
+        //}
         return pt[@hyperlinks=hlinks][@messages=msgs];
       }
       return pt[@messages={error("BUG: not a spec", pt@\loc)}];
