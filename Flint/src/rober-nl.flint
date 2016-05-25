@@ -852,3 +852,203 @@ wanneer
   iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.j
 actie:
   + iFEIT.Vw.16.1.j.afwijzen
+
+
+relatie NR.Vw.8.k: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder k, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:k. gedurende de periode waarin de vreemdeling door
+  Onze Minister in de gelegenheid wordt gesteld aangifte te
+  doen van overtreding van artikel 273f van het Wetboek van
+  Strafrecht
+}
+
+relatie NR.Awb.4:1.bevoegd: [de aanvrager] is gehouden jegens [het bestuursorgaan] tot [de aanvraag tot het geven van een beschikking]
+  bron: Artikel 4:1 Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Paragraaf=4.1.1&Artikel=4:1
+{
+  Tenzij bij wettelijk voorschrift anders is bepaald, wordt de
+  aanvraag tot het geven van een beschikking schriftelijk
+  ingediend bij het bestuursorgaan dat bevoegd is op de
+  aanvraag te beslissen.
+}
+
+relatie NR.Awb.3:2.VERPLICHT: [het bestuursorgaan] is gehouden jegens [de aanvrager] tot [de nodige kennis omtrent de relevante feiten en de af te wegen belangen]
+  bron: Artikel 3:2 Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.2&Artikel=3:2
+{
+  Bij de voorbereiding van een besluit vergaart het
+  bestuursorgaan de nodige kennis omtrent de relevante feiten
+  en de af te wegen belangen.
+}
+
+relatie NR.Vw.8.g: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder g, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:g. in afwachting van de beslissing op een aanvraag
+  tot het verlenen van de verblijfsvergunning, bedoeld in de
+  artikelen 20, 33 en 45a, of tot het verlengen van de
+  geldigheidsduur van de verblijfsvergunning, bedoeld in de
+  artikelen 14 en 28, of een wijziging ervan, terwijl bij of
+  krachtens deze wet of op grond van een rechterlijke
+  beslissing uitzetting van de aanvrager achterwege dient te
+  blijven totdat op de aanvraag is beslist
+}
+
+relatie NR.Vw.8.e: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder e, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:e. als gemeenschapsonderdaan zolang deze onderdaan
+  verblijf houdt op grond van een regeling krachtens het
+  Verdrag tot oprichting van de Europese Gemeenschap dan wel
+  de Overeenkomst betreffende de Europese Economische Ruimte
+}
+
+relatie NR.Awb.4:1.schriftelijk: [de aanvrager] is gehouden jegens [het bestuursorgaan] tot [de aanvraag tot het geven van een beschikking]
+  bron: Artikel 4:1 Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Paragraaf=4.1.1&Artikel=4:1
+{
+  Tenzij bij wettelijk voorschrift anders is bepaald, wordt de
+  aanvraag tot het geven van een beschikking schriftelijk
+  ingediend bij het bestuursorgaan dat bevoegd is op de
+  aanvraag te beslissen.
+}
+
+relatie NR.Vw.8.d: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder d, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:d. op grond van een verblijfsvergunning voor
+  onbepaalde tijd als bedoeld in artikel 33, of een
+  EU-verblijfsvergunning voor langdurig ingezetenen als
+  bedoeld in artikel 45a indien op het aan de vreemdeling
+  verschafte document, bedoeld in artikel 9, de aantekening,
+  bedoeld in artikel 45c, eerste lid, is geplaatst
+}
+
+relatie NR.Vw.8.f: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:f. in afwachting van de beslissing op een aanvraag
+  tot het verlenen van de verblijfsvergunning, bedoeld in de
+  artikelen 14 en 28, terwijl bij of krachtens deze wet dan
+  wel op grond van een rechterlijke beslissing uitzetting van
+  de aanvrager achterwege dient te blijven totdat op de
+  aanvraag is beslist
+}
+
+relatie NR.Awb.4:13.1.termijn: [het bestuursorgaan] is gehouden jegens [de aanvrager] tot [een beschikking]
+  bron: Artikel 4:13, eerste lid, Awb
+  link: jci1.31:c:BWBR0005537&g=2009-10-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.3&Paragraaf=4.1.3.1&Artikel=4:13&Lid=1
+{
+  Een beschikking dient te worden gegeven binnen de bij
+  wettelijk voorschrift bepaalde termijn of, bij het ontbreken
+  van zulk een termijn, binnen een redelijke termijn na
+  ontvangst van de aanvraag.
+}
+
+relatie NR.Vw.8.m: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder m, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:m. indien de aanvraag tot het verlenen van een
+  verblijfsvergunning voor bepaalde tijd als bedoeld in
+  artikel 28 niet in behandeling is genomen op grond van
+  artikel 30 terwijl hij in afwachting is van de feitelijke
+  overdracht naar een verantwoordelijke lidstaat in de zin van
+  de Dublinverordening
+}
+
+relatie NR.Vw.8.a: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:a. op grond van een verblijfsvergunning voor
+  bepaalde tijd als bedoeld in artikel 14
+}
+
+relatie NR.Vw.8.i: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder i, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:i. gedurende de vrije termijn, bedoeld in artikel
+  12, zolang het verblijf van de vreemdeling bij of krachtens
+  artikel 12 is toegestaan
+}
+
+relatie NR.Vw.8.c: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder c, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:c. op grond van een verblijfsvergunning voor
+  bepaalde tijd als bedoeld in artikel 28
+}
+
+
+
+
+
+relatie NR.Awb.3:46.VERPLICHT: [het bestuursorgaan] is gehouden jegens [de aanvrager] tot [een besluit]
+  bron: Artikel 3:46 Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.7&Artikel=3:46
+{
+  Een besluit dient te berusten op een deugdelijke motivering.
+}
+
+relatie NR.Vw.8.j: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder j, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:j. indien tegen de uitzetting beletselen bestaan
+  als bedoeld in artikel 64
+}
+
+relatie NR.Vw.8.b: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:b. op grond van een verblijfsvergunning voor
+  onbepaalde tijd als bedoeld in artikel 20, of een
+  EU-verblijfsvergunning voor langdurig ingezetenen als
+  bedoeld in artikel 45a indien op het aan de vreemdeling
+  verschafte document, bedoeld in artikel 9, geen aantekening
+  als bedoeld in artikel 45c, eerste lid, is geplaatst
+}
+
+relatie NR.Vw.8.l: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder l, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:l. indien de vreemdeling verblijfsrecht ontleent
+  aan het Associatiebesluit 1/80 van de Associatieraad
+  EEG/Turkije
+}
+
+relatie NR.Vw.8.h: [de vreemdeling] is immuun jegens [ieder] tot [rechtmatig verblijf in Nederland]
+  bron: Artikel 8, aanhef en onder h, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=1&Artikel=8
+{
+  De vreemdeling heeft in Nederland uitsluitend rechtmatig
+  verblijf:h. in afwachting van de beslissing op een
+  bezwaarschrift of een beroepschrift, terwijl bij of
+  krachtens deze wet of op grond van een rechterlijke
+  beslissing uitzetting van de aanvrager achterwege dient te
+  blijven totdat op het bezwaarschrift of het beroepschrift is
+  beslist
+}

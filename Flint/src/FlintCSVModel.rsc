@@ -51,20 +51,20 @@ str comments
 alias GenNormRelCore = set[GenNorm];
 
 alias SitNormRel = rel[
-str \type,
-str code,
-str juriconnect,
-str source,
-str text,
-str dutyOwner,
-str claimrightOwner,
-str liberyOwner,
-str noRightOwner,
-str object,
-str dutyClaimRight,
-str liberyNoRight,
-str refs,
-str comments,
+str \type, // 0
+str code, // 1
+str juriconnect, //2
+str source, // 3
+str text, // 4
+str dutyOwner, //5
+str claimrightOwner, //6
+str libertyOwner, // 7
+str noRightOwner, // 8
+str object, // 9
+str dutyClaimRight,// 10
+str libertyNoRight, // 11
+str refs, // 12
+str comments, // 13
 str typeEn,
 str codeEn,
 str sourceEn,
@@ -89,11 +89,11 @@ str source,
 str text,
 str dutyOwner,
 str claimrightOwner,
-str liberyOwner,
+str libertyOwner,
 str noRightOwner,
 str object,
 str dutyClaimRight,
-str liberyNoRight,
+str libertyNoRight,
 str refs,
 str comments
 ];

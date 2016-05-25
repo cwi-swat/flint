@@ -6,12 +6,16 @@ import List;
 import IO;
 import FlintCSVModel;
 
+private int WRAP = 60;
+
 str csvs2flint(bool english) {
   rels = readCSV(#GenNormRel, |project://Flint/IND%20-%20Generatieve%20Normative%20Relaties.csv|, separator=";");
   ifacts = readCSV(#IFactRel, |project://Flint/IND%20-%20iFEITen.csv|, separator=";");
+  srels = readCSV(#SitNormRel, |project://Flint/IND%20-%20Situational%20Normative%20Relaties.csv|, separator=";");
   factSrc = ifacts2flint(ifacts, english=english);
+  sitSrc = sitRel2flint((), srels, english=english);
   relSrc = genRel2flint((), rels, english=english);
-  return "<factSrc>\n\n<relSrc>";
+  return "<factSrc>\n\n<relSrc>\n\n<sitSrc>";
 }
 
 
@@ -19,6 +23,68 @@ GenNormRel readGenNormRel() {
   return readCSV(#GenNormRel, |project://Flint/IND%20-%20Generatieve%20Normative%20Relaties.csv|, separator=";");
 }
 
+
+str sitRel2flint(FactEnv env, SitNormRel sitRel, bool english = false) {
+  if (english) {
+    return sitRel2flintGen(env, sitRel<14, 15, 2, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26>, sitRel2flintEnglish);
+  }
+  return sitRel2flintGen(env, sitRel<0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13>, sitRel2flintDutch);
+}
+
+str sitRel2flintGen(FactEnv env, SitNormRelCore r, str(FactEnv, SitNorm) f) 
+  = intercalate("\n\n", [ f(env, x) | x <- r ]);
+
+bool bogus(SitNorm x) {
+  if (trim(x.dutyOwner) == "" && trim(x.claimrightOwner) == "") {
+    return true;
+  }
+  if (trim(x.libertyOwner) == "" && trim(x.noRightOwner) == "") {
+    return true;
+  }
+  return false;
+}
+
+
+str sitRel2flintDutch(FactEnv env, SitNorm r) {
+  actor = "UNKNOWN";
+  towards = "UNKNOWN";
+  re = "UNKNOWN";
+  
+  switch (r.\type) {
+    case "VERPLICHTING-AANSPRAAK": {
+      actor = r.dutyOwner;
+      towards = r.claimrightOwner;
+      re = "is gehouden";
+      act = r.dutyClaimRight;
+    }
+    case "VRIJHEID-GEEN AANSPRAAK": {
+      actor = r.libertyOwner;
+      towards = r.noRightOwner;
+      re = "is immuun";
+      act = r.libertyNoRight;
+    }
+    default:
+      throw "unsupported relation: <r.\type>";
+    
+  }
+  
+  if (trim(actor) == "") {
+    return "";
+  }
+  
+  return 
+   "relatie <r.code>: <actor> <re> jegens <towards> tot <r.object>
+   '  bron: <r.source>
+   '  link: <r.juriconnect>
+   '{
+   '  <wrap(r.text, WRAP)>
+   '}";
+}
+
+
+/*
+ * Generative relations
+ */
 
 str genRel2flint(FactEnv env, GenNormRel genRel, bool english = false) {
   if (english) {
@@ -98,7 +164,7 @@ str ifact2flintDutch(<str obj, str name, str def, str juri, str src, str comment
     '  link: <juri><if (trim(name) != ""){>
     '  alias: <name><}>
     '{
-    '  <wrap(def, 60)>
+    '  <wrap(def, WRAP)>
     '}";
 
 str ifact2flintEnglish(<str obj, str name, str def, str juri, str src, str comments>)
@@ -107,7 +173,7 @@ str ifact2flintEnglish(<str obj, str name, str def, str juri, str src, str comme
     '  link: <juri><if (trim(name) != ""){>
     '  alias: <name><}>
     '{
-    '  <wrap(def, 60)>
+    '  <wrap(def, WRAP)>
     '}";
     
 str makeId(str x) = intercalate("", [elts[0]] + [ capitalize(e) | e <- elts[1..] ])

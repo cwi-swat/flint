@@ -21,6 +21,8 @@ syntax Decl
   | @Foldable "iFact" Id MetaData* Text
   | @Foldable "relatie" Id ":" Relation Preconditions? Action
   | @Foldable "relation" Id ":" Relation Preconditions? Action
+  | @Foldable "relatie" Id ":" Relation MetaData* Text
+  | @Foldable "relation" Id ":" Relation MetaData* Text
   ;  
   
   
@@ -72,7 +74,9 @@ syntax Expr
   
 syntax Relation
   = Name from Type "jegens" Name other "tot" "het" Name action "van" Name object
+  | Name from Type "jegens" Name other "tot" Name object
   | Name from Type "towards" Name "to" Name action Name object
+  | Name from Type "towards" Name "to" Name object
   ; 
 
 syntax Name
