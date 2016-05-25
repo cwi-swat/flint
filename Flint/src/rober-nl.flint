@@ -882,7 +882,6 @@ actie:
   af te wijzen dan wel niet in behandeling te nemen;
 }
 
-
 relatie NR.Vw.16.1.d: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
   bron: Artikel 16, eerste lid, aanhef en onder d, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
@@ -1094,7 +1093,8 @@ actie:
 }
 
 
-relatie NR.Vw.16.1.g: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+relatie NR.Vw.16.1.g: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] 
+ tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
   bron: Artikel 16, eerste lid, aanhef en onder g, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
 wanneer

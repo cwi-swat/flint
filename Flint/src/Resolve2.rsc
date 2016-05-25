@@ -46,7 +46,7 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
     }
   }
   
-  errs += { warning("Unused iFact/relation <k>", env[k][0]) | k <- env, env[k] notin r<1> }; 
+  errs += { warning("Unused iFact/relation <k>", env[k][0]) | k <- env, env[k][0] notin r<1> }; 
 
   return <r, errs, docs>;
 }
