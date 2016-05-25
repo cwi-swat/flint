@@ -1,0 +1,205 @@
+
+
+
+
+hasPower('NR.AA.16.1.h', 'Our Minister', 'the alien', 'reject', 'the application to grant a temporary residence permit')
+ :- fact('iFACT.AA.14.1.a.application'),
+    fact('iFACT.AA.16.1.h.integration'),
+    fact('iFACT.AA.16.1.h.knowledge'),
+    fact('iFACT.AA.16.1.h.categories').
+
+enactPower('NR.AA.16.1.h', 
+   'Our Minister'(X), 
+   'the alien'(Y), 
+   'reject', 
+   'the application to grant a temporary residence permit'(Z)) 
+ :- hasPower('NR.AA.16.1.h', 
+     'Our Minister'(X), 
+     'the alien'(Y), 
+     'reject', 
+     'the application to grant a temporary residence permit'(Z)),
+    assert(fact('iFACT.AA.16.1.h.reject'(X, Y, Z)).
+   
+
+relatie NR.Vw.14.1.a.inwilligen: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [inwilligen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 14, eerste lid, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.26.1.voldoen EN iFEIT.Vw.26.1.datum
+actie:
+  + iFEIT.Vw.14.1.a.inwilligen
+{
+  Onze Minister is bevoegd: de aanvraag tot het verlenen van
+  een verblijfsvergunning voor bepaalde tijd in te willigen,
+  af te wijzen dan wel niet in behandeling te nemen;
+}
+
+
+relatie NR.Vw.16.1.d: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder d, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.d
+actie:
+  + iFEIT.Vw.16.1.d.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling een gevaar vormt voor de
+  openbare orde of nationale veiligheid;
+}
+
+
+relatie NR.Awb.3:41.2: [het bestuursorgaan] heeft de bevoegdheid jegens [belanghebbenden] tot het [bekendmaken] van [besluit]
+  bron: Artikel 3:41, tweede lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=2
+wanneer
+  (iFEIT.Vw.14.1.inwilligen OF iFEIT.Vw.14.1.afwijzen OF iFEIT.Awb.4:5.niet.in.behandeling.nemen) EN iFEIT.Awb.3:41.2
+actie:
+  + iFEIT.Awb.3:40.besluit.in.werking
+  - NR.Awb.4:13.1.termijn
+  - iFEIT.Vw.14.1.a.aanvraag
+{
+  Indien de bekendmaking van het besluit niet kan geschieden
+  op de wijze als voorzien in het eerste lid, geschiedt zij op
+  een andere geschikte wijze.
+}
+
+
+relatie NR.Vw.16.1.g: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder g, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.g
+actie:
+  + iFEIT.Vw.16.1.g.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling niet voldoet aan de
+  beperking, verband houdende met het doel waarvoor hij wil
+  verblijven;
+}
+
+
+relatie NR.Vw.16.1.a: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=a
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag AND iFEIT.Vw.16.1.a AND NOT (iFEIT.Vw.17.1.a OR iFEIT.Vw.17.1.b OR iFEIT.Vw.17.1.c OR iFEIT.Vw.17.1.d OR iFEIT.Vw.17.1.e OR iFEIT.Vw.17.1.f OR iFEIT.Vw.17.1.g OR iFEIT.Vw.17.1.h OR iFEIT.Vb.3.71.3)
+actie:
+  + iFEIT.Vw.16.1.a.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling niet beschikt over een
+  geldige machtiging tot voorlopig verblijf die overeenkomt
+  met het verblijfsdoel waarvoor de verblijfsvergunning is
+  aangevraagd;
+}
+
+
+relatie NR.Awb.3.46: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [motiveren] van [een besluit]
+  bron: Artikel 3:46 Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
+wanneer
+  iFEIT.3:2.feiten EN iFEIT.3:2.belangen EN NIET (iFEIT.Awb.4:7.1.a OF iFEIT.Awb.4:7.1.b)
+actie:
+  + iFEIT.Awb.3:46
+  - NR.Awb.3:46.VERPLICHT
+{
+  Een besluit dient te berusten op een deugdelijke motivering.
+}
+
+
+relatie NR.Vw.16.1.b: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.b EN NIET (iFEIT.Vb.3.72.alien OR iFEIT.Vc.B1.4.2.zin4.1 OF iFEIT.Vc.B1.4.2.zin4.2)
+actie:
+  + iFEIT.Vw.16.1.b.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling niet beschikt over een
+  geldig document voor grensoverschrijding;
+}
+
+
+relatie NR.Vw.16.1.h: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder h, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=h
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.h.inburgeringsplichtig EN iFEIT.Vw.16.1.h.kennis EN iFEIT.Vw.16.1.h.categorie�n
+actie:
+  + iFEIT.Vw.16.1.h.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling, die niet behoort tot een
+  der categorie�n, bedoeld in artikel 17, eerste lid, na
+  verkrijging van rechtmatig verblijf in Nederland
+  inburgeringsplichtig zou zijn op grond van de artikelen 3 en
+  5 van de Wet inburgering en niet beschikt over kennis op
+  basisniveau van de Nederlandse taal en de Nederlandse
+  maatschappij;
+}
+
+
+relatie NR.Vw.16.1.f: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=f
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.f
+actie:
+  + iFEIT.Vw.16.1.f.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling voor een werkgever arbeid
+  verricht, zonder dat aan de Wet arbeid vreemdelingen is
+  voldaan;
+}
+
+
+relatie NR.Awb.4:5: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [niet in behandeling nemen] van [de aanvraag]
+  bron: Artikel 4:5 Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Article=4:5
+wanneer
+  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Awb.4:5.1.mits EN iFEIT.Awb.4.5.4 EN ( iFEIT.Awb.4:5.1.a OF  iFEIT.Awb.4:5.1.b OF  iFEIT.Awb.4:5.1.c OF iFEIT.Awb.4:5.2 OF iFEIT.Awb.4:5.3)
+actie:
+  + iFEIT.Awb.4:5.niet.in.behandeling.nemen
+{
+  1. Het bestuursorgaan kan besluiten de aanvraag niet te
+  behandelen, indien:
+a. de aanvrager niet heeft voldaan aan
+  enig wettelijk voorschrift voor het in behandeling nemen van
+  de aanvraag, of
+b. de aanvraag geheel of gedeeltelijk is
+  geweigerd op grond van artikel 2:15, of
+c. de verstrekte
+  gegevens en bescheiden onvoldoende zijn voor de beoordeling
+  van de aanvraag of voor de voorbereiding van de
+  beschikking,
+mits de aanvrager de gelegenheid heeft gehad de
+  aanvraag binnen een door het bestuursorgaan gestelde termijn
+  aan te vullen.
+2. Indien de aanvraag of een van de daarbij
+  behorende gegevens of bescheiden in een vreemde taal is
+  gesteld en een vertaling daarvan voor de beoordeling van de
+  aanvraag of voor de voorbereiding van de beschikking
+  noodzakelijk is, kan het bestuursorgaan besluiten de
+  aanvraag niet te behandelen, mits de aanvrager de
+  gelegenheid heeft gehad binnen een door het bestuursorgaan
+  gestelde termijn de aanvraag met een vertaling aan te
+  vullen. 
+3. Indien de aanvraag of een van de daarbij
+  behorende gegevens of bescheiden omvangrijk of ingewikkeld
+  is en een samenvatting voor de beoordeling van de aanvraag
+  of voor de voorbereiding van de beschikking noodzakelijk is,
+  kan het bestuursorgaan besluiten de aanvraag niet te
+  behandelen, mits de aanvrager de gelegenheid heeft gehad
+  binnen een door het bestuursorgaan gestelde termijn de
+  aanvraag met een samenvatting aan te vullen.
+}

@@ -899,7 +899,7 @@ relation NR.GAL.1:3.3: [stakeholder] has the power towards [the administrative a
 when 
   iFACT.GAL.1:3.3.request AND iFACT.GAL.1:3.3.stakeholder AND NOT iFACT.GAL.4:1.unless
 action:
-  + NR.GAL.3:2.DUTY
+  + NR.GAL.4:1.authorized
   + NR.GAL.3:46.DUTY
   + NR.GAL.4:1.written
   + NR.GAL.4:1.authorized

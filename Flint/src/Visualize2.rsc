@@ -1,10 +1,11 @@
-module Visualize2
+module Visualize
 
 import vis::Figure;
 import ParseTree;
 import List;
 import util::Editors;
 import vis::KeySym;
+import Flint;
 import IO;
 
 public FProperty FONT = font("Menlo");
@@ -26,6 +27,9 @@ FProperty onClickExpr(Expr d) =
 
 Edges exprToEdges(e:(Expr)`niet <Expr a>`)
   = [edge(exprId(a), exprId(e))] + exprToEdges(a);
+
+Edges exprToEdges(e:(Expr)`onbekend <Expr a>`)
+  = [edge(exprId(e), exprId(a))] + exprToEdges(a);
 
 Edges exprToEdges(e:(Expr)`<Expr l> en <Expr r>`)
   = [edge(exprId(l), exprId(e)), edge(exprId(r), exprId(e))]
