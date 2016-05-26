@@ -8,30 +8,43 @@ import List;
 tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   env = ();
 
-  str makeDoc(Text t) = "Definition: <trim("<t>"[1..-1])>";
+  str makeDoc(str label, Text t) = "<label>: <trim("<t>"[1..-1])>";
 
   visit (m) {
     case (Decl)`iFeit <Id x> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc(t)>; 
+      env["<x>"] = <x@\loc, makeDoc("iFeit", t)>; 
     case (Decl)`iFact <Id x> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc(t)>; 
+      env["<x>"] = <x@\loc, makeDoc("iFact", t)>; 
     case (Decl)`relatie <Id x>: <Relation _> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc(t)>; 
+      env["<x>"] = <x@\loc, makeDoc("relatie", t)>; 
     case (Decl)`relation <Id x>: <Relation _> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc(t)>; 
+      env["<x>"] = <x@\loc, makeDoc("relation", t)>; 
   }
   
   rel[loc, loc, str] r = {};
   set[Message] errs = {};
   map[loc, str] docs = ();
   
-  visit (m) {
+  ctx = "";
+  // used-in links
+  rel[loc, loc, str] rinv = {};
+  
+  top-down visit (m) {
     // Ref is used in expression and statements
+    
+    case (Decl)`relatie <Id d>: <Relation _> <MetaData* _> <Preconditions? _> <Action _> <Text _>`: 
+      ctx = "<d>";
+      
+    case (Decl)`relation <Id d>: <Relation _> <MetaData* _> <Preconditions? _> <Action _> <Text _>`: 
+      ctx = "<d>";
+  
+    
     case (Ref)`<Id x>`: { 
       n = "<x>";
       if (n in env) {
         r += {<x@\loc, env[n][0], n>};
         docs[x@\loc] = env[n][1];
+        rinv += {<env[n][0], x@\loc, ctx>};
       }
       else {
         //alts = suggestions(env, n);
@@ -48,7 +61,7 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   
   errs += { warning("Unused iFact/relation <k>", env[k][0]) | k <- env, env[k][0] notin r<1> }; 
 
-  return <r, errs, docs>;
+  return <r + rinv, errs, docs>;
 }
 
 
