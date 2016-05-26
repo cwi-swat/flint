@@ -1,3 +1,12 @@
+iFeit Vw.17.1.c
+  bron: Artikel 17, lid 1, onder c, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=c
+  alias: vreemdeling kan vanwege gezondheid niet reizen
+{
+  het is voor de vreemdeling, gelet op diens
+  gezondheidstoestand, niet verantwoord om te reizen
+}
+
 iFeit 1105/2011/EU.1.buitengrens
   bron: 
   link: 
@@ -7,7 +16,7 @@ iFeit 1105/2011/EU.1.buitengrens
   van de buitengrenzen
 }
 
-iFeit iFEIT.travel.doc.part.I.NL
+iFeit travel.doc.part.I.NL
   bron: 
   link: 
   alias: erkend door NL in bijlage 1
@@ -15,7 +24,19 @@ iFeit iFEIT.travel.doc.part.I.NL
   reisdocument erkend door Nederland in bijlage 1
 }
 
-iFeit iFEIT.Awb.4:5.1.b
+iFeit Vb.3.71.3
+  bron: Artikel 3.71, lid 3, Vb
+  link: jci1.31:c:BWBR0011825&g=2016-03-01&Hoofdstuk=3&Afdeling=2&Paragraaf=3&Artikel=3.71&Lid=3
+  alias: afwijzing leidt tot onbillikheid
+{
+  afwijzen van de aanvraag van een verblijfsvergunning voor
+  bepaalde tijd omdat de vreemdeling niet beschikt over een
+  geldige machtiging tot voorlopig verblijf zal naar het
+  oordeel van Onze Minister leiden tot een onbillijkheid van
+  overwegende aard
+}
+
+iFeit Awb.4:5.1.b
   bron: Artikel 4:5, lid 1, onder b, Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
   alias: geweigerde digitale aanvraag
@@ -24,16 +45,15 @@ iFeit iFEIT.Awb.4:5.1.b
   artikel 2:15
 }
 
-iFeit iFEIT.Vw.16.1.h.kennis
-  bron: Artikel 16, lid 1, onder h, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
-  alias: vreemdeling beschikt niet over kennis Nederland(s)
+iFeit travel.doc.part.II
+  bron: 
+  link: 
+  alias: erkend door alle lidstaten in bijlage 2
 {
-  de vreemdeling beschikt niet over kennis op basisniveau van
-  de Nederlandse taal en de Nederlandse maatschappij
+  reisdocument erkend door alle lidstaten in bijlage 2
 }
 
-iFeit iFEIT.Awb.3:40
+iFeit Awb.3:40
   bron: 
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
   alias: besluit niet in werking voor bekendmaking
@@ -42,7 +62,7 @@ iFeit iFEIT.Awb.3:40
   bekendgemaakt
 }
 
-iFeit iFEIT.Awb.4:5.1.mits
+iFeit Awb.4:5.1.mits
   bron: Artikel 4:5, lid 1, Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
   alias: mits aanvrager aanvraag kon aanvullen
@@ -51,7 +71,7 @@ iFeit iFEIT.Awb.4:5.1.mits
   een door het bestuursorgaan gestelde termijn aan te vullen.
 }
 
-iFeit iFEIT.Vw.16.1.e
+iFeit Vw.16.1.e
   bron: Artikel 16, lid 1, onder e, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=e
   alias: geen medisch onderzoek of behandeling
@@ -63,7 +83,7 @@ iFeit iFEIT.Vw.16.1.e
   ondergaan
 }
 
-iFeit iFEIT.Vw.24.2.zin3
+iFeit Vw.24.2.zin3
   bron: Artikel 24, lid 2, Vw
   link: jci1.31:c:BWBR0011823&g=2014-03-01&Hoofdstuk=3&Afdeling=3&Paragraaf=3&Artikel=24&Lid=2
   alias: betaling leges blijft achterwege
@@ -73,7 +93,7 @@ iFeit iFEIT.Vw.24.2.zin3
   document niet afgegeven
 }
 
-iFeit iFEIT.Vw.17.1.e
+iFeit Vw.17.1.e
   bron: Artikel 17, lid 1, onder e, Vw
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=e
   alias: bezit VVA
@@ -82,7 +102,7 @@ iFeit iFEIT.Vw.17.1.e
   in het bezit van een VVA BEP dan wel van een VVA ONBEP
 }
 
-iFeit iFEIT.Vw.17.1.g
+iFeit Vw.17.1.g
   bron: Artikel 17, lid 1, onder g, Vw
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=g
   alias: bij AmvB aangewezen categorie
@@ -91,20 +111,7 @@ iFeit iFEIT.Vw.17.1.g
   bestuur aangewezen categorie
 }
 
-iFeit iFEIT.Vw.16.1.c.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder c, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=c
-  alias: afgewezen op middelenvereiste
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling beschikt niet zelfstandig en
-  duurzaam over voldoende middelen van bestaan dan wel, de
-  persoon bij wie de vreemdeling wil verblijven, beschikt niet
-  zelfstandig en duurzaam over voldoende middelen van bestaan
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.niet.aangetoond
+iFeit Vw.16.1.b.IND.BB.niet.aangetoond
   bron: GEEN
   link: GEEN
   alias: bezit document aangetoond
@@ -113,7 +120,414 @@ iFeit iFEIT.Vw.16.1.b.IND.BB.niet.aangetoond
   over een geldig document voor grensoverschrijding
 }
 
-iFeit iFEIT.Vc.B1.4.2.zin.4.2
+iFeit Vw.14.1.a.afwijzen
+  bron: Artikel 14, lid 1, onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
+  alias: aanvraag VVR BEP wordt afgewezen
+{
+  de aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd wordt afgewezen
+}
+
+iFeit Awb.4:5.4
+  bron: Artikel 4:5, lid 4, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: besluit binnen vier weken na aanvullen aanvraag
+{
+  een besluit om de aanvraag niet te behandelen wordt aan de
+  aanvrager bekendgemaakt binnen vier weken nadat de aanvraag
+  is aangevuld of nadat de daarvoor gestelde termijn
+  ongebruikt is verstreken
+}
+
+iFeit Awb.4:1.voorschrift
+  bron: Artikel 4:1, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:1
+  alias: niet anders bepaald
+{
+  tenzij bij wettelijk voorschrift anders is bepaald
+}
+
+iFeit Vw.16.1.k.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder k, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=k
+  alias: afgewezen omdat geen verklaring referent is overlegd
+{
+   
+}
+
+iFeit Vw.16.1.f
+  bron: Artikel 16, lid 1, onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
+  alias: arbeid in strijd met Wav
+{
+  de vreemdeling heeft voor een werkgever arbeid verricht,
+  zonder dat aan de Wet arbeid vreemdelingen is voldaan
+}
+
+iFeit Awb.3:4.2
+  bron: Artikel 3:4, tweede lid Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:4&Lid=2
+  alias: nadelige gevolgen niet onevenredig
+{
+  de voor een of meer belanghebbenden nadelige gevolgen van
+  een besluit mogen niet onevenredig zijn in verhouding tot de
+  met het besluit te dienen doelen
+}
+
+iFeit Awb.3:2.belangen
+  bron: Artikel 3:2, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
+  alias: weging relevante belangen
+{
+  de voor het nemen van het besluit nodige kennis omtrent de
+  relevante  af te wegen belangen
+}
+
+iFeit Vw.24.2.zin4
+  bron: Artikel 24, lid 2, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-03-01&Hoofdstuk=3&Afdeling=3&Paragraaf=3&Artikel=24&Lid=2
+  alias: Artikel 4:5, vierde lid, Awb n.v.t.
+{
+  artikel 4:5, vierde lid, Algemene wet bestuursrecht is niet
+  van toepassing
+}
+
+iFeit Awb.3:41.1
+  bron: 
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=1
+  alias: bekendmaking door toezending of uitreiking
+{
+  de bekendmaking van het besluit dat tot een of meer
+  belanghebbenden is gericht, geschiedt door toezending of
+  uitreiking aan belanghebbenden, onder wie begrepen de
+  aanvrager
+}
+
+iFeit Awb.4:5.1.a
+  bron: Artikel 4:5, lid 1, onder a, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: niet voldaan aan enig wettelijk voorschrift
+{
+  de aanvrager heeft niet voldaan aan enig wettelijk
+  voorschrift voor het in behandeling nemen van de aanvraag
+}
+
+iFeit Vw.17.1.f
+  bron: Artikel 17, lid 1, onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=f
+  alias: tijdig ingediende wijziging verblijfsvergunning
+{
+  de vreemdeling heeft tijdig een aanvraag ingediend tot
+  wijziging van een verblijfsvergunning
+}
+
+iFeit Vw.16.1.b
+  bron: Artikel 16, lid 1, onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
+  alias: geen geldig paspoort
+{
+  de vreemdeling beschikt niet over een geldig document voor
+  grensoverschrijding
+}
+
+iFeit Vw.16.1.b.IND.BB.alle.echtheidskenmerken
+  bron: GEEN
+  link: GEEN
+  alias: alle echtheidskenmerken
+{
+  document bevat alle echtheidskenmerken
+}
+
+iFeit Awb.3:41.2
+  bron: 
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=2
+  alias: bekendmaking op andere geschikte wijze
+{
+  de bekendmaking van het besluit kan niet geschieden door
+  toezending of uitreiking aan belanghebbenden, onder wie
+  begrepen de aanvrager, en geschiedt op een andere geschikte
+  wijze.
+}
+
+iFeit Vw.16.1.h.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder h, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
+  alias: afgewezen op inburgeringsplicht
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling, behoort niet tot een der
+  categorie�n, bedoeld in artikel 17, eerste lid, na
+  verkrijging van rechtmatig verblijf in Nederland
+  inburgeringsplichtig zou zijn op grond van de artikelen 3 en
+  5 van de Wet inburgering en beschikt niet over kennis op
+  basisniveau van de Nederlandse taal en de Nederlandse
+  maatschappij
+}
+
+iFeit travel.doc.part.III
+  bron: 
+  link: 
+  alias: erkend door alle lidstaten in bijlage 3
+{
+  reisdocument erkend door alle lidstaten in bijlage 3
+}
+
+iFeit Vw.16.1.c
+  bron: Artikel 16, lid 1, onder c, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=c
+  alias: onvoldoende middelen
+{
+  de vreemdeling beschikt niet zelfstandig en duurzaam over
+  voldoende middelen van bestaan dan wel, de persoon bij wie
+  de vreemdeling wil verblijven, beschikt niet zelfstandig en
+  duurzaam over voldoende middelen van bestaan
+}
+
+iFeit Awb.4:5.1.niet.in.behandeling.nemen
+  bron: Artikel 4:5, lid 1, aanhef, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: aanvraag wordt niet in behandeling genomen
+{
+  het bestuursorgaan besluit de aanvraag niet te behandelen
+}
+
+iFeit Awb.3:46
+  bron: Artikel 3:46, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Artikel=3:46
+  alias: deugdelijke motivering
+{
+  een deugdelijke motivering
+}
+
+iFeit Awb.4:7.1.a
+  bron: artikel 4:7, eerste lid, onder a, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.2&Artikel=4:7&Lid=1
+  alias: afwijzing steunt op gegevens over aanvrager
+{
+  de afwijzing steunt op gegevens over feiten en belangen die
+  de aanvrager betreffen
+}
+
+iFeit Vw.16.1.f.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
+  alias: afgewezen vanwege overtreding Wav
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling heeft voor een werkgever
+  arbeid verricht, zonder dat aan de Wet arbeid vreemdelingen
+  is voldaan
+}
+
+iFeit Vw.16.1.d.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder d, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
+  alias: afgewezen op OO of nationale veiligheid
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling vormt een gevaar voor de
+  openbare orde of nationale veiligheid
+}
+
+iFeit Awb.4:7.2
+  bron: artikel 4:7, tweede lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.2&Artikel=4:7&Lid=2
+  alias: afwijking van aanvraag van geringe betekenis
+{
+  er is sprake van een afwijking van de aanvraag die slechts
+  van geringe betekenis voor de aanvrager kan zijn
+}
+
+iFeit Vw.17.1.d
+  bron: Artikel 17, lid 1, onder d, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=d
+  alias: slachtoffer getuige-aangever van mensenhandel
+{
+  de vreemdeling is slachtoffer of getuige-aangever van
+  mensenhandel
+}
+
+iFeit Vw.16.1.b.IND.BB.datum.geldig.tot.n�.aanvraag
+  bron: GEEN
+  link: GEEN
+  alias: document geldig tot datum na aanvraag
+{
+  datum geldig tot van document ligt n� de datum van de
+  aanvraag
+}
+
+iFeit Vw.16.1.i.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder i, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=i
+  alias: afgewezen omdat onjuiste of onvolledige zijn gegevens verstrekt
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling heeft onjuiste gegevens
+  verstrekt dan wel gegevens achtergehouden terwijl die
+  gegevens tot afwijzing van een eerdere aanvraag tot het
+  verlenen, verlengen of wijzigen van een visum of een
+  verblijfsvergunning hebben geleid of zouden hebben geleid
+}
+
+iFeit Vw.14.1.a.aanvraag
+  bron: Artikel 14, lid 1, onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
+  alias: aanvraag VVR BEP
+{
+  de aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd
+}
+
+iFeit Vw.16.1.b.IND.BB.datum.geldig.tot.n�.besluit
+  bron: GEEN
+  link: GEEN
+  alias: document geldig tot datum na beslissing
+{
+  datum geldig tot van document ligt n� de datum van het
+  besluit op de aanvraag
+}
+
+iFeit Vw.16.1.b.IND.BB.reisdocument.naam=paspoort
+  bron: GEEN
+  link: GEEN
+  alias: reisdocument = paspoort
+{
+  naam reisdocument bevat de term "paspoort"
+}
+
+iFeit Vw.16.1.j
+  bron: Artikel 16, lid 1, onder j, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=j
+  alias: vreemdeling had illegaal verblijf
+{
+  de vreemdeling in heeft Nederland verblijf gehouden, anders
+  dan op grond van artikel 8
+}
+
+iFeit Awb.4:7.1.b
+  bron: artikel 4:7, eerste lid, onder b, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.2&Artikel=4:7&Lid=1
+  alias: gegevens wijken af van verstrekte gegevens
+{
+  de afwijzing steunt op gegevens die afwijken van gegevens
+  die de aanvrager ter zake zelf heeft verstrekt
+}
+
+iFeit Vw.16.1.h.kennis
+  bron: Artikel 16, lid 1, onder h, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
+  alias: vreemdeling beschikt niet over kennis Nederland(s)
+{
+  de vreemdeling beschikt niet over kennis op basisniveau van
+  de Nederlandse taal en de Nederlandse maatschappij
+}
+
+iFeit Vw.16.1.j.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder j, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=j
+  alias: afgewezen vanwege illegaal verblijf
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling in heeft Nederland verblijf
+  gehouden, anders dan op grond van artikel 8
+}
+
+iFeit Vw.16.1.b.IND.BB.datum.afgifte.v��r.aanvraag
+  bron: GEEN
+  link: GEEN
+  alias: document afgegeven v��r aanvraag
+{
+  datum van afgifte document ligt v��r de datum van de
+  aanvraag
+}
+
+iFeit Awb.4:5.1.c
+  bron: Artikel 4:5, lid 1, onder c, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: onvoldoende gegevens verstrekt
+{
+  de verstrekte gegevens en bescheiden onvoldoende zijn voor
+  de beoordeling van de aanvraag of voor de voorbereiding van
+  de beschikking
+}
+
+iFeit Awb.3:2.feiten
+  bron: Artikel 3:2, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
+  alias: relevante feiten
+{
+  de voor het besluit nodige kennis omtrent de relevante
+  feiten
+}
+
+iFeit Awb.4:5.2
+  bron: Artikel 4:5, lid 2, Awb
+  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
+  alias: vertaling gegevens in vreemde taal nodig
+{
+  de aanvraag of een van de daarbij behorende gegevens of
+  bescheiden is in een vreemde taal gesteld en een vertaling
+  daarvan is noodzakelijk voor de beoordeling van de aanvraag
+  of voor de voorbereiding van de beschikking
+}
+
+iFeit Vw.16.1.a.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=a
+  alias: afgewezen op mvv-vereiste
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling niet beschikt over een
+  geldige machtiging tot voorlopig verblijf die overeenkomt
+  met het verblijfsdoel waarvoor de verblijfsvergunning is
+  aangevraagd
+}
+
+iFeit Vw.17.1.b
+  bron: Artikel 17, lid 1, onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=b
+  alias: vreemdeling is gemeenschapsonderdaan
+{
+  de vreemdeling is gemeenschapsonderdaan, voorzover niet
+  reeds vrijgesteld op grond van een aanwijzing als bedoeld
+  onder artikel 17, eerste lid onder a, Vw
+}
+
+iFeit Vb.3.72.vreemdeling
+  bron: Artikel 3.72, Vb
+  link: jci1.31:c:BWBR0011825&g=2016-03-01&Hoofdstuk=3&Afdeling=2&Paragraaf=3&Artikel=3.72
+  alias: vanwege regering land vreemdeling geen paspoort
+{
+  de vreemdeling heeft naar het oordeel van Onze Minister
+  aangetoond dat hij vanwege de regering van het land waarvan
+  hij onderdaan is, niet of niet meer in het bezit van een
+  geldig document voor grensoverschrijding kan worden gesteld
+}
+
+iFeit Awb.1:3.3.aanvraag
+  bron: Artikel 1:3, derde lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
+  alias: aanvraag
+{
+  een aanvraag
+}
+
+iFeit Vw.16.1.b.document
+  bron: 
+  link: 
+  alias: document voor grensoverschrijding
+{
+  een document voor grensoverschrijding
+}
+
+iFeit Vc.B1.4.2.zin4.2
   bron: B1/4.2 zin 4
   link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
   alias: vreemdeling is een in Nederland geboren kind
@@ -127,130 +541,7 @@ iFeit iFEIT.Vc.B1.4.2.zin.4.2
   grensoverschrijding te beschikken
 }
 
-iFeit iFEIT.Vw.14.1.a.afwijzen
-  bron: Artikel 14, lid 1, onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
-  alias: aanvraag VVR BEP wordt afgewezen
-{
-  de aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd wordt afgewezen
-}
-
-iFeit iFEIT.Awb.4:5.4
-  bron: Artikel 4:5, lid 4, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
-  alias: besluit binnen vier weken na aanvullen aanvraag
-{
-  een besluit om de aanvraag niet te behandelen wordt aan de
-  aanvrager bekendgemaakt binnen vier weken nadat de aanvraag
-  is aangevuld of nadat de daarvoor gestelde termijn
-  ongebruikt is verstreken
-}
-
-iFeit iFEIT.Awb.4:1.voorschrift
-  bron: Artikel 4:1, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:1
-  alias: niet anders bepaald
-{
-  tenzij bij wettelijk voorschrift anders is bepaald
-}
-
-iFeit iFEIT.Vw.17.1.c
-  bron: Artikel 17, lid 1, onder c, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=c
-  alias: vreemdeling kan vanwege gezondheid niet reizen
-{
-  het is voor de vreemdeling, gelet op diens
-  gezondheidstoestand, niet verantwoord om te reizen
-}
-
-iFeit iFEIT.Vw.16.1.j.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder j, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=j
-  alias: afgewezen vanwege illegaal verblijf
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling in heeft Nederland verblijf
-  gehouden, anders dan op grond van artikel 8
-}
-
-iFeit iFEIT.Vw.16.1.f
-  bron: Artikel 16, lid 1, onder f, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
-  alias: arbeid in strijd met Wav
-{
-  de vreemdeling heeft voor een werkgever arbeid verricht,
-  zonder dat aan de Wet arbeid vreemdelingen is voldaan
-}
-
-iFeit iFEIT.Awb.3:4.2
-  bron: Artikel 3:4, tweede lid Awb
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:4&Lid=2
-  alias: nadelige gevolgen niet onevenredig
-{
-  de voor een of meer belanghebbenden nadelige gevolgen van
-  een besluit mogen niet onevenredig zijn in verhouding tot de
-  met het besluit te dienen doelen
-}
-
-iFeit iFEIT.Awb.3:2.belangen
-  bron: Artikel 3:2, Awb
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
-  alias: weging relevante belangen
-{
-  de voor het nemen van het besluit nodige kennis omtrent de
-  relevante  af te wegen belangen
-}
-
-iFeit iFEIT.Vw.24.2.zin4
-  bron: Artikel 24, lid 2, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-03-01&Hoofdstuk=3&Afdeling=3&Paragraaf=3&Artikel=24&Lid=2
-  alias: Artikel 4:5, vierde lid, Awb n.v.t.
-{
-  artikel 4:5, vierde lid, Algemene wet bestuursrecht is niet
-  van toepassing
-}
-
-iFeit iFEIT.Awb.3:41.1
-  bron: 
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=1
-  alias: bekendmaking door toezending of uitreiking
-{
-  de bekendmaking van het besluit dat tot een of meer
-  belanghebbenden is gericht, geschiedt door toezending of
-  uitreiking aan belanghebbenden, onder wie begrepen de
-  aanvrager
-}
-
-iFeit iFEIT.Vw.17.1.f
-  bron: Artikel 17, lid 1, onder f, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=f
-  alias: tijdig ingediende wijziging verblijfsvergunning
-{
-  de vreemdeling heeft tijdig een aanvraag ingediend tot
-  wijziging van een verblijfsvergunning
-}
-
-iFeit iFEIT.Vw.16.1.b
-  bron: Artikel 16, lid 1, onder b, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
-  alias: geen geldig paspoort
-{
-  de vreemdeling beschikt niet over een geldig document voor
-  grensoverschrijding
-}
-
-iFeit iFEIT.Awb.4:5.1.a
-  bron: Artikel 4:5, lid 1, onder a, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
-  alias: niet voldaan aan enig wettelijk voorschrift
-{
-  de aanvrager heeft niet voldaan aan enig wettelijk
-  voorschrift voor het in behandeling nemen van de aanvraag
-}
-
-iFeit iFEIT.Vw.16.1.g.afgewezen
+iFeit Vw.16.1.g.afwijzen
   bron: Artikel 16, lid 1, aanhef en onder g, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=g
   alias: afgewezen vanwege niet voldoen aan verblijfsdoelspecifieke voorwaarden
@@ -262,240 +553,7 @@ iFeit iFEIT.Vw.16.1.g.afgewezen
   verblijven
 }
 
-iFeit iFEIT.Vw.16.1.b.IND.BB.alle.echtheidskenmerken
-  bron: GEEN
-  link: GEEN
-  alias: alle echtheidskenmerken
-{
-  document bevat alle echtheidskenmerken
-}
-
-iFeit iFEIT.Awb.3:41.2
-  bron: 
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&Lid=2
-  alias: bekendmaking op andere geschikte wijze
-{
-  de bekendmaking van het besluit kan niet geschieden door
-  toezending of uitreiking aan belanghebbenden, onder wie
-  begrepen de aanvrager, en geschiedt op een andere geschikte
-  wijze.
-}
-
-iFeit iFEIT.travel.doc.part.III
-  bron: 
-  link: 
-  alias: erkend door alle lidstaten in bijlage 3
-{
-  reisdocument erkend door alle lidstaten in bijlage 3
-}
-
-iFeit iFEIT.Vw.16.1.c
-  bron: Artikel 16, lid 1, onder c, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=c
-  alias: onvoldoende middelen
-{
-  de vreemdeling beschikt niet zelfstandig en duurzaam over
-  voldoende middelen van bestaan dan wel, de persoon bij wie
-  de vreemdeling wil verblijven, beschikt niet zelfstandig en
-  duurzaam over voldoende middelen van bestaan
-}
-
-iFeit iFEIT.Vb.3.71.3
-  bron: Artikel 3.71, lid 3, Vb
-  link: jci1.31:c:BWBR0011825&g=2016-03-01&Hoofdstuk=3&Afdeling=2&Paragraaf=3&Artikel=3.71&Lid=3
-  alias: afwijzing leidt tot onbillikheid
-{
-  afwijzen van de aanvraag van een verblijfsvergunning voor
-  bepaalde tijd omdat de vreemdeling niet beschikt over een
-  geldige machtiging tot voorlopig verblijf zal naar het
-  oordeel van Onze Minister leiden tot een onbillijkheid van
-  overwegende aard
-}
-
-iFeit iFEIT.Vc.B1.4.2.zin.4.1
-  bron: B1/4.2 zin 4 Vc
-  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
-  alias: vreemdeling is onderdaan Somali�
-{
-  de vreemdeling is onderdaan van Somali�, en er is geen
-  internationaal erkend centraal gezag in Somali� en Nederland
-  erkent de Somalische autoriteiten en door hen uitgegeven
-  documenten niet
-}
-
-iFeit iFEIT.Awb.4:5.1.niet.in.behandeling.nemen
-  bron: Artikel 4:5, lid 1, aanhef, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
-  alias: aanvraag wordt niet in behandeling genomen
-{
-  het bestuursorgaan besluit de aanvraag niet te behandelen
-}
-
-iFeit iFEIT.Awb.3:46
-  bron: Artikel 3:46, Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Artikel=3:46
-  alias: deugdelijke motivering
-{
-  een deugdelijke motivering
-}
-
-iFeit iFEIT.Vw.17.1.d
-  bron: Artikel 17, lid 1, onder d, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=d
-  alias: slachtoffer getuige-aangever van mensenhandel
-{
-  de vreemdeling is slachtoffer of getuige-aangever van
-  mensenhandel
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.datum.geldig.tot.n�.aanvraag
-  bron: GEEN
-  link: GEEN
-  alias: document geldig tot datum na aanvraag
-{
-  datum geldig tot van document ligt n� de datum van de
-  aanvraag
-}
-
-iFeit iFEIT.Vw.14.1.a.aanvraag
-  bron: Artikel 14, lid 1, onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
-  alias: aanvraag VVR BEP
-{
-  de aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.datum.geldig.tot.n�.besluit
-  bron: GEEN
-  link: GEEN
-  alias: document geldig tot datum na beslissing
-{
-  datum geldig tot van document ligt n� de datum van het
-  besluit op de aanvraag
-}
-
-iFeit iFEIT.Vw.16.1.e.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder e, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=e
-  alias: afgewezen op weigeren medisch onderzoek of behandeling
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling is niet bereid om medewerking
-  te verlenen aan een medisch onderzoek naar een ziekte
-  aangewezen bij of krachtens de Wpg, ter bescherming van de
-  volksgezondheid of een medische behandeling tegen een
-  dergelijke ziekte te ondergaan
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.reisdocument.naam=paspoort
-  bron: GEEN
-  link: GEEN
-  alias: reisdocument = paspoort
-{
-  naam reisdocument bevat de term "paspoort"
-}
-
-iFeit iFEIT.Vw.16.1.j
-  bron: Artikel 16, lid 1, onder j, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=j
-  alias: vreemdeling had illegaal verblijf
-{
-  de vreemdeling in heeft Nederland verblijf gehouden, anders
-  dan op grond van artikel 8
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.datum.afgifte.v��r.aanvraag
-  bron: GEEN
-  link: GEEN
-  alias: document afgegeven v��r aanvraag
-{
-  datum van afgifte document ligt v��r de datum van de
-  aanvraag
-}
-
-iFeit iFEIT.Awb.4:5.1.c
-  bron: Artikel 4:5, lid 1, onder c, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
-  alias: onvoldoende gegevens verstrekt
-{
-  de verstrekte gegevens en bescheiden onvoldoende zijn voor
-  de beoordeling van de aanvraag of voor de voorbereiding van
-  de beschikking
-}
-
-iFeit iFEIT.Awb.3:2.feiten
-  bron: Artikel 3:2, Awb
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
-  alias: relevante feiten
-{
-  de voor het besluit nodige kennis omtrent de relevante
-  feiten
-}
-
-iFeit iFEIT.Vw.16.1.a.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=a
-  alias: afgewezen op mvv-vereiste
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling niet beschikt over een
-  geldige machtiging tot voorlopig verblijf die overeenkomt
-  met het verblijfsdoel waarvoor de verblijfsvergunning is
-  aangevraagd
-}
-
-iFeit iFEIT.Awb.4:5.2
-  bron: Artikel 4:5, lid 2, Awb
-  link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
-  alias: vertaling gegevens in vreemde taal nodig
-{
-  de aanvraag of een van de daarbij behorende gegevens of
-  bescheiden is in een vreemde taal gesteld en een vertaling
-  daarvan is noodzakelijk voor de beoordeling van de aanvraag
-  of voor de voorbereiding van de beschikking
-}
-
-iFeit iFEIT.Vw.17.1.b
-  bron: Artikel 17, lid 1, onder b, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=b
-  alias: vreemdeling is gemeenschapsonderdaan
-{
-  de vreemdeling is gemeenschapsonderdaan, voorzover niet
-  reeds vrijgesteld op grond van een aanwijzing als bedoeld
-  onder artikel 17, eerste lid onder a, Vw
-}
-
-iFeit iFEIT.Vb.3.72.vreemdeling
-  bron: Artikel 3.72, Vb
-  link: jci1.31:c:BWBR0011825&g=2016-03-01&Hoofdstuk=3&Afdeling=2&Paragraaf=3&Artikel=3.72
-  alias: vanwege regering land vreemdeling geen paspoort
-{
-  de vreemdeling heeft naar het oordeel van Onze Minister
-  aangetoond dat hij vanwege de regering van het land waarvan
-  hij onderdaan is, niet of niet meer in het bezit van een
-  geldig document voor grensoverschrijding kan worden gesteld
-}
-
-iFeit iFEIT.Awb.1:3.3.aanvraag
-  bron: Artikel 1:3, derde lid, Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
-  alias: aanvraag
-{
-  een aanvraag
-}
-
-iFeit iFEIT.Vw.16.1.b.document
-  bron: 
-  link: 
-  alias: document voor grensoverschrijding
-{
-  een document voor grensoverschrijding
-}
-
-iFeit iFEIT.Vw.14.1.a.inwilligen
+iFeit Vw.14.1.a.inwilligen
   bron: Artikel 14, lid 1, onder a, Vw
   link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
   alias: aanvraag VVR BEP wordt ingewilligd
@@ -504,7 +562,7 @@ iFeit iFEIT.Vw.14.1.a.inwilligen
   voor bepaalde tijd wordt ingewilligd
 }
 
-iFeit iFEIT.Vw.16.1.d
+iFeit Vw.16.1.d
   bron: Artikel 16, lid 1, onder d, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
   alias: gevaar OO of nationale veiligheid
@@ -521,7 +579,18 @@ iFeit 1105/2011/EU.1.visum
   reisdocumenten waarin een visum kan worden aangebracht
 }
 
-iFeit iFEIT.Awb.1:3.3.verzoek
+iFeit Vc.B1.4.2.zin4.1
+  bron: B1/4.2 zin 4 Vc
+  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
+  alias: vreemdeling is onderdaan Somali�
+{
+  de vreemdeling is onderdaan van Somali�, en er is geen
+  internationaal erkend centraal gezag in Somali� en Nederland
+  erkent de Somalische autoriteiten en door hen uitgegeven
+  documenten niet
+}
+
+iFeit Awb.1:3.3.verzoek
   bron: Artikel 1:3, derde lid, Awb
   link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
   alias: verzoek besluit te nemen
@@ -529,65 +598,7 @@ iFeit iFEIT.Awb.1:3.3.verzoek
   een verzoek een besluit te nemen
 }
 
-iFeit iFEIT.Vw.16.1.f.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder f, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=f
-  alias: afgewezen vanwege overtreding Wav
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling heeft voor een werkgever
-  arbeid verricht, zonder dat aan de Wet arbeid vreemdelingen
-  is voldaan
-}
-
-iFeit iFEIT.travel.doc.part.I
-  bron: 
-  link: 
-  alias: erkend door alle lidstaten in bijlage 1
-{
-  reisdocument erkend door alle lidstaten in bijlage 1
-}
-
-iFeit iFEIT.travel.doc.part.III.NL
-  bron: 
-  link: 
-  alias: erkend door NL in bijlage 3
-{
-  reisdocument erkend door Nederland in bijlage 3
-}
-
-iFeit iFEIT.Vw.16.1.a
-  bron: Artikel 16, lid 1, onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=a
-  alias: geen geldige mvv
-{
-  de vreemdeling beschikt niet over een geldige machtiging tot
-  voorlopig verblijf die overeenkomt met het verblijfsdoel
-  waarvoor de verblijfsvergunning is aangevraagd
-}
-
-iFeit iFEIT.Vw.14.1.a.niet.in.behandeling.nemen
-  bron: Artikel 14, lid 1, onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
-  alias: aanvraag VVR BEP wordt niet in behandeling genomen
-{
-  de aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd wordt niet in behandeling genomen
-}
-
-iFeit iFEIT.Vw.16.1.d.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder d, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
-  alias: afgewezen op OO of nationale veiligheid
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling vormt een gevaar voor de
-  openbare orde of nationale veiligheid
-}
-
-iFeit iFEIT.Vw.17.1.a
+iFeit Vw.17.1.a
   bron: Artikel 17, lid 1, onder a, Vw
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=a
   alias: nationaliteit ��n der aangewezen landen
@@ -597,7 +608,56 @@ iFeit iFEIT.Vw.17.1.a
   Minister van Buitenlandse Zaken aangewezen landen
 }
 
-iFeit iFEIT.Vw.16.1.b.IND.BB.geen.kenmerken.ongeldigheid
+iFeit Vw.16.1.e.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder e, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=e
+  alias: afgewezen op weigeren medisch onderzoek of behandeling
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling is niet bereid om medewerking
+  te verlenen aan een medisch onderzoek naar een ziekte
+  aangewezen bij of krachtens de Wpg, ter bescherming van de
+  volksgezondheid of een medische behandeling tegen een
+  dergelijke ziekte te ondergaan
+}
+
+iFeit travel.doc.part.I
+  bron: 
+  link: 
+  alias: erkend door alle lidstaten in bijlage 1
+{
+  reisdocument erkend door alle lidstaten in bijlage 1
+}
+
+iFeit travel.doc.part.III.NL
+  bron: 
+  link: 
+  alias: erkend door NL in bijlage 3
+{
+  reisdocument erkend door Nederland in bijlage 3
+}
+
+iFeit Vw.16.1.a
+  bron: Artikel 16, lid 1, onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=a
+  alias: geen geldige mvv
+{
+  de vreemdeling beschikt niet over een geldige machtiging tot
+  voorlopig verblijf die overeenkomt met het verblijfsdoel
+  waarvoor de verblijfsvergunning is aangevraagd
+}
+
+iFeit Vw.14.1.a.niet.in.behandeling.nemen
+  bron: Artikel 14, lid 1, onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
+  alias: aanvraag VVR BEP wordt niet in behandeling genomen
+{
+  de aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd wordt niet in behandeling genomen
+}
+
+iFeit Vw.16.1.b.IND.BB.geen.kenmerken.ongeldigheid
   bron: GEEN
   link: GEEN
   alias: geen aanwijzingen ongeldigheid
@@ -606,7 +666,7 @@ iFeit iFEIT.Vw.16.1.b.IND.BB.geen.kenmerken.ongeldigheid
   ontbreken
 }
 
-iFeit iFEIT.travel.doc.part.II.NL
+iFeit travel.doc.part.II.NL
   bron: 
   link: 
   alias: erkend door NL in bijlage 2
@@ -614,7 +674,7 @@ iFeit iFEIT.travel.doc.part.II.NL
   reisdocument erkend door Nederland in bijlage 2
 }
 
-iFeit iFEIT.Vw.26.1.voldoet
+iFeit Vw.26.1.voldoet
   bron: Artikel 26, lid 1, Vw
   link: jci1.31:c:BWBR0011823&g=2001-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=5&Artikel=16&Lid=1
   alias: VVR op dag voldaan aan voorwaarden
@@ -626,7 +686,7 @@ iFeit iFEIT.Vw.26.1.voldoet
   dag waarop de aanvraag is ontvangen
 }
 
-iFeit iFEIT.Awb.1:3.3.belanghebbende
+iFeit Awb.1:3.3.belanghebbende
   bron: Artikel 1:3, derde lid, Awb
   link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
   alias: verzoek van belanghebbende
@@ -634,7 +694,7 @@ iFeit iFEIT.Awb.1:3.3.belanghebbende
   een verzoek van een belanghebbende
 }
 
-iFeit iFEIT.Awb.4:1.bevoegd
+iFeit Awb.4:1.bevoegd
   bron: Artikel 4:1, Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:1
   alias: bestuursorgaan bevoegd
@@ -642,7 +702,7 @@ iFeit iFEIT.Awb.4:1.bevoegd
   het bestuursorgaan is bevoegd op de aanvraag te beslissen
 }
 
-iFeit iFEIT.Awb.3:40.besluit.in.werking
+iFeit Awb.3:40.besluit.in.werking
   bron: 
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
   alias: bekendmaken besluit
@@ -651,15 +711,7 @@ iFeit iFEIT.Awb.3:40.besluit.in.werking
   is
 }
 
-iFeit iFEIT.Vw.16.1.k.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder k, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=k
-  alias: afgewezen omdat geen verklaring referent is overlegd
-{
-   
-}
-
-iFeit iFEIT.Vw.16.1.i
+iFeit Vw.16.1.i
   bron: Artikel 16, lid 1, onder i, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=i
   alias: onjuiste of onvolledige gegevens verstrekt
@@ -671,7 +723,7 @@ iFeit iFEIT.Vw.16.1.i
   geleid of zouden hebben geleid
 }
 
-iFeit iFEIT.Vw.16.1.h.inburgeringsplichtig
+iFeit Vw.16.1.h.inburgeringsplichtig
   bron: Artikel 16, lid 1, onder h, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
   alias: vreemdeling is inburgeringsplichtig
@@ -681,7 +733,7 @@ iFeit iFEIT.Vw.16.1.h.inburgeringsplichtig
   en 5 van de Wet inburgering
 }
 
-iFeit iFEIT.monsterboekje
+iFeit monsterboekje
   bron: 
   link: 
   alias: geen visum in monsterboekje
@@ -690,7 +742,7 @@ iFeit iFEIT.monsterboekje
   visum worden aangebracht
 }
 
-iFeit iFEIT.Vw.16.1.k
+iFeit Vw.16.1.k
   bron: Artikel 16, lid 1, onder k, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=k
   alias: geen verklaring referent overlegd
@@ -700,7 +752,7 @@ iFeit iFEIT.Vw.16.1.k
   artikel 2a, eerste lid
 }
 
-iFeit iFEIT.Awb.4:5.3
+iFeit Awb.4:5.3
   bron: Artikel 4:5, lid 3, Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
   alias: samenvatting gegevens nodig
@@ -711,7 +763,7 @@ iFeit iFEIT.Awb.4:5.3
   de voorbereiding van de beschikking
 }
 
-iFeit iFEIT.Vw.16.1.b.IND.BB.gelegenheid
+iFeit Vw.16.1.b.IND.BB.gelegenheid
   bron: GEEN
   link: GEEN
   alias: gelegenheid tonen document
@@ -721,42 +773,7 @@ iFeit iFEIT.Vw.16.1.b.IND.BB.gelegenheid
   grensoverschrijding
 }
 
-iFeit iFEIT.Vw.16.1.h.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder h, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
-  alias: afgewezen op inburgeringsplicht
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling, behoort niet tot een der
-  categorie�n, bedoeld in artikel 17, eerste lid, na
-  verkrijging van rechtmatig verblijf in Nederland
-  inburgeringsplichtig zou zijn op grond van de artikelen 3 en
-  5 van de Wet inburgering en beschikt niet over kennis op
-  basisniveau van de Nederlandse taal en de Nederlandse
-  maatschappij
-}
-
-iFeit iFEIT.travel.doc.part.II
-  bron: 
-  link: 
-  alias: erkend door alle lidstaten in bijlage 2
-{
-  reisdocument erkend door alle lidstaten in bijlage 2
-}
-
-iFeit iFEIT.Vw.16.1.b.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder b, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
-  alias: afgewezen op paspoortvereiste
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling niet beschikt over een geldig
-  document voor grensoverschrijding
-}
-
-iFeit iFEIT.Vw.17.1.h
+iFeit Vw.17.1.h
   bron: Artikel 17, lid 1, onder h, Vw
   link: jci1.31:c:BWBR0011823&g=2014-03-29&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=17&Lid=1&Nummer=h
   alias: langdurig ingezetene of gezinslid daarvan
@@ -766,7 +783,7 @@ iFeit iFEIT.Vw.17.1.h
   ingeval het gezin reeds was gevormd in die andere lidstaat
 }
 
-iFeit iFEIT.Vw.16.1.h
+iFeit Vw.16.1.h
   bron: Artikel 16, lid 1, onder h, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
   alias: inburgeringsplicht
@@ -779,7 +796,20 @@ iFeit iFEIT.Vw.16.1.h
   Nederlandse taal en de Nederlandse maatschappij
 }
 
-iFeit iFEIT.Vw.26.1.datum
+iFeit Vw.16.1.c.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder c, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=c
+  alias: afgewezen op middelenvereiste
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling beschikt niet zelfstandig en
+  duurzaam over voldoende middelen van bestaan dan wel, de
+  persoon bij wie de vreemdeling wil verblijven, beschikt niet
+  zelfstandig en duurzaam over voldoende middelen van bestaan
+}
+
+iFeit Vw.26.1.datum
   bron: Artikel 26, lid 1, Vw
   link: jci1.31:c:BWBR0011823&g=2001-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=5&Artikel=16&Lid=1
   alias: VVR niet voor datum aanvraag
@@ -789,21 +819,7 @@ iFeit iFEIT.Vw.26.1.datum
   van de dag waarop de aanvraag is ontvangen.
 }
 
-iFeit iFEIT.Vw.16.1.i.afgewezen
-  bron: Artikel 16, lid 1, aanhef en onder i, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=i
-  alias: afgewezen omdat onjuiste of onvolledige zijn gegevens verstrekt
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling heeft onjuiste gegevens
-  verstrekt dan wel gegevens achtergehouden terwijl die
-  gegevens tot afwijzing van een eerdere aanvraag tot het
-  verlenen, verlengen of wijzigen van een visum of een
-  verblijfsvergunning hebben geleid of zouden hebben geleid
-}
-
-iFeit iFEIT.Vw.16.1.b.IND.BB.datum.afgifte.v��r.besluit
+iFeit Vw.16.1.b.IND.BB.datum.afgifte.v��r.besluit
   bron: GEEN
   link: GEEN
   alias: document afgegeven v��r beslissing
@@ -812,7 +828,18 @@ iFeit iFEIT.Vw.16.1.b.IND.BB.datum.afgifte.v��r.besluit
   besluit op de aanvraag
 }
 
-iFeit iFEIT.Vw.16.1.g
+iFeit Vw.16.1.b.afwijzen
+  bron: Artikel 16, lid 1, aanhef en onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
+  alias: afgewezen op paspoortvereiste
+{
+  een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
+  afgewezen omdat de vreemdeling niet beschikt over een geldig
+  document voor grensoverschrijding
+}
+
+iFeit Vw.16.1.g
   bron: Artikel 16, lid 1, onder g, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=g
   alias: niet voldoen aan verblijfsdoelspecifieke voorwaarden
@@ -821,7 +848,7 @@ iFeit iFEIT.Vw.16.1.g
   houdende met het doel waarvoor hij wil verblijven
 }
 
-iFeit iFEIT.Awb.4:1.schriftelijk
+iFeit Awb.4:1.schriftelijk
   bron: Artikel 4:1, Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:1
   alias: aanvraag schriftelijk
@@ -829,7 +856,7 @@ iFeit iFEIT.Awb.4:1.schriftelijk
   een aanvraag wordt schriftelijk ingediend
 }
 
-iFeit iFEIT.Awb.4:2.1
+iFeit Awb.4:2.1
   bron: Artikel 4:2, eerste lid, Awb
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=1
   alias: ondertekenend, naam en adres, dagtekening, aanduiding beschikking
@@ -839,7 +866,7 @@ iFeit iFEIT.Awb.4:2.1
   aanduiding van de beschikking die wordt gevraagd
 }
 
-iFeit iFEIT.Awb.4:2.2
+iFeit Awb.4:2.2
   bron: Artikel 4:2, tweede lid, Awb
   link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:2&Lid=2
   alias: verschaffen gegevens en bescheiden
@@ -849,139 +876,13 @@ iFeit iFEIT.Awb.4:2.2
   redelijkerwijs de beschikking kan krijgen
 }
 
-relatie NR.Awb.3:41.2: [het bestuursorgaan] heeft de bevoegdheid jegens [belanghebbenden] tot het [bekendmaken] van [besluit]
-  bron: Artikel 3:41, tweede lid, Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=2
-wanneer
-  (iFEIT.Vw.14.1.inwilligen OF iFEIT.Vw.14.1.afwijzen OF iFEIT.Awb.4:5.niet.in.behandeling.nemen) EN iFEIT.Awb.3:41.2
-actie:
-  + iFEIT.Awb.3:40.besluit.in.werking
-  - NR.Awb.4:1.schriftelijk
-  - NR.Awb.4:1.bevoegd
-  - NR.Awb.4:2.1
-  - NR.Awb.4:2.2
-  - NR.Awb.4:13.1.termijn
-  - iFEIT.Vw.14.1.a.aanvraag
-{
-  Indien de bekendmaking van het besluit niet kan geschieden
-  op de wijze als voorzien in het eerste lid, geschiedt zij op
-  een andere geschikte wijze.
-}
-
-
-relatie NR.Vw.14.1.a.inwilligen: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [inwilligen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 14, eerste lid, aanhef en onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.26.1.voldoen EN iFEIT.Vw.26.1.datum
-actie:
-  + iFEIT.Vw.14.1.a.inwilligen
-{ 
-  Onze Minister is bevoegd: de aanvraag tot het verlenen van
-  een verblijfsvergunning voor bepaalde tijd in te willigen,
-  af te wijzen dan wel niet in behandeling te nemen;
-}
-
-relatie NR.Vw.16.1.d: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder d, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.d
-actie:
-  + iFEIT.Vw.16.1.d.afwijzen
-{
-  Een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien: de vreemdeling een gevaar vormt voor de
-  openbare orde of nationale veiligheid;
-}
-
-
-relatie NR.Awb.1:3.3: [belanghebbende] heeft de bevoegdheid jegens [het bestuursorgaan] tot het [doen] van [een verzoek een besluit te nemen]
-  bron: Artikel 1:3, derde lid, Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
-wanneer
-  iFEIT.Awb.1:3.3.verzoek EN iFEIT.Awb.1:3.3.belanghebbende EN NIET iFEIT.Awb.4:1.voorschrift
-actie:
-  + NR.Awb.3:2.VERPLICHT
-  + NR.Awb.3:46.VERPLICHT
-  + NR.Awb.4:1.schriftelijk
-  + NR.Awb.4:1.bevoegd
-  + NR.Awb.4:2.1
-  + NR.Awb.4:2.2
-  + NR.Awb.4:13.1.termijn
-  + iFEIT.Awb.1:3.3.aanvraag
-{
-  Onder aanvraag wordt verstaan: een verzoek van een
-  belanghebbende, een besluit te nemen
-}
-
-
-relatie NR.Vw.16.1.a: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=a
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag AND iFEIT.Vw.16.1.a AND NOT (iFEIT.Vw.17.1.a OR iFEIT.Vw.17.1.b OR iFEIT.Vw.17.1.c OR iFEIT.Vw.17.1.d OR iFEIT.Vw.17.1.e OR iFEIT.Vw.17.1.f OR iFEIT.Vw.17.1.g OR iFEIT.Vw.17.1.h OR iFEIT.Vb.3.71.3)
-actie:
-  + iFEIT.Vw.16.1.a.afwijzen
-{
-  Een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien: de vreemdeling niet beschikt over een
-  geldige machtiging tot voorlopig verblijf die overeenkomt
-  met het verblijfsdoel waarvoor de verblijfsvergunning is
-  aangevraagd;
-}
-
-
-relatie NR.Awb.3.46: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [motiveren] van [een besluit]
-  bron: Artikel 3:46 Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
-wanneer
-  iFEIT.3:2.feiten EN iFEIT.3:2.belangen EN NIET (iFEIT.Awb.4:7.1.a OF iFEIT.Awb.4:7.1.b)
-actie:
-  + iFEIT.Awb.3:46
-  - NR.Awb.3:46.VERPLICHT
-{
-  Een besluit dient te berusten op een deugdelijke motivering.
-}
-
-
-relatie NR.Vw.16.1.b: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder b, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.b EN NIET (iFEIT.Vb.3.72.alien OR iFEIT.Vc.B1.4.2.zin4.1 OF iFEIT.Vc.B1.4.2.zin4.2)
-actie:
-  + iFEIT.Vw.16.1.b.afwijzen
-{
-  Een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien: de vreemdeling niet beschikt over een
-  geldig document voor grensoverschrijding;
-}
-
-relatie NR.Vw.14.1.a.afwijzen: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 14, eerste lid, aanhef en onder a, Vw
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag AND iFEIT.Awb.3:46 AND iFEIT.Awb.3:4.2
-actie:
-  + iFEIT.Vw.14.1.a.afwijzen
-{
-  Onze Minister is bevoegd: de aanvraag tot het verlenen van
-  een verblijfsvergunning voor bepaalde tijd in te willigen,
-  af te wijzen dan wel niet in behandeling te nemen;
-}
-
- 
 relatie NR.Awb.4:5: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [niet in behandeling nemen] van [de aanvraag]
   bron: Artikel 4:5 Awb
   link: jci1.31:c:BWBR0005537&g=2004-07-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.1&Artikel=4:5
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Awb.4:5.1.mits EN iFEIT.Awb.4:5.4 EN ( iFEIT.Awb.4:5.1.a OF  iFEIT.Awb.4:5.1.b OF  iFEIT.Awb.4:5.1.c OF iFEIT.Awb.4:5.2 OF iFEIT.Awb.4:5.3)
+  Vw.14.1.a.aanvraag EN Awb.4:5.1.mits EN Awb.4:5.4 EN ( Awb.4:5.1.a OF  Awb.4:5.1.b OF  Awb.4:5.1.c OF Awb.4:5.2 OF Awb.4:5.3)
 actie:
-  + iFEIT.Awb.4:5.niet.in.behandeling.nemen
+  + Awb.4:5.1.niet.in.behandeling.nemen
 {
   1. Het bestuursorgaan kan besluiten de aanvraag niet te
   behandelen, indien:a. de aanvrager niet heeft voldaan aan
@@ -1011,13 +912,180 @@ actie:
 }
 
 
+relatie NR.Awb.3.46: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [motiveren] van [een besluit]
+  bron: Artikel 3:46 Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
+wanneer
+  Awb.3:2.feiten EN Awb.3:2.belangen EN NIET (Awb.4:7.1.a EN Awb.4:7.1.b)
+actie:
+  + Awb.3:46
+  - NR.Awb.3:46.VERPLICHT
+{
+  Een besluit dient te berusten op een deugdelijke motivering.
+}
+
+
+relatie NR.Awb.1:3.3: [belanghebbende] heeft de bevoegdheid jegens [het bestuursorgaan] tot het [doen] van [een verzoek een besluit te nemen]
+  bron: Artikel 1:3, derde lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=1&Titeldeel=1.1&Artikel=1:3
+wanneer
+  Awb.1:3.3.verzoek EN Awb.1:3.3.belanghebbende EN NIET Awb.4:1.voorschrift
+actie:
+  + NR.Awb.3:2.VERPLICHT
+  + NR.Awb.3:46.VERPLICHT
+  + NR.Awb.4:1.schriftelijk
+  + NR.Awb.4:1.bevoegd
+  + NR.Awb.4:2.1
+  + NR.Awb.4:2.2
+  + NR.Awb.4:13.1.termijn
+  + Awb.1:3.3.aanvraag
+{
+  Onder aanvraag wordt verstaan: een verzoek van een
+  belanghebbende, een besluit te nemen
+}
+
+
+relatie NR.Vw.16.1.e: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder e, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=e
+wanneer
+  Vw.14.1.a.aanvraag EN Vw.16.1.e
+actie:
+  + Vw.16.1.e.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien:de vreemdeling niet bereid is om
+  medewerking te verlenen aan een medisch onderzoek naar een
+  ziekte aangewezen bij of krachtens de Infectieziektewet, ter
+  bescherming van de volksgezondheid of een medische
+  behandeling tegen een dergelijke ziekte te ondergaan;
+}
+
+
+relatie NR.Vw.16.1.g: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder g, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
+wanneer
+  Vw.14.1.a.aanvraag EN Vw.16.1.g
+actie:
+  + Vw.16.1.g.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling niet voldoet aan de
+  beperking, verband houdende met het doel waarvoor hij wil
+  verblijven;
+}
+
+
+relatie NR.Awb.3.46.zienswijze: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [motiveren] van [een besluit]
+  bron: Artikel 3:46 Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
+wanneer
+  Awb.3:2.feiten EN Awb.3:2.belangen EN (Awb.4:7.1.a EN Awb.4:7.1.b) EN NIET Awb.4:7.2
+actie:
+  + NR.Awb.4:7.1
+  + Awb.3:46
+  - NR.Awb.3:46.VERPLICHT
+{
+  Een besluit dient te berusten op een deugdelijke motivering.
+}
+
+
+relatie NR.Awb.3:41.1: [het bestuursorgaan] heeft de bevoegdheid jegens [belanghebbenden] tot het [bekendmaken] van [besluit]
+  bron: Artikel 3:41, eerste lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=1
+wanneer
+  (Vw.14.1.a.inwilligen OF Vw.14.1.afwijzen OF Awb.4:5.1.niet.in.behandeling.nemen) EN Awb.3:41.1
+actie:
+  + Awb.3:40.besluit.in.werking
+  - NR.Awb.4:1.schriftelijk
+  - NR.Awb.4:1.bevoegd
+  - NR.Awb.4:2.1
+  - NR.Awb.4:2.2
+  - NR.Awb.4:13.1.termijn
+  - Vw.14.1.a.aanvraag
+{
+  De bekendmaking van besluiten die tot een of meer
+  belanghebbenden zijn gericht, geschiedt door toezending of
+  uitreiking aan hen, onder wie begrepen de aanvrager.
+}
+
+
+relatie NR.Vw.16.1.f: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder f, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=f
+wanneer
+  Vw.14.1.a.aanvraag EN Vw.16.1.f
+actie:
+  + Vw.16.1.f.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling voor een werkgever arbeid
+  verricht, zonder dat aan de Wet arbeid vreemdelingen is
+  voldaan;
+}
+
+
+relatie NR.Awb.3:2: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [vergaren] van [de nodige kennis voor het nemen van een besluit]
+  bron: Artikel 3:2 Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
+wanneer
+  Awb.1:3.3.aanvraag
+actie:
+  + Awb.3:2.feiten
+  + Awb.3:2.belangen
+  - NR.Awb.3:2.VERPLICHT
+{
+  Bij de voorbereiding van een besluit vergaart het
+  bestuursorgaan de nodige kennis omtrent de relevante feiten
+  en de af te wegen belangen.
+}
+
+
+relatie NR.Awb.3:41.2: [het bestuursorgaan] heeft de bevoegdheid jegens [belanghebbenden] tot het [bekendmaken] van [besluit]
+  bron: Artikel 3:41, tweede lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=2
+wanneer
+  (Vw.14.1.a.inwilligen OF Vw.14.1.afwijzen OF Awb.4:5.1.niet.in.behandeling.nemen) EN Awb.3:41.2
+actie:
+  + Awb.3:40.besluit.in.werking
+  - NR.Awb.4:1.schriftelijk
+  - NR.Awb.4:1.bevoegd
+  - NR.Awb.4:2.1
+  - NR.Awb.4:2.2
+  - NR.Awb.4:13.1.termijn
+  - Vw.14.1.a.aanvraag
+{
+  Indien de bekendmaking van het besluit niet kan geschieden
+  op de wijze als voorzien in het eerste lid, geschiedt zij op
+  een andere geschikte wijze.
+}
+
+
+relatie NR.Vw.14.1.a.afwijzen: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 14, eerste lid, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
+wanneer
+  Vw.14.1.a.aanvraag EN Awb.3:46 EN Awb.3:4.2
+actie:
+  + Vw.14.1.a.afwijzen
+{
+  Onze Minister is bevoegd: de aanvraag tot het verlenen van
+  een verblijfsvergunning voor bepaalde tijd in te willigen,
+  af te wijzen dan wel niet in behandeling te nemen;
+}
+
+
 relatie NR.Vw.16.1.k: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
   bron: Artikel 16, eerste lid, aanhef en onder k, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=k
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.k
+  Vw.14.1.a.aanvraag EN Vw.16.1.k
 actie:
-  + iFEIT.Vw.16.1.k.afwijzen
+  + Vw.16.1.k.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
@@ -1031,9 +1099,9 @@ relatie NR.Vw.16.1.c: [Onze Minister] heeft de bevoegdheid jegens [de vreemdelin
   bron: Artikel 16, eerste lid, aanhef en onder c, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=c
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.c
+  Vw.14.1.a.aanvraag EN Vw.16.1.c
 actie:
-  + iFEIT.Vw.16.1.c.afwijzen
+  + Vw.16.1.c.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
@@ -1045,68 +1113,35 @@ actie:
 }
 
 
-relatie NR.Awb.3.46.zienswijze: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [motiveren] van [een besluit]
-  bron: Artikel 3:46 Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Afdeling=3.7&Article=3:46
+relatie NR.Vw.16.1.a: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=a
 wanneer
-  iFEIT.3:2.feiten EN iFEIT.3:2.belangen EN (iFEIT.Awb.4:7.1.a OF iFEIT.Awb.4:7.1.b) EN NIET iFEIT.Awb.4:7.2
+  Vw.14.1.a.aanvraag EN Vw.16.1.a EN NIET (Vw.17.1.a OF Vw.17.1.b OF Vw.17.1.c OF Vw.17.1.d OF Vw.17.1.e OF Vw.17.1.f OF Vw.17.1.g OF Vw.17.1.h OF Vb.3.71.3)
 actie:
-  + NR.Awb.4:7
-  + iFEIT.Awb.3:46
-  - NR.Awb.3:46.VERPLICHT
-{
-  Een besluit dient te berusten op een deugdelijke motivering.
-}
-
-
-relatie NR.Vw.16.1.e: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder e, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=e
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.e
-actie:
-  + iFEIT.Vw.16.1.e.afwijzen
+  + Vw.16.1.a.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien:de vreemdeling niet bereid is om
-  medewerking te verlenen aan een medisch onderzoek naar een
-  ziekte aangewezen bij of krachtens de Infectieziektewet, ter
-  bescherming van de volksgezondheid of een medische
-  behandeling tegen een dergelijke ziekte te ondergaan;
+  afgewezen indien: de vreemdeling niet beschikt over een
+  geldige machtiging tot voorlopig verblijf die overeenkomt
+  met het verblijfsdoel waarvoor de verblijfsvergunning is
+  aangevraagd;
 }
 
 
-relatie NR.Awb.3:2: [het bestuursorgaan] heeft de bevoegdheid jegens [de aanvrager] tot het [vergaren] van [de nodige kennis voor het nemen van een besluit]
-  bron: Artikel 3:2 Awb
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Afdeling=3.2&Artikel=3:2
+relatie NR.Vw.16.1.d: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder d, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=d
 wanneer
-  iFEIT.Awb.1:3.3.aanvraag
+  Vw.14.1.a.aanvraag EN Vw.16.1.d
 actie:
-  + iFEIT.3:2.feiten
-  + iFEIT.3:2.belangen
-  - NR.Awb.3:2.VERPLICHT
-{
-  Bij de voorbereiding van een besluit vergaart het
-  bestuursorgaan de nodige kennis omtrent de relevante feiten
-  en de af te wegen belangen.
-}
-
-
-relatie NR.Vw.16.1.g: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] 
- tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder g, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=g
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.g
-actie:
-  + iFEIT.Vw.16.1.g.afwijzen
+  + Vw.16.1.d.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien: de vreemdeling niet voldoet aan de
-  beperking, verband houdende met het doel waarvoor hij wil
-  verblijven;
+  afgewezen indien: de vreemdeling een gevaar vormt voor de
+  openbare orde of nationale veiligheid;
 }
 
 
@@ -1114,9 +1149,9 @@ relatie NR.Vw.16.1.h: [Onze Minister] heeft de bevoegdheid jegens [de vreemdelin
   bron: Artikel 16, eerste lid, aanhef en onder h, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=h
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.h.inburgeringsplichtig EN iFEIT.Vw.16.1.h.kennis EN iFEIT.Vw.16.1.h.categorie�n
+  Vw.14.1.a.aanvraag EN Vw.16.1.h.inburgeringsplichtig EN Vw.16.1.h.kennis EN Vw.16.1.h.categorie�n
 actie:
-  + iFEIT.Vw.16.1.h.afwijzen
+  + Vw.16.1.h.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
@@ -1134,10 +1169,10 @@ relatie NR.Vw.14.1.a.niet.in.behandeling.nemen: [Onze Minister] heeft de bevoegd
   bron: Artikel 14, eerste lid, aanhef en onder a, Vw
   link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Awb.4:5.1.mits EN iFEIT.Vw.24.2.zin3
+  Vw.14.1.a.aanvraag EN Awb.4:5.1.mits EN Vw.24.2.zin3
 actie:
-  + iFEIT.Vw.14.1.a.niet.in.behandeling.nemen
-  + iFEIT.Vw.24.2.zin4
+  + Vw.14.1.a.niet.in.behandeling.nemen
+  + Vw.24.2.zin4
 {
   Onze Minister is bevoegd: de aanvraag tot het verlenen van
   een verblijfsvergunning voor bepaalde tijd in te willigen,
@@ -1145,49 +1180,13 @@ actie:
 }
 
 
-relatie NR.Awb.3:41.1: [het bestuursorgaan] heeft de bevoegdheid jegens [belanghebbenden] tot het [bekendmaken] van [besluit]
-  bron: Artikel 3:41, eerste lid, Awb
-  link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=1
-wanneer
-  (iFEIT.Vw.14.1.inwilligen OF iFEIT.Vw.14.1.afwijzen OF iFEIT.Awb.4:5.niet.in.behandeling.nemen) EN iFEIT.Awb.3:41.1
-actie:
-  + iFEIT.Awb.3:40.besluit.in.werking
-  - NR.Awb.4:1.schriftelijk
-  - NR.Awb.4:1.bevoegd
-  - NR.Awb.4:2.1
-  - NR.Awb.4:2.2
-  - NR.Awb.4:13.1.termijn
-  - iFEIT.Vw.14.1.a.aanvraag
-{
-  De bekendmaking van besluiten die tot een of meer
-  belanghebbenden zijn gericht, geschiedt door toezending of
-  uitreiking aan hen, onder wie begrepen de aanvrager.
-}
-
-
-relatie NR.Vw.16.1.f: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
-  bron: Artikel 16, eerste lid, aanhef en onder f, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=f
-wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.f
-actie:
-  + iFEIT.Vw.16.1.f.afwijzen
-{
-  Een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 kan worden
-  afgewezen indien: de vreemdeling voor een werkgever arbeid
-  verricht, zonder dat aan de Wet arbeid vreemdelingen is
-  voldaan;
-}
-
-
 relatie NR.Vw.16.1.i: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
   bron: Artikel 16, eerste lid, aanhef en onder i, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=i
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.i
+  Vw.14.1.a.aanvraag EN Vw.16.1.i
 actie:
-  + iFEIT.Vw.16.1.i.afwijzen
+  + Vw.16.1.i.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
@@ -1203,14 +1202,43 @@ relatie NR.Vw.16.1.j: [Onze Minister] heeft de bevoegdheid jegens [de vreemdelin
   bron: Artikel 16, eerste lid, aanhef en onder j, Vw
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=j
 wanneer
-  iFEIT.Vw.14.1.a.aanvraag EN iFEIT.Vw.16.1.j
+  Vw.14.1.a.aanvraag EN Vw.16.1.j
 actie:
-  + iFEIT.Vw.16.1.j.afwijzen
+  + Vw.16.1.j.afwijzen
 {
   Een aanvraag tot het verlenen van een verblijfsvergunning
   voor bepaalde tijd als bedoeld in artikel 14 kan worden
   afgewezen indien: de vreemdeling in Nederland verblijf heeft
   gehouden, anders dan op grond van artikel 8.
+}
+
+
+relatie NR.Vw.16.1.b: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 16, eerste lid, aanhef en onder b, Vw
+  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
+wanneer
+  Vw.14.1.a.aanvraag EN Vw.16.1.b EN NIET (Vb.3.72.vreemdeling OF Vc.B1.4.2.zin4.1 OF Vc.B1.4.2.zin4.2)
+actie:
+  + Vw.16.1.b.afwijzen
+{
+  Een aanvraag tot het verlenen van een verblijfsvergunning
+  voor bepaalde tijd als bedoeld in artikel 14 kan worden
+  afgewezen indien: de vreemdeling niet beschikt over een
+  geldig document voor grensoverschrijding;
+}
+
+
+relatie NR.Vw.14.1.a.inwilligen: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [inwilligen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
+  bron: Artikel 14, eerste lid, aanhef en onder a, Vw
+  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&lid=1&nummer=a
+wanneer
+  Vw.14.1.a.aanvraag EN Vw.26.1.voldoet EN Vw.26.1.datum
+actie:
+  + Vw.14.1.a.inwilligen
+{
+  Onze Minister is bevoegd: de aanvraag tot het verlenen van
+  een verblijfsvergunning voor bepaalde tijd in te willigen,
+  af te wijzen dan wel niet in behandeling te nemen;
 }
 
 
@@ -1240,6 +1268,19 @@ relatie NR.Awb.4:2.2: [de aanvrager] is gehouden jegens [het bestuursorgaan] tot
   De aanvrager verschaft voorts de gegevens en bescheiden die
   voor de beslissing op de aanvraag nodig zijn en waarover hij
   redelijkerwijs de beschikking kan krijgen.
+}
+
+relatie NR.Awb.4:7.1: [het bestuursorgaan] is gehouden jegens [de aanvrager] tot [zienswijze]
+  bron: Artikel 4:7, eerste lid, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titel=4.1&Paragraaf=4.1.1&Artikel=4:7&Lid=1
+{
+  Voordat een bestuursorgaan een aanvraag tot het geven van
+  een beschikking geheel of gedeeltelijk afwijst, stelt het de
+  aanvrager in de gelegenheid zijn zienswijze naar voren te
+  brengen indien:a. de afwijzing zou steunen op gegevens over
+  feiten en belangen die de aanvrager betreffen, enb. die
+  gegevens afwijken van gegevens die de aanvrager ter zake
+  zelf heeft verstrekt.
 }
 
 relatie NR.Awb.3:46.VERPLICHT: [het bestuursorgaan] is gehouden jegens [de aanvrager] tot [een besluit]

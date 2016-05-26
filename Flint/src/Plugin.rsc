@@ -81,10 +81,10 @@ void main() {
     annotator(Tree(Tree pt) {
       if (start[Main] f := pt) {
         <hlinks, msgs, docs> = resolve(f);
-        //errs = { m.msg | m <- msgs, m is error };
-        //for (e <- errs) {
-        //  println("Error: <e>");
-        //}
+        errs = { m.msg | m <- msgs, m is error };
+        for (e <- errs) {
+          println("Error: <e>");
+        }
         //for (Message m <- msgs, m is warning) {
         //  println("Warning: <m.msg>");
         //}

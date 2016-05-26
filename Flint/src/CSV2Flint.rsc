@@ -148,10 +148,10 @@ str genRel2flintEnglish(FactEnv env, GenNorm r) {
    '  source: <r.source>
    '  link: <r.juriconnect>
    'when 
-   '  <replaceAll(r.pre, "\r", "")>
+   '  <stripPrefix(replaceAll(r.pre, "\r", ""))>
    'action:<for (pc <- posts(r.postCreate), trim(pc) != "") {>
-   '  + <pc><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
-   '  - <pd><}>
+   '  + <stripPrefix(pc)><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
+   '  - <stripPrefix(pd)><}>
    '{
    '  <wrap(r.text, WRAP)>
    '}
@@ -173,10 +173,10 @@ str genRel2flintDutch(FactEnv env, GenNorm r) {
    '  bron: <r.source>
    '  link: <r.juriconnect>
    'wanneer
-   '  <replaceAll(r.pre, "\r", "")>
+   '  <stripPrefix(replaceAll(r.pre, "\r", ""))>
    'actie:<for (pc <- posts(r.postCreate), trim(pc) != "") {>
-   '  + <pc><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
-   '  - <pd><}>
+   '  + <stripPrefix(pc)><}><for (pd <- posts(r.postDelete), trim(pd) != "") {>
+   '  - <stripPrefix(pd)><}>
    '{
    '  <wrap(r.text, WRAP)>
    '}
@@ -196,6 +196,7 @@ IFactRel readIFactRel() {
   return readCSV(#IFactRel, |project://Flint/IND%20-%20iFEITen.csv|, separator=";");
 }
 
+str stripPrefix(str x) = replaceAll(replaceAll(x, "iFEIT.", ""), "iFACT.", "");
 
 str ifacts2flint(IFactRel ifacts, bool english = false) {
   if (english) {
@@ -208,7 +209,7 @@ str ifacts2flintGen(IFactRelCore ifacts, str(IFact) gen)
   = intercalate("\n\n", [ gen(f) | f <- ifacts ]);
    
 str ifact2flintDutch(<str obj, str name, str def, str juri, str src, str comments>)
-  = "iFeit <obj>
+  = "iFeit <stripPrefix(obj)>
     '  bron: <src>
     '  link: <juri><if (trim(name) != ""){>
     '  alias: <name><}>
@@ -217,7 +218,7 @@ str ifact2flintDutch(<str obj, str name, str def, str juri, str src, str comment
     '}";
 
 str ifact2flintEnglish(<str obj, str name, str def, str juri, str src, str comments>)
-  = "iFact <obj>
+  = "iFact <stripPrefix(obj)>
     '  source: <src>
     '  link: <juri><if (trim(name) != ""){>
     '  alias: <name><}>
