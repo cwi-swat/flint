@@ -5,6 +5,7 @@ import ParseTree;
 import util::IDE;
 import Resolve2;
 import Simulate;
+import Outline;
 import IO;
 import String;
 import List;
@@ -92,7 +93,7 @@ void main() {
       }
       return pt[@messages={error("BUG: not a spec", pt@\loc)}];
     }),
-    
+    outliner(flintOutliner), 
     proposer(flintProposer, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZ0123456789.:")
   };
   
