@@ -1,6 +1,21 @@
 
 
-Flint is a domain-specific languag (DSL) for formally describing institutional facts and Hohfeldian relations. It supports three kinds of declarations:
+
+
+
+4 
+
+
+4.1
+
+- Domain-specific languages (DSL)
+- Language workbenches
+
+
+4.2 Flint
+
+
+Flint is a domain-specific languag (DSL) for formally describing institutional facts and Hohfeldian relations. [refer to model] It supports three kinds of declarations:
 
 - iFacts, declaring types of (atomic) facts that may be true in some world.
 

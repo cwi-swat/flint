@@ -4,22 +4,43 @@ import Flint2;
 import ParseTree;
 import String;
 import List;
+import Set;
+import IO;
 
 tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   env = ();
 
   str makeDoc(str label, Text t) = "<label>: <trim("<t>"[1..-1])>";
-
-  visit (m) {
-    case (Decl)`iFeit <Id x> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc("iFeit", t)>; 
-    case (Decl)`iFact <Id x> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc("iFact", t)>; 
-    case (Decl)`relatie <Id x>: <Relation _> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc("relatie", t)>; 
-    case (Decl)`relation <Id x>: <Relation _> <MetaData* _> <Text t>`:
-      env["<x>"] = <x@\loc, makeDoc("relation", t)>; 
+  
+  set[str] srcs = {};
+  
+  str getSrc(MetaData* md) {
+    for (MetaData m <- md) {
+      switch (m) {
+        case (MetaData)`bron: <LineText t>`: { srcs += {"<t>"}; return "<t>"; }
+        case (MetaData)`source: <LineText t>`: { srcs += {"<t>"}; return "<t>"; }
+      }
+    }
+    return "";
   }
+  
+  visit (m) {
+    case (Decl)`iFeit <Id x> <MetaData* md> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc("iFeit", t), getSrc(md)>; 
+    case (Decl)`iFact <Id x> <MetaData* md> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc("iFact", t), getSrc(md)>; 
+    case (Decl)`relatie <Id x>: <Relation _> <MetaData* md> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc("relatie", t), getSrc(md)>; 
+    case (Decl)`relation <Id x>: <Relation _> <MetaData* md> <Text t>`:
+      env["<x>"] = <x@\loc, makeDoc("relation", t), getSrc(md)>; 
+  }
+  
+  
+  println(size(srcs));
+  for (str s <- sort(srcs)) {
+    println(s);
+  }
+
   
   rel[loc, loc, str] r = {};
   set[Message] errs = {};
@@ -29,21 +50,25 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   // used-in links
   rel[loc, loc, str] rinv = {};
   
+  
+  
   top-down visit (m) {
     // Ref is used in expression and statements
     
-    case (Decl)`relatie <Id d>: <Relation _> <MetaData* _> <Preconditions? _> <Action _> <Text _>`: 
+    case (Decl)`relatie <Id d>: <Relation _> <MetaData* md> <Preconditions? _> <Action _> <Text _>`: { 
       ctx = "<d>";
+    }
       
-    case (Decl)`relation <Id d>: <Relation _> <MetaData* _> <Preconditions? _> <Action _> <Text _>`: 
+    case (Decl)`relation <Id d>: <Relation _> <MetaData* md> <Preconditions? _> <Action _> <Text _>`: { 
       ctx = "<d>";
+    }
   
     
     case (Ref)`<Id x>`: { 
       n = "<x>";
       if (n in env) {
         r += {<x@\loc, env[n][0], n>};
-        docs[x@\loc] = env[n][1];
+        docs[x@\loc] = "Source: <env[n][2]>\<br\><env[n][1]>";
         rinv += {<env[n][0], x@\loc, ctx>};
       }
       else {

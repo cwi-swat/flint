@@ -45,21 +45,21 @@ iFeit Awb.4:5.1.b
   artikel 2:15
 }
 
+iFeit Awb.4:7.1.b
+  bron: artikel 4:7, eerste lid, onder b, Awb
+  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.2&Artikel=4:7&Lid=1
+  alias: gegevens wijken af van verstrekte gegevens
+{
+  de afwijzing steunt op gegevens die afwijken van gegevens
+  die de aanvrager ter zake zelf heeft verstrekt
+}
+
 iFeit travel.doc.part.II
   bron: 
   link: 
   alias: erkend door alle lidstaten in bijlage 2
 {
   reisdocument erkend door alle lidstaten in bijlage 2
-}
-
-iFeit Awb.3:40
-  bron: 
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:40
-  alias: besluit niet in werking voor bekendmaking
-{
-  een besluit treedt niet in werking voordat het is
-  bekendgemaakt
 }
 
 iFeit Awb.4:5.1.mits
@@ -250,22 +250,6 @@ iFeit Awb.3:41.2
   wijze.
 }
 
-iFeit Vw.16.1.h.afwijzen
-  bron: Artikel 16, lid 1, aanhef en onder h, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
-  alias: afgewezen op inburgeringsplicht
-{
-  een aanvraag tot het verlenen van een verblijfsvergunning
-  voor bepaalde tijd als bedoeld in artikel 14 Vw, wordt
-  afgewezen omdat de vreemdeling, behoort niet tot een der
-  categorie�n, bedoeld in artikel 17, eerste lid, na
-  verkrijging van rechtmatig verblijf in Nederland
-  inburgeringsplichtig zou zijn op grond van de artikelen 3 en
-  5 van de Wet inburgering en beschikt niet over kennis op
-  basisniveau van de Nederlandse taal en de Nederlandse
-  maatschappij
-}
-
 iFeit travel.doc.part.III
   bron: 
   link: 
@@ -407,24 +391,6 @@ iFeit Vw.16.1.j
 {
   de vreemdeling in heeft Nederland verblijf gehouden, anders
   dan op grond van artikel 8
-}
-
-iFeit Awb.4:7.1.b
-  bron: artikel 4:7, eerste lid, onder b, Awb
-  link: jci1.31:c:BWBR0005537&g=1994-01-01&Hoofdstuk=4&Titeldeel=4.1&Afdeling=4.1.2&Artikel=4:7&Lid=1
-  alias: gegevens wijken af van verstrekte gegevens
-{
-  de afwijzing steunt op gegevens die afwijken van gegevens
-  die de aanvrager ter zake zelf heeft verstrekt
-}
-
-iFeit Vw.16.1.h.kennis
-  bron: Artikel 16, lid 1, onder h, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
-  alias: vreemdeling beschikt niet over kennis Nederland(s)
-{
-  de vreemdeling beschikt niet over kennis op basisniveau van
-  de Nederlandse taal en de Nederlandse maatschappij
 }
 
 iFeit Vw.16.1.j.afwijzen
@@ -721,16 +687,6 @@ iFeit Vw.16.1.i
   van een eerdere aanvraag tot het verlenen, verlengen of
   wijzigen van een visum of een verblijfsvergunning hebben
   geleid of zouden hebben geleid
-}
-
-iFeit Vw.16.1.h.inburgeringsplichtig
-  bron: Artikel 16, lid 1, onder h, Vw
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=h
-  alias: vreemdeling is inburgeringsplichtig
-{
-  de vreemdeling is na verkrijging van rechtmatig verblijf in
-  Nederland inburgeringsplichtig op grond van de artikelen 3
-  en 5 van de Wet inburgering
 }
 
 iFeit monsterboekje

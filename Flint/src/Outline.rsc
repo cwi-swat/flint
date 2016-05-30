@@ -2,6 +2,7 @@ module Outline
 
 import ParseTree;
 import Flint2;
+import List;
 
 node flintOutliner(start[Main] m) {
   i = [];
@@ -28,9 +29,9 @@ node flintOutliner(start[Main] m) {
       g += ["grel"()[@label="<d>"][@\loc=d@\loc]];
   }
 
-  ifacts = "ifacts"(i)[@label="iFacts"];
-  genrels = "genrels"(g)[@label="Generative"];
-  sitrels = "sitrels"(s)[@label="Situational"];
+  ifacts = "ifacts"(i)[@label="Institutional Facts (<size(i)>)"];
+  genrels = "genrels"(g)[@label="Generative Relations (<size(g)>)"];
+  sitrels = "sitrels"(s)[@label="Situational Relations (<size(s)>)"];
 
   root = "root"(ifacts, genrels, sitrels);
   return root;
