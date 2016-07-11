@@ -17,12 +17,12 @@ syntax Formal
   ; 
   
 syntax Decl
-  = @Foldable "iFeit" Id MetaData* Text
-  | @Foldable "iFact" Id MetaData* Text
-  | @Foldable "relatie" Id ":" Relation MetaData* Preconditions? Action Text
-  | @Foldable "relation" Id ":" Relation MetaData* Preconditions? Action Text
-  | @Foldable "relatie" Id ":" Relation MetaData* Text
-  | @Foldable "relation" Id ":" Relation MetaData* Text
+  = @Foldable iFeit: "iFeit" Id id MetaData* Text
+  | @Foldable iFact: "iFact" Id MetaData* Text
+  | @Foldable genRelatie: "relatie" Id id ":" Relation MetaData* Preconditions? Action Text
+  | @Foldable genRelation: "relation" Id id ":" Relation MetaData* Preconditions? Action Text
+  | @Foldable sitRelatie: "relatie" Id id ":" Relation MetaData* Text
+  | @Foldable sitRelation: "relation" Id id ":" Relation MetaData* Text
   ;  
   
   
@@ -44,12 +44,12 @@ syntax Preconditions
   ; 
 
 syntax Action
-  = "actie" ":" Statement+
-  | "action" ":" Statement+
+  = "actie" ":" Statement+ stats
+  | "action" ":" Statement+ stats
   ;
 
 syntax Statement
-  = "+" Ref
+  = "+" Ref 
   | [\-] Ref
   ; 
   

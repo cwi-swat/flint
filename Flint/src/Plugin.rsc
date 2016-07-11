@@ -4,11 +4,13 @@ import Flint2;
 import ParseTree;
 import util::IDE;
 import Resolve2;
+import Visualize2;
 import Simulate;
 import Outline;
 import IO;
 import String;
 import List;
+import vis::Render;
 
 anno rel[loc,loc, str] Tree@hyperlinks;
 
@@ -94,25 +96,22 @@ void main() {
       return pt[@messages={error("BUG: not a spec", pt@\loc)}];
     }),
     outliner(flintOutliner), 
-    proposer(flintProposer, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZ0123456789.:")
+    proposer(flintProposer, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZ0123456789.:"),
+      
+    popup(
+      menu("Flint",[
+        action("Visualize", (Tree tree, loc sel) {
+          if (start[Main] flint := tree) {
+            f = visualize(flint, sel);
+            render(f);
+          }
+        })
+      ])
+    )
   };
   
   registerContributions("Flint", contribs);
-  //  
-  //  popup(
-  //    menu("Flint",[
-  //      action("Visualize", (Tree tree, loc sel) {
-  //        if (start[Main] flint := tree) {
-  //          render(visualize(flint));
-  //        }
-  //      }),
-  //      action("Run situation", void (Tree tree, loc selection) {
-  //        if (start[Main] flint := tree) {
-  //          render(showSim(flint, extractWorld(flint, selection)));
-  //        }
-  //      })
-  //    ])
-  //  )
+  
   //  
   //};
   //
