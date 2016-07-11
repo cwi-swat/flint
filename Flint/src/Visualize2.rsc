@@ -59,25 +59,25 @@ list[Figure] exprToNodes(e:(Expr)`<Id f>`)
   = [ellipse(text("<f>", FONT, FONT_SIZE), id(exprId(e)), onClickExpr(e))];
 
 list[Figure] exprToNodes(e:(Expr)`niet <Expr a>`)
-  = [ellipse(text(" ¬ "), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
+  = [ellipse(text(" ¬ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
 
 list[Figure] exprToNodes(e:(Expr)`NIET <Expr a>`)
-  = [ellipse(text(" ¬ "), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
+  = [ellipse(text(" ¬ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> en <Expr r>`)
-  = [ellipse(text(" ∧ "), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∧ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> EN <Expr r>`)
-  = [ellipse(text(" ∧ "), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∧ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> of <Expr r>`)
-  = [ellipse(text(" ∨ "), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∨ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`<Expr l> OF <Expr r>`)
-  = [ellipse(text(" ∨ "), id(exprId(e)), onClickExpr(e))]
+  = [ellipse(text(" ∨ ", FONT, fontSize(18)), id(exprId(e)), onClickExpr(e))]
      + exprToNodes(l) + exprToNodes(r);
 
 list[Figure] exprToNodes(e:(Expr)`(<Expr x>)`)
@@ -130,10 +130,10 @@ Figure visualize(start[Main] flint, loc sel) {
 	      
 	      // TODO: factor out
 	      // TODO: use locs for ids, it's not reliable currently...
-	      ns += [box(text("+ <f>", FONT, FONT_SIZE), id("+<f>"), gap(3.0)) |
+	      ns += [ellipse(text("+ <f>", FONT, FONT_SIZE), id("+<f>"), gap(3.0)) |
 	                (Statement)`+ <Id f>` <- a.stats ];
 
-	      ns += [box(text("- <f>", FONT, FONT_SIZE), id("-<f>"), gap(3.0)) |
+	      ns += [ellipse(text("- <f>", FONT, FONT_SIZE), id("-<f>"), gap(3.0)) |
 	                (Statement)`- <Id f>` <- a.stats ];
 	                
 	      es += [ edge("<r>", "+<f>", TO_ARROW) |
@@ -153,10 +153,10 @@ Figure visualize(start[Main] flint, loc sel) {
 	      es += [ edge(exprId(c), "<r>") | Expr c <- cc.conditions ]
 	        + [ *exprToEdges(c) | Expr c <- cc.conditions ];
 	        
-	      ns += [box(text("+ <f>", FONT, FONT_SIZE), id("+<f>"), gap(3.0)) |
+	      ns += [ellipse(text("+ <f>", FONT, FONT_SIZE), id("+<f>"), gap(3.0)) |
 	                (Statement)`+ <Id f>` <- a.stats ];
 
-	      ns += [box(text("- <f>", FONT, FONT_SIZE), id("-<f>"), gap(3.0)) |
+	      ns += [ellipse(text("- <f>", FONT, FONT_SIZE), id("-<f>"), gap(3.0)) |
 	                (Statement)`- <Id f>` <- a.stats ];
 	                
 	      es += [ edge("<r>", "+<f>", TO_ARROW) |
