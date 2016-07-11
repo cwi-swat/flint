@@ -56,7 +56,7 @@ default Edges exprToEdges(Expr _) = [];
 
 
 list[Figure] exprToNodes(e:(Expr)`<Id f>`)
-  = [ellipse(text("<f>"), id(exprId(e)), onClickExpr(e))];
+  = [ellipse(text("<f>", FONT, FONT_SIZE), id(exprId(e)), onClickExpr(e))];
 
 list[Figure] exprToNodes(e:(Expr)`niet <Expr a>`)
   = [ellipse(text(" ¬ "), id(exprId(e)), onClickExpr(e))] + exprToNodes(a);
@@ -171,6 +171,6 @@ Figure visualize(start[Main] flint, loc sel) {
   for (n <- ns, /id(str x) := n) {
     println(x);
   }
-  return graph(ns, es, gap(20.0,20.0), hint("layered"), orientation(topDown()));
+  return graph(ns, es, gap(40.0,40.0), hint("layered"), orientation(topDown()));
 }
 
