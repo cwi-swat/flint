@@ -7,18 +7,33 @@ import List;
 import Set;
 import IO;
 
+
+data Defines
+  = iFeit(str id, loc _id, str ns = "iFact")
+  | iFact(str id, loc _id)
+  | genRelatie(str id, loc _id)
+  | genRelation(str id, loc _id)
+  | sitRelatie(str id, loc _id)
+  | sitRelation(str id, loc _id)
+  ;
+  
+data Refs
+  = add(str ref, loc _ref)
+  | del(str ref, loc _ref)
+  | ref(str ref, loc _ref)
+  ;
+
+
 tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
   env = ();
 
-  str makeDoc(str label, Text t) = "<label>: <trim("<t>"[1..-1])>";
-  
-  set[str] srcs = {};
+  str makeDoc(str label, Text t) = "\<b\><label>\</b\>: <trim("<t>"[1..-1])>";
   
   str getSrc(MetaData* md) {
     for (MetaData m <- md) {
       switch (m) {
-        case (MetaData)`bron: <LineText t>`: { srcs += {"<t>"}; return "<t>"; }
-        case (MetaData)`source: <LineText t>`: { srcs += {"<t>"}; return "<t>"; }
+        case (MetaData)`bron: <LineText t>`: { return "<t>"; }
+        case (MetaData)`source: <LineText t>`: { return "<t>"; }
       }
     }
     return "";
@@ -34,13 +49,6 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
     case (Decl)`relation <Id x>: <Relation _> <MetaData* md> <Text t>`:
       env["<x>"] = <x@\loc, makeDoc("relation", t), getSrc(md)>; 
   }
-  
-  
-  println(size(srcs));
-  for (str s <- sort(srcs)) {
-    println(s);
-  }
-
   
   rel[loc, loc, str] r = {};
   set[Message] errs = {};
@@ -63,12 +71,16 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
       ctx = "<d>";
     }
   
+    case (MetaData)`link: <LineText t>`: {
+      txt = trim(replaceAll("<t>", "jci1.31", "jci1.3"));
+      docs[t@\loc] = "\<b\>Link\</b\>: http://wetten.overheid.nl/<txt>";
+    }
     
     case (Ref)`<Id x>`: { 
       n = "<x>";
       if (n in env) {
         r += {<x@\loc, env[n][0], n>};
-        docs[x@\loc] = "Source: <env[n][2]>\<br\><env[n][1]>";
+        docs[x@\loc] = "\<b\>Source\</b\>: <env[n][2]>\<br\><env[n][1]>";
         rinv += {<env[n][0], x@\loc, ctx>};
       }
       else {
