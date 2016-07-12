@@ -96,5 +96,5 @@ syntax Type
   ;
  
 lexical Id
-  = [a-zA-Z0-9][a-zA-Z0-9.:�/=]* !>> [a-zA-Z0-9.]
+  = [a-zA-Z0-9][a-zA-Z0-9.:�áóé/=]* !>> [a-zA-Z0-9.]
   ;
