@@ -7,13 +7,23 @@ import List;
 import ParseTree;
 
 
+void main(list[str] args) {
+  p = |file://<args[0]>|;
+  println(flint2json(p));
+}
+
 str flint2json(loc path) {
   try {
     pt = parse(#start[Main], path);
     return flint2json(path, implode(pt));
   }
   catch ParseError(x): {
-    return "{\"parseError\": \"<x>\"}";
+    return "{\"parseError\": { 
+           '  \"offset\": <x.offset>,
+           '  \"begin\": [<x.begin.line>, <x.begin.column>], 
+           '  \"end\": [<x.end.line>, <x.end.column>]
+           ' } 
+           '}";
   } 
 }
 
