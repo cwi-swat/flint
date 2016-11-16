@@ -76,10 +76,11 @@ str expr2cond((Expr)`<Expr l> \<= <Expr r>`) = "<expr2prolog(l)> \<= <expr2prolo
 str expr2cond((Expr)`<Expr l> == <Expr r>`) = "<expr2prolog(l)> = <expr2prolog(r)>";
 str expr2cond((Expr)`<Expr l> != <Expr r>`) = "<expr2prolog(l)> \\= <expr2prolog(r)>";
 
-str expr2cond((Expr)`<Expr l> and <Expr r>`) = "(<expr2prolog(l)> , <expr2prolog(r)>)";
-str expr2cond((Expr)`<Expr l> or <Expr r>`) = "(<expr2prolog(l)> ; <expr2prolog(r)>)";
+str expr2cond((Expr)`<Expr l> and <Expr r>`) = "(<expr2cond(l)> , <expr2cond(r)>)";
+str expr2cond((Expr)`<Expr l> or <Expr r>`) = "(<expr2cond(l)> ; <expr2cond(r)>)";
+str expr2cond((Expr)`not(<Expr e>)`) = "not(<expr2cond(e)>)";
 
-str expr2cond((Expr)`(<Expr e>)`) = expr2cond(e);
+str expr2cond((Expr)`(<Expr e>)`) = "(<expr2cond(e)>)";
 
 // this must be here, because findall is not an arithmetic expression.
 str expr2cond((Expr)`<Id x> := sum(<Id n> | <Expr r>)`) 
@@ -87,7 +88,7 @@ str expr2cond((Expr)`<Id x> := sum(<Id n> | <Expr r>)`)
   
 default str expr2cond((Expr)`<Id x> := <Expr r>`) = "<capitalize("<x>")> is <expr2prolog(r)>";
 
-str expr2cond((Expr)`not(<Expr e>)`) = "not(<expr2prolog(e)>)";
+//str expr2cond((Expr)`not(<Expr e>)`) = "not(<expr2prolog(e)>)";
 
 str expr2prolog((Expr)`<Expr l> + <Expr r>`) = "<expr2prolog(l)> + <expr2prolog(r)>";
 str expr2prolog((Expr)`<Expr l> - <Expr r>`) = "<expr2prolog(l)> - <expr2prolog(r)>";

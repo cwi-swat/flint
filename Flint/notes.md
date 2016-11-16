@@ -1,5 +1,6 @@
 
 
+- time varying facts and querying over it (e.g., payments)
 - bot: virtual power exerciser/button pressor
 - separating concerns: policy/workflow (immediate exercise/periodical/...), 
   calculation language, API/database mapping, etc., data schema/ontology (check rules against data)

@@ -26,9 +26,9 @@ hasPower(sendInvoice, ACTOR, RECV, OBJ, 'send') :-
   classify('landlord', ACTOR),
   classify('tenant', RECV),
   classify('invoice', OBJ),
-  ('UNSUPPORTED: lease(actor, receiver, amount)' , ('UNSUPPORTED: not(sent(_, _, _)) or
+  ('UNSUPPORTED: lease(actor, receiver, amount)' , ('UNSUPPORTED: not(sent(_, _, _) or
      (sent(t, actor, receiver)
-     and isNotSamePeriod(t, x))')).
+     and isNotSamePeriod(t, x)))')).
 
 executePower(sendInvoice, ACTOR, RECV, 'send', OBJ, []) :-
   hasPower(sendInvoice, ACTOR, RECV, OBJ, 'send'),
