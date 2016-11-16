@@ -1,0 +1,25 @@
+sum([], 0).
+sum([X|Xs], N) :- sum(Xs, N0), N is N0 + X.
+
+taxDebt(Payer, Amount) :- 
+  salary(Payer, Salary), 
+  findall(N, payment(_, Payer, N), LIST), sum(LIST, Total), 
+  Amount is (Salary * 0.45) - Total.
+
+:- dynamic payment/3.
+
+:- dynamic salary/2.
+
+hasPower(payTaxes, 'taxpayer'(Actor),'fiscus'(Receiver), 'pay', 'taxes') :-
+  taxDebt(Actor, Amount), Amount > 0.
+
+executePower(payTaxes, 'taxpayer'(Actor),'fiscus'(Receiver), 'pay', 'taxes', [Amount]) :-
+  hasPower_payTaxes('taxpayer'(Actor),'fiscus'(Receiver), 'pay', 'taxes'),
+  get_time(NOW),
+  assert(payment(NOW, Actor, Amount)).
+
+
+buttons(X) :-
+    findall(
+
+

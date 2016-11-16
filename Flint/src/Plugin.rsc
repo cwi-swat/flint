@@ -5,6 +5,7 @@ import ParseTree;
 import util::IDE;
 import Resolve2;
 import Visualize2;
+import Flint2Prolog;
 import Simulate;
 import Outline;
 import IO;
@@ -96,6 +97,10 @@ void main() {
       return pt[@messages={error("BUG: not a spec", pt@\loc)}];
     }),
     outliner(flintOutliner), 
+    builder(set[Message](start[Main] tree) {
+      loc output = tree@\loc.top[extension="pl"];
+      writeFile(output, flint2prolog(tree));
+    }),
     proposer(flintProposer, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZ0123456789.:"),
       
     popup(

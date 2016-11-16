@@ -1,48 +1,40 @@
 
 iFact ApplicationExists
   source: Article 14, paragraph 1, point a, AA
-  link: jci1.31:c:BWBR0011823&g=2014-04-01&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=14&Lid=1&Nummer=a
   {The application to grant a temporary residence permit}
 
 iFact NoValidBorderCrossingDoc
   source: Article 16, paragraph 1, point b, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
   {The alien does not possess a valid border-crossing document.}
 
 iFact CannotHaveBorderCrossingDoc
   source: Article 3.72, AD
-  link: jci1.31:c:BWBR0011825&g=2016-03-01&Hoofdstuk=3&Afdeling=2&Paragraaf=3&Artikel=3.72
-  {The alien proves that he can not (any longer) be put in possession of a valid border-crossing
-   document due to the government of his country.}
-
+  {The alien proves that he can not (any longer) be put in 
+   possession of a valid border-crossing document due to 
+   the government of his country.}
 
 iFact CitizenOfSomalia
   source: B1/4.2 sentence 4 AAIG
-  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
-  alias: the alien is citizen of Somalia
   {The alien is citizen of Somalia.}
-
 
 iFact ChildrenBornInNL
   source: B1/4.2 sentence 4 AAIG
-  link: jci1.31:c:BWBR0012289&g=2013-06-01&Circulaire.divisie=B1&Hoofdstuk=4&Paragraaf=4&Volzin=4
   {Children born in this country born who apply for stay with their parents, 
    provided they meet the conditions.}
 
-iFact RejectBecauseNoValidBorderCrossingDoc
+iFact RejectedBecauseNoValidBorderCrossingDoc
   source: Article 16, paragraph 1, introduction and point b, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=b
   {The application to grant a temporary residence permit is rejected because the
    alien does not possess a valid border-crossing document.}
 
-relation NR.AA.16.1.b: [Our Minister] has the power towards [the alien] to [reject] [the application to grant a temporary residence permit]
+relation NR.AA.16.1.b: [Our Minister] has the power towards [the alien] 
+  to [reject] [the application to grant a temporary residence permit]
   source: Article 16, paragraph 1, introduction and under point b, AA
-  link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&lid=1&nummer=b
 when 
   ApplicationExists AND NoValidBorderCrossingDoc 
   AND NOT (CannotHaveBorderCrossingDoc OR CitizenOfSomalia OR ChildrenBornInNL)
 action:
-  + RejectBecauseNoValidBorderCrossingDoc
+  + RejectedBecauseNoValidBorderCrossingDoc
   {An application to grant a temporary residence permit as referred to in Article
    14 may be rejected if: the alien does not possess a valid border-crossing document.}
 

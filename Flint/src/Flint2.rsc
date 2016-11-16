@@ -13,18 +13,34 @@ lexical LineText
   
  
 syntax Formal
-  = Id ":" Id 
+  = Id ":" Id
+  | Id 
   ; 
   
+syntax Formals
+ = "(" {Formal ","}* ")"
+ ;  
+ 
 syntax Decl
-  = @Foldable iFeit: "iFeit" Id id MetaData* Text
-  | @Foldable iFact: "iFact" Id MetaData* Text
+  = @Foldable iFeit: "iFeit" TemporalModifier? Id id Formals? MetaData* Text
+  | @Foldable iFact: "iFact" TemporalModifier? Id  Formals?  MetaData* Text
+  | @Foldable iFact: "iFact" TemporalModifier? Id Formals? MetaData* "if" {Expr ","}+ Text
   | @Foldable genRelatie: "relatie" Id id ":" Relation MetaData* Preconditions? Action Text
   | @Foldable genRelation: "relation" Id id ":" Relation MetaData* Preconditions? Action Text
   | @Foldable sitRelatie: "relatie" Id id ":" Relation MetaData* Text
   | @Foldable sitRelation: "relation" Id id ":" Relation MetaData* Text
+  | Id "(" {Atom ","}* ")" 
+  | Atom "is" "a" Id 
+  ;
+
+lexical String
+  = [\"] ![\"]* [\"];
+
+syntax Atom
+  = String
+  | Int
+  | Real
   ;  
-  
   
 syntax Text
   = @Foldable "{" Content "}"
@@ -44,23 +60,59 @@ syntax Preconditions
   ; 
 
 syntax Action
-  = "actie" ":" Statement+ stats
-  | "action" ":" Statement+ stats
+  = "actie" Formals? ":" Statement+ stats
+  | "action" Formals? ":" Statement+ stats
+  ;
+
+syntax Info
+  = Ref
+  | Ref "(" {Expr ","}* ")"
   ;
 
 syntax Statement
-  = "+" Ref 
-  | [\-] Ref
+  = "+" Info 
+  | [\-] Info
   ; 
   
 syntax Ref
   = @category="Variable" Id
   ;
   
+lexical Int
+  = [\-]?[1-9][0-9]* !>> [0-9]
+  | [0]
+  ;
+  
+lexical Real
+  = Int "." [0-9]* !>> [0-9]
+  ;
+  
 syntax Expr
-  = Ref 
+  = Id 
+  | Int
+  | Real
+  | "now"
   | 'niet' Expr
   | 'not' Expr
+  | Id "(" {Id ","}* ")"
+  | left (
+    Expr "*" Expr
+  | Expr "/" Expr 
+  | "sum" "(" Id "|" Expr ")"
+  )
+  >
+  left (Expr "+" Expr
+  |Expr "-" Expr
+  )
+  >
+  > non-assoc (
+    Expr "\<" Expr
+    |  Expr "\>" Expr
+    |  Expr "\>=" Expr
+    |  Expr "\<=" Expr
+    |  Expr "==" Expr
+    |  Expr "!=" Expr
+  )
   > left (
     left Expr 'en' Expr
     | left Expr 'and' Expr
@@ -69,15 +121,24 @@ syntax Expr
     left Expr 'of' Expr
     | left Expr 'or' Expr
   )
+  
+  >
+  Id ":=" Expr
   | bracket "(" Expr ")"
   ;  
   
 syntax Relation
-  = Name from Type "jegens" Name other "tot" "het" Name action "van" Name object
-  | Name from Type "jegens" Name other "tot" Name object
-  | Name from Type "towards" Name "to" Name action Name object
-  | Name from Type "towards" Name "to" Name object
+  = TemporalModifier? Name from Type "jegens" Name other "tot" "het" Name action "van" Name object
+  | TemporalModifier? Name from Type "jegens" Name other "tot" Name object
+  | TemporalModifier? Name from Type "towards" Name "to" Name action Name object
+  | TemporalModifier? Name from Type "towards" Name "to" Name object
   ; 
+  
+syntax TemporalModifier 
+  = "yearly"
+  | "monthly"
+  | "weekly"
+  ;
 
 syntax Name
   = "[" Id+ "]"
@@ -96,5 +157,16 @@ syntax Type
   ;
  
 lexical Id
-  = [a-zA-Z0-9][a-zA-Z0-9.:�áóé/=]* !>> [a-zA-Z0-9.]
+  = ([a-zA-Z0-9][a-zA-Z][a-zA-Z0-9.:�áóé/=]* !>> [a-zA-Z0-9.]) \ Reserved
+  | [a-zA-Z] !>> [a-zA-Z0-9.]
+  | "_"
+  | "actor"
+  | "receiver"
   ;
+  
+keyword Reserved
+  = "now"
+  | "actor"
+  | "receiver"
+  ;
+  

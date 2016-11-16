@@ -86,12 +86,12 @@ tuple[rel[loc,loc, str], set[Message], map[loc, str]] resolve(start[Main] m) {
       else {
         //alts = suggestions(env, n);
         alts = {};
-        if (alts == {}) {
-          errs += {error("Undefined iFact/relation <x>", x@\loc)};
-        }
-        else {
-          errs += {error("Undefined iFact/relation <x>\n(Did you mean <alts>)", x@\loc)};
-        } 
+        //if (alts == {}) {
+        //  errs += {error("Undefined iFact/relation <x>", x@\loc)};
+        //}
+        //else {
+        //  errs += {error("Undefined iFact/relation <x>\n(Did you mean <alts>)", x@\loc)};
+        //} 
       }
     }
   }

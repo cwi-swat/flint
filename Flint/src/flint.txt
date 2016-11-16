@@ -3,13 +3,16 @@
 
 
 
-4 
+4 Flint: A Domain-Specific Language for Specifying Norms
 
 
-4.1
+4.1 Introduction
 
-- Domain-specific languages (DSL)
-- Language workbenches
+Domain-specific languages (DSLs) are software languages tailored toward a particular problem domain. Well-designed DSLs provide custom notation, which is closer to the concepts and vocabulary of domain experts. This improves productivity (shorter programs), quality assurance (better error message through domain-specific checks), and stakeholder communication (programs are expressed in terms of the problem domain). DSLs have been successfully applied in areas such as financial services, hardware description, and web development (for related work on DSLs, see [Mernik et al.]).
+
+Although DSLs provide a bridge between a problem domain and its technical realization in software, DSLs development requires both language engineering expertise and domain knowledge. Recent developments in the area of language workbenches provides integrated tool support for significantly lowering the complexity of this task [Erdeweg et al.]. Language workbenches take  traditional compiler tools to the next level, by also providing support for defining editor services, such as syntax highlighting, outline views, cross-referencing, static analyses, and documentation generation. 
+
+In this section we present Flint, a DSL for describing and executing norms. The current prototype of Flint is designed as a textual language using the meta programming system Rascal [Klint et al.]. 
 
 
 4.2 Flint
@@ -24,25 +27,31 @@ DUTY-CLAIMRIGHT, and LIBERTY-NORIGHT relations. These relations are similar to i
 
 - Generative relations: these are the generative Hohfeldian relations. Most important this includes the POWER-LIABILITY relation. Generative relations can create or delete facts or situational relations.
 
-All declarations have a unique name, and associated meta data, such as a description of the legal source, a Juriconnect URL, and the relevant natural language text fragment of the law.
+The Flint version of the simplified case introduced in the previous section is shown in Figures A and B. The first six declarations capture the institutional facts that may hold or not. Each iFact has an intuitive name, a reference to the legal source, and the relevant fragment of the actual text of the law. Additional meta data, such as a Juriconnect identifier,  can be provided, but for presentation purposes has been omitted from  this example.
 
-The idea is that the iFacts and the situational relations describe possible states of the world. The generative relations can be used to  transition to a new world, where a different set of iFacts holds.  A declaration of a generative relation contains a boolean expression, describing its precondition. Boolean expressions consist of the standard boolean connectives (and, or, not, etc.) and may refer to iFacts and situational relations.
-Whenever the precondition is true, the relation is /enabled/.  When such a relation is enabled, it can be /enacted/ (by the appropriate actor) to trigger the execution of the postcondition. A postcondition is a list of iFacts or situational relations that must become true or false in the new world.
+The last declaration describes the generative POWER relation between the actor "Our Minister" and "the alien". In this case, it describes the power to reject an application for a temporary residence permit, on the ground of not having a valid border crossing document. The precondition encodes the requirement of this document (after the "when" keyword), which also describes exceptions (e.g., being a citizen of Somalia). Whenever the precondition holds, the actor ("Our Minister") can enact the relation, which causes the action to be executed. In this, the action consists of adding the institutional fact "RejectedBecauseNoValidBorderCrossingDoc". Enforcing a generative relation represents a transition into a new (institutional) world, where additional facts are added or withdrawn. 
 
-Subsection: Formal Analysis & Simulation
+In addition to checking for iFacts in the precondition, and adding or deleting iFacts in the postcondition, a generative rule can also query and create or withdraw situational relations, such as claim-rights and duties. 
 
-Subsection: Specification Support
+4.3 Benefits of Flint
 
-Flint is accompanied with an integrated develoment environment (IDE), which provides editor services such as automatic syntax checking, syntax highlighting, jump-to-definition (e.g., clicking on an iFact in a precondition or postcondition moves the cursor to its definition), error marking, content completion, and hover documentation. Currently, the IDE displays errors when a references iFact or relation is not defined. In the future, we will extend this with automated cross-referencing with legal texts, more advanced consistency checks (e.g., decidability, reachability etc.), and refactoring operations (e.g., consistently renaming an iFact).
+Tool support
+
+Flint is accompanied with an integrated develoment environment (IDE), which provides editor services such as automatic syntax checking, syntax highlighting, jump-to-definition (e.g., clicking on an iFact in a precondition or postcondition moves the cursor to its definition), error marking, content completion, and hover documentation. Currently, the IDE displays errors when a references iFact or relation is not defined. In the future, we will extend this with automated cross-referencing with legal texts, more advanced consistency checks (e.g., decidability, reachability etc.), and refactoring operations (e.g., consistently renaming an iFact). For a screen shot of the Flint IDE see Figure X.
 
 We have automatically imported an initial set of legal relations and iFacts from Excel sheets, which immediately uncovered a number of mistakes due to typos or missing iFact declarations. Automated tooling for engineering such legal specifications is thus extremely useful, even if the analysis itself is very simple. 
 
-Simulation
-
 Flint specifications can be used for simulating cases. This involves defining an (initial) world by listing the iFact and situational relations that hold. Given this initial world, some of the generative relations are enabled, because the preconditions are true. In the simulation, the enabled relations can be fired, to obtian a new state of the world, in which a (possibly different) set of relations is enabled. 
 
-TODO:
+[Todo: Formal analysis, simulation, code generation.]
 
-- Screenshot: showing error marking
-- example
-- visualization
+
+[Mernik et al.] 
+Marjan Mernik, Jan Heering, Anthony M. Sloane. When and how to develop domain-specific languages. ACM Computing Surveys (CSUR) Volume 37 Issue 4, December 2005 Pages 316-344
+
+http://dl.acm.org/citation.cfm?id=1118892
+
+[Erdweg et al.]
+Sebastian Erdweg, Tijs van der Storm, Markus Völter, Laurence Tratt, Remi Bosman, William R. Cook, Albert Gerritsen, Angelo Hulshout, Steven Kelly, Alex Loh, Gabriël Konat, Pedro J. Molina, Martin Palatnik, Risto Pohjonen, Eugen Schindler, Klemens Schindler, Riccardo Solmi, Vlad Vergu, Eelco Visser, Kevin van der Vlist, Guido Wachsmuth, Jimi van der Woning. Evaluating and comparing language workbenches: Existing results and benchmarks for the future, Computer Languages, Systems & Structures, Volume 44, Part A, December 2015, Pages 24-47.
+
+http://dx.doi.org/10.1016/j.cl.2015.08.007

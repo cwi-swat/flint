@@ -1,11 +1,17 @@
+
+
+
 iFact AA.16.1.d.reject
   source: Article 16, paragraph 1, introduction and point d, AA
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=d
+  tag: #IND , #verblijfsvergunning
 {
   the application to grant a temporary residence permit is
   rejected because the alien constitutes a threat to public
   order or national security
 }
+
+
 
 iFact AA.16.1.b.IND.PD.date.issue.before.application
   source: NONE
@@ -15,6 +21,7 @@ iFact AA.16.1.b.IND.PD.date.issue.before.application
   date of issue document is before the submission date of
   application
 }
+
 
 iFact travel.doc.part.III
   source: 
@@ -1163,3 +1170,5 @@ relation NR.GAL.4:7.1: [the administrative authority] is liable towards [the app
   issue a decision totally or partially the applicant is given
   the opportunity to bring his opinion forward.
 }
+
+

@@ -609,7 +609,7 @@ iFeit Vw.16.1.a
   link: jci1.31:c:BWBR0011823&g=2013-09-21&Hoofdstuk=3&Afdeling=3&Paragraaf=1&Artikel=16&Lid=1&Nummer=a
   alias: geen geldige mvv
 {
-  de vreemdeling beschikt niet over een geldige machtiging tot
+  [de vreemdeling] beschikt niet over een geldige machtiging tot
   voorlopig verblijf die overeenkomt met het verblijfsdoel
   waarvoor de verblijfsvergunning is aangevraagd
 }
@@ -899,7 +899,6 @@ actie:
   Onder aanvraag wordt verstaan: een verzoek van een
   belanghebbende, een besluit te nemen
 }
-
 
 relatie NR.Vw.16.1.e: [Onze Minister] heeft de bevoegdheid jegens [de vreemdeling] tot het [afwijzen] van [de aanvraag tot het verlenen van een verblijfsvergunning voor bepaalde tijd]
   bron: Artikel 16, eerste lid, aanhef en onder e, Vw

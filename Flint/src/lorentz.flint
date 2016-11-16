@@ -1,0 +1,41 @@
+
+// some example data
+salary("tijs", 40000)
+salary("markus", 80000)
+"fiscus" is a fiscus 
+"tijs" is a taxpayer
+"markus" is a taxpayer
+"taxes" is a taxes
+
+iFact yearly taxDebt(payer, amount) if
+  salary(payer, salary),
+  total := sum(n | payment(_, payer, n)),
+  amount := (salary * 0.45) - total 
+{Defines the (remaining) tax debt of a tax payer}
+
+iFact payment(time, taxpayer, amount) {}
+
+iFact salary(taxpayer, salary) {}
+
+relation sendInvoice: monthly [landlord] has the power towards [tenant] to [send] [invoice]
+ when
+   lease(actor, receiver, amount)
+   and 
+   (not(sent(_, _, _)) or
+   (sent(t, actor, receiver)
+   and isNotSamePeriod(t, x))) 
+ action():
+   + sent(now, actor, receiver, amount)
+ {}
+
+relation payTaxes: yearly [taxpayer] has the power towards [fiscus] 
+  to [pay] [taxes] 
+when  
+  taxDebt(actor, amount), amount > 0
+action(amount):
+  // "now" can only be used in post-condition
+  + payment(now, actor, amount)
+  {Reduce tax debt by paying an amount}
+  
+
+
