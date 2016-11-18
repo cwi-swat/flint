@@ -1,36 +1,35 @@
 
 
-iFact yearly taxDebt(payer, amount) if
+iFact taxDebt(payer, amount) if
   salary(payer, salary),
   total := sum(n | payment(_, payer, n)),
   amount := (salary * 0.45) - total
-{Defines the (remaining) tax debt of a tax payer}
+{The remaining tax debt of a tax payer}
 
-iFact payment(time, taxpayer, amount) {}
+iFact payment(t, taxpayer, x) 
+{Represents a payment by taxpayer at time t of amount}
 
-iFact salary(taxpayer, salary) {}
+iFact salary(taxpayer, salary) 
+{Associating taxpayer and annual salary}
 
-
-relation payTaxes: yearly [taxpayer] has the power towards [fiscus] 
+relation payTaxes: [taxpayer] has the power towards [inspector] 
   to [pay] [taxes] 
 when  
   taxDebt(actor, amount), amount > 0
 action(amount):
-  // "now" can only be used in post-condition
   + payment(now, actor, amount)
-  {Reduce tax debt by paying an amount}
-  
-  
+{Reduce tax debt by paying an amount}
   
 
 
+
+  
 // some example data
 salary("tijs", 40000)
-salary("markus", 80000)
-"fiscus" is a fiscus 
-"fiscus2" is a fiscus 
+salary("robert", 80000)
+"tom" is a inspector 
 "tijs" is a taxpayer
-"markus" is a taxpayer
+"robert" is a taxpayer
 "taxes" is a taxes
 
 

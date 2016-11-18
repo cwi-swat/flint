@@ -37,6 +37,9 @@ str flint2prolog((Decl)`iFact <Id name> <Formals fs> <MetaData* _> <Text _>`)
   = ":- dynamic <name>/<formals2arity(fs)>.";
   
 
+str flint2prolog((Decl)`iFact <TemporalModifier _> <Id name> <Formals fs> <MetaData* _> if <{Expr ","}* exps> <Text _>`)
+  = "<name>(<intercalate(", ", formals2vars(fs))>) :- \n  <intercalate(", \n  ", [ expr2cond(e) | e <- exps ])>.";
+
 str flint2prolog((Decl)`iFact <Id name> <Formals fs> <MetaData* _> if <{Expr ","}* exps> <Text _>`)
   = "<name>(<intercalate(", ", formals2vars(fs))>) :- <intercalate(", ", [ expr2cond(e) | e <- exps ])>.";
 
@@ -56,7 +59,7 @@ str flint2prolog((Decl)`relation <Id x>: <Name name>
     '  TRACE = Trace<traceIdx>.
     '
     'executePower(<x>, ACTOR, RECV, <name2atom(action)>, OBJ, [<intercalate(", ", formals2vars(fs))>]) :-
-    '  hasPower(<x>, ACTOR, RECV, OBJ, <name2atom(action)>, _),
+    '  hasPower(<x>, ACTOR, RECV, OBJ, <name2atom(action)>),
     '  get_time(NOW),
     '  <intercalate(", ", [ stm2assert(s) | s <- stms ])>.";  
 
@@ -72,7 +75,7 @@ str trace(str exp) {
 }
 
 str expr2cond((Expr)`<Id f>(<{Id ","}* xs>)`)
-  = trace("<f>(<intercalate(", ", [ expr2prolog((Expr)`<Id x>`) | x <- xs ] + ["Trace<traceIdx>"])>)");
+  = trace("<f>(<intercalate(", ", [ expr2prolog((Expr)`<Id x>`) | x <- xs ])>)");
   
 str expr2cond((Expr)`<Expr l> \> <Expr r>`) = trace("<expr2prolog(l)> \> <expr2prolog(r)>");
 str expr2cond((Expr)`<Expr l> \>= <Expr r>`) = trace("<expr2prolog(l)> \>= <expr2prolog(r)>");

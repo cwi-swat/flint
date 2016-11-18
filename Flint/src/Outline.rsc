@@ -16,6 +16,9 @@ node flintOutliner(start[Main] m) {
     case (Decl)`iFact <Id x> <MetaData* _> <Text t>`:
       i += ["iFact"()[@label="<x>"][@\loc=x@\loc]];
     
+    case (Decl)`iFact <Id x> <Formals f> <MetaData* _> <Text t>`:
+      i += ["iFact"()[@label="<x><f>"][@\loc=x@\loc]];
+    
     case (Decl)`relatie <Id x>: <Relation _> <MetaData* _> <Text t>`:
       s += ["srel"()[@label="<x>"][@\loc=x@\loc]];
 

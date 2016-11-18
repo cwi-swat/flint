@@ -165,7 +165,7 @@ iFact AA.26.1.fulfills
   for granting a residence permit
 }
 
-iFact 1105/2011/EU.1.visa
+iFact az1105/2011/EU.1.visa
   source: 
   link: 
   alias: visa
@@ -408,7 +408,7 @@ iFact AA.16.1.j
   accordance with iFACT.AA.8
 }
 
-iFact 1105/2011/EU.1.borders
+iFact az1105/2011/EU.1.borders
   source: 
   link: 
   alias: borders
@@ -854,7 +854,8 @@ action:
 }
 
 
-relation NR.GAL.3:41.2: [the administrative authority] has the power towards [the applicant] to [announce] [decision]
+relation NR.GAL.3:41.2: [the administrative authority] has the power 
+                   towards [the applicant] to [announce] [decision]
   source: Artikel 3:41, Paragraph 2, GAL
   link: jci1.31:c:BWBR0005537&g=1998-01-01&Hoofdstuk=3&Paragraaf=3.6&Artikel=3:41&lid=2
 when 
