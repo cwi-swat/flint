@@ -24,7 +24,7 @@ syntax Formals
 syntax Decl
   = @Foldable iFeit: "iFeit" TemporalModifier? Id id Formals? MetaData* Text
   | @Foldable iFact: "iFact" TemporalModifier? Id  Formals?  MetaData* Text
-  | @Foldable iFact: "iFact" TemporalModifier? Id Formals? MetaData* "if" {Expr ","}+ Text
+  | @Foldable iFact: "iFact" TemporalModifier? Id Formals? MetaData* "if" {Expr!en!and!of!or ","}+ Text
   | @Foldable genRelatie: "relatie" Id id ":" Relation MetaData* Preconditions? Action Text
   | @Foldable genRelation: "relation" Id id ":" Relation MetaData* Preconditions? Action Text
   | @Foldable sitRelatie: "relatie" Id id ":" Relation MetaData* Text
@@ -103,6 +103,7 @@ syntax Expr
   | "max" "(" {Expr ","}+ ")"
   | "min" "(" {Expr ","}+ ")"
   | Id "(" {Id ","}* ")"
+  | bracket "(" Expr ")"
   | left (
     Expr "*" Expr
   | Expr "/" Expr 
@@ -112,7 +113,6 @@ syntax Expr
    Expr "+" Expr
   |Expr "-" Expr
   )
-  >
   > non-assoc (
     Expr "\<" Expr
     |  Expr "\>" Expr
@@ -121,18 +121,16 @@ syntax Expr
     |  Expr "==" Expr
     |  Expr "!=" Expr 
   )
-  > left (
-    left Expr 'en' Expr
-    | left Expr 'and' Expr
-  )  
-  > left (
-    left Expr 'of' Expr
-    | left Expr 'or' Expr
-  )
-  
   >
   Id ":=" Expr
-  | bracket "(" Expr ")"
+  > left (
+    left en: Expr 'en' Expr
+    | left and: Expr 'and' Expr
+  )  
+  > left (
+    left of: Expr 'of' Expr
+    | left or: Expr 'or' Expr
+  )
   ;  
   
 syntax Relation

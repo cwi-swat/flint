@@ -6,6 +6,7 @@ iFact taxDebt(payer, amount) if
   amount := (salary * 0.45) - total
 {The remaining tax debt of a tax payer}
 
+
 iFact payment(t, taxpayer, x) 
 {Represents a payment by taxpayer at time t of amount}
 
@@ -25,7 +26,7 @@ iFact VerschuldigdeBedragIsBepaald(amount) if
   belastingEindheffingsbestanddelen(x),
   belastingVergoedingenEnVerstrekkingen(y),
   belastingToeslagen(z),
-  amount := x + y - z
+  amount := (x + y) - z
 {}
 
 iFact CorrectAangifteGedaan() if
