@@ -20,6 +20,17 @@ action(amount):
   + payment(now, actor, amount)
 {Reduce tax debt by paying an amount}
   
+  
+iFact VerschuldigdeBedragIsBepaald(amount) if
+  belastingEindheffingsbestanddelen(x),
+  belastingVergoedingenEnVerstrekkingen(y),
+  belastingToeslagen(z),
+  amount := x + y - z
+{}
+
+iFact CorrectAangifteGedaan() if
+  VerschuldigdeBedragIsBepaald()
+{}  
 
 
 

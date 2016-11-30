@@ -87,21 +87,29 @@ lexical Real
   = Int "." [0-9]* !>> [0-9]
   ;
   
+lexical Perc
+  = Int "%"
+  ;  
+  
 syntax Expr
   = Id 
   | Int
   | Real
+  | Perc
   | "now"
   | 'niet' Expr
   | 'not' Expr
+  | "sum" "(" Id "|" Expr ")"
+  | "max" "(" {Expr ","}+ ")"
+  | "min" "(" {Expr ","}+ ")"
   | Id "(" {Id ","}* ")"
   | left (
     Expr "*" Expr
   | Expr "/" Expr 
-  | "sum" "(" Id "|" Expr ")"
   )
   >
-  left (Expr "+" Expr
+  left (
+   Expr "+" Expr
   |Expr "-" Expr
   )
   >
@@ -111,7 +119,7 @@ syntax Expr
     |  Expr "\>=" Expr
     |  Expr "\<=" Expr
     |  Expr "==" Expr
-    |  Expr "!=" Expr
+    |  Expr "!=" Expr 
   )
   > left (
     left Expr 'en' Expr
